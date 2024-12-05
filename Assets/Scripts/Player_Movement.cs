@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
@@ -19,6 +20,11 @@ public class Player_Movement : MonoBehaviour
         {
          StartCoroutine(Jumping());
         }
+    }
+
+    private void FixedUpdate()
+    {
+        PlayerRigidbody.linearVelocity = new Vector3(3.5f,0,0);
     }
 
 
