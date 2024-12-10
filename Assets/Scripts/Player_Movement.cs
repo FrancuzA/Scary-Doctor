@@ -24,7 +24,7 @@ public class Player_Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        PlayerRigidbody.linearVelocity = new Vector3(3.5f,0,0);
+        PlayerRigidbody.linearVelocity = new Vector3(0f,0f,3.5f);
     }
 
 
