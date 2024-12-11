@@ -3,23 +3,17 @@ using UnityEngine.AI;
 
 public class Enemy_Mouvement : MonoBehaviour
 {
-    public GameObject player;
-    public NavMeshAgent Doctor_NavAgent;
+    public Rigidbody DoctorRB;
+    public BoxCollider DeathCollider;
 
     private void Start()
     {
-        DoctorDestination();
+        DoctorRB = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
     {
-        DoctorDestination();
-    }
-
-
-    public void DoctorDestination()
-    {
-     Doctor_NavAgent.SetDestination(player.transform.position);
+        DoctorRB.linearVelocity = new Vector3(0f, 0f, 3.5f);
     }
 
 }
