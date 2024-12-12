@@ -8,7 +8,7 @@ public class Deloader : MonoBehaviour
         if (other.CompareTag("Wall"))
         {
             
-            //Destroy(other.gameObject);
+            Destroy(other.gameObject);
             Debug.Log("deloading...");
         }
     }

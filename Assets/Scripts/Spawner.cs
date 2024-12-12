@@ -7,18 +7,22 @@ public class Spawner : MonoBehaviour
     private Vector3 SpawningPoint;
     public GameObject terrain;
     public Quaternion _Rotation;
+    public GameObject This_Wall;
+
+    private void Awake()
+    {
+        This_Wall.transform.parent = null;
+    }
 
     private void FixedUpdate()
     {
-        SpawningPoint = Spawn_Point.transform.position;
-        Debug.Log(SpawningPoint);
+        SpawningPoint = Spawn_Point.transform.position; 
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Wall"))
+        if (other.CompareTag("Player"))
         {
             Instantiate(Wall_1,SpawningPoint,_Rotation ,terrain.transform);
-            Debug.Log("Spawning Wall at "+SpawningPoint);
         }
     }
 }
