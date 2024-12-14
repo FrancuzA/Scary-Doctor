@@ -9,7 +9,7 @@ public class Deloader : MonoBehaviour
         {
             
             Destroy(other.gameObject);
-            Debug.Log("deloading...");
+            
         }
     }
 }

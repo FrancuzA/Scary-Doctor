@@ -6,6 +6,8 @@ public class Player_Movement : MonoBehaviour
 {
     [SerializeField] private Rigidbody PlayerRigidbody;
     [SerializeField] private float JumpForce;
+    [SerializeField] private float Speed;
+    public bool IsDead = false;
     private bool IsJumping = false;
 
     void Start()
@@ -24,7 +26,7 @@ public class Player_Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        PlayerRigidbody.linearVelocity = new Vector3(0f,0f,3.5f);
+        PlayerRigidbody.linearVelocity = new Vector3(0f,0f,Speed);
     }
 
 
