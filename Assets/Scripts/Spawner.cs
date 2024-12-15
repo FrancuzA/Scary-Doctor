@@ -10,10 +10,12 @@ public class Spawner : MonoBehaviour
     public GameObject terrain;
     public Quaternion _Rotation;
     public GameObject This_Wall;
+    public GameObject Score_Multip_Obj;
 
     private void Awake()
     {
         This_Wall.transform.parent = null;
+        RollForBonus();
     }
 
     private void FixedUpdate()
@@ -38,5 +40,10 @@ public class Spawner : MonoBehaviour
     
     }
     
+    public void RollForBonus()
+    {
+        float BRNG = Random.value;
+        if (BRNG <= 0.1) {Score_Multip_Obj.SetActive(true); }
+    }
 
 }
