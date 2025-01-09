@@ -10,6 +10,11 @@ public class Score_Multip : MonoBehaviour
         {
             StartCoroutine(StartBonus());
         }
+
+        if (other.CompareTag("Player") && Point_System.OnBonus == true)
+        {
+            shape.SetActive(false);
+        }
     }
 
 

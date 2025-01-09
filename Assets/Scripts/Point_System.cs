@@ -17,7 +17,6 @@ public class Point_System : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log("Multiplier is= " + Point_Multiplier);
         Current_Points +=Point_Multiplier * Time.deltaTime;
         Score_UI.text = Mathf.RoundToInt(Current_Points).ToString();
     }

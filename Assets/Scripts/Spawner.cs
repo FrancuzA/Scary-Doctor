@@ -26,7 +26,6 @@ public class Spawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("PlayerEnteredCollider");
             SpawnSegment();
         }
     }

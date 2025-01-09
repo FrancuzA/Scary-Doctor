@@ -1,0 +1,366 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5755069668030313951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../Documents/FMOD Studio/Scary_Doctor/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638720488296528287
+  FileSizes:
+  - Name: Desktop
+    Value: 1190
+  Exists: 1
+--- !u!114 &-4569453701520776943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musics/Music1
+  m_EditorClassIdentifier: 
+  Path: event:/musics/Music1
+  Guid:
+    Data1: -469383268
+    Data2: 1147485390
+    Data3: 286020772
+    Data4: 398362299
+  Banks:
+  - {fileID: 8143036433914323311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 45714
+--- !u!114 &-3750526235410612644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/Jump
+  Guid:
+    Data1: -1807636315
+    Data2: 1135500426
+    Data3: 993856445
+    Data4: 700877560
+  Banks:
+  - {fileID: 1866457140399820811}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2674988815963949897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/Death
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/Death
+  Guid:
+    Data1: 707884423
+    Data2: 1185010467
+    Data3: -572438358
+    Data4: -1371354478
+  Banks:
+  - {fileID: 1866457140399820811}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2586
+--- !u!114 &-1689284617029190967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musics/Music4
+  m_EditorClassIdentifier: 
+  Path: event:/musics/Music4
+  Guid:
+    Data1: -489414405
+    Data2: 1229623079
+    Data3: -197475694
+    Data4: -1836544130
+  Banks:
+  - {fileID: 8143036433914323311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 120013
+--- !u!114 &-753620710925539900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/Destroy
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/Destroy
+  Guid:
+    Data1: 1203169086
+    Data2: 1237906687
+    Data3: -1356326268
+    Data4: 2140779698
+  Banks:
+  - {fileID: 1866457140399820811}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -5755069668030313951}
+  - {fileID: 8143036433914323311}
+  - {fileID: 1866457140399820811}
+  EditorEvents:
+  - {fileID: 8444858475999638213}
+  - {fileID: -4569453701520776943}
+  - {fileID: 5656585704361751851}
+  - {fileID: 3954335476729098600}
+  - {fileID: -1689284617029190967}
+  - {fileID: 195077345824658688}
+  - {fileID: -753620710925539900}
+  - {fileID: -2674988815963949897}
+  - {fileID: 2701117042183403983}
+  - {fileID: -3750526235410612644}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 8143036433914323311}
+  StringsBanks:
+  - {fileID: -5755069668030313951}
+  cacheTime: 638720506718009272
+  cacheVersion: 131622
+--- !u!114 &195077345824658688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/MonsterRun
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/MonsterRun
+  Guid:
+    Data1: 1681669401
+    Data2: 1164024690
+    Data3: 1129735308
+    Data4: -1658006534
+  Banks:
+  - {fileID: 1866457140399820811}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6765
+--- !u!114 &1866457140399820811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SoundScaryDoctor.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../Documents/FMOD Studio/Scary_Doctor/Build/Desktop/SoundScaryDoctor.bank
+  Name: SoundScaryDoctor
+  StudioPath: bank:/SoundScaryDoctor
+  lastModified: 638720506718009272
+  FileSizes:
+  - Name: Desktop
+    Value: 825856
+  Exists: 1
+--- !u!114 &2701117042183403983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/BoyRun
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/BoyRun
+  Guid:
+    Data1: 864394122
+    Data2: 1331627725
+    Data3: -80714091
+    Data4: -2070940508
+  Banks:
+  - {fileID: 1866457140399820811}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 45144
+--- !u!114 &3954335476729098600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musics/Music3
+  m_EditorClassIdentifier: 
+  Path: event:/musics/Music3
+  Guid:
+    Data1: 1814173423
+    Data2: 1217996189
+    Data3: 1041923496
+    Data4: 1701182178
+  Banks:
+  - {fileID: 8143036433914323311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 117000
+--- !u!114 &5656585704361751851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musics/Music5
+  m_EditorClassIdentifier: 
+  Path: event:/musics/Music5
+  Guid:
+    Data1: -317228120
+    Data2: 1194472530
+    Data3: 735918243
+    Data4: 1794671395
+  Banks:
+  - {fileID: 8143036433914323311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 126390
+--- !u!114 &8143036433914323311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../../Documents/FMOD Studio/Scary_Doctor/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638720488296503167
+  FileSizes:
+  - Name: Desktop
+    Value: 7478080
+  Exists: 1
+--- !u!114 &8444858475999638213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musics/Music2
+  m_EditorClassIdentifier: 
+  Path: event:/musics/Music2
+  Guid:
+    Data1: 739071306
+    Data2: 1090208548
+    Data3: -119033465
+    Data4: 1263519746
+  Banks:
+  - {fileID: 8143036433914323311}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 146000
