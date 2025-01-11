@@ -25,6 +25,8 @@ public class Player_Movement : MonoBehaviour
     private bool isPlaying = false; // Tracks if the sound is currently playing
     public EventReference soundEvent; // The FMOD event to play in a loop
     private EventInstance soundInstance; // The FMOD event instance
+    public MusicPlayer Mplayer;
+    public GameObject DeathUI;
 
 
     void Start()
@@ -43,7 +45,7 @@ public class Player_Movement : MonoBehaviour
             StopSlide();
             Jumping();
         }
-        if (IsOnGround==true && isPlaying == false) {PlaySound();}
+        if (IsOnGround==true && isPlaying == false && PlayerRigidbody.linearVelocity.x >0) {PlaySound();}
         if(IsOnGround==false && isPlaying == true) { StopSound();}
         if (Input.GetKeyDown(KeyCode.S) && IsSliding == false) { StartSlide(); }
 
@@ -65,7 +67,6 @@ public class Player_Movement : MonoBehaviour
         PlayerRigidbody.linearVelocity = new Vector3(PlayerRigidbody.linearVelocity.x, 0f, PlayerRigidbody.linearVelocity.z);
         PlayerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         Debug.Log("JUmping");
-        
     }
 
     private void PlaySound()
@@ -111,4 +112,20 @@ public class Player_Movement : MonoBehaviour
         playerObj.localScale = new Vector3(playerObj.localScale.x, startYScale, playerObj.localScale.z);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Death();
+        }
+    }
+
+    public void Death()
+    {
+        Mplayer.currentTrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        Enemy_Mouvement.soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        DeathUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }

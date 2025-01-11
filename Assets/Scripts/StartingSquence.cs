@@ -5,6 +5,7 @@ using System.Collections;
 public class StartingSquence : MonoBehaviour
 {
     public TextMeshProUGUI CounterUI;
+    public MusicPlayer Mplayer;
     void Start()
     {
         StartCoroutine(StartingSequence());
@@ -23,5 +24,7 @@ public class StartingSquence : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         CounterUI.text = "";
         Time.timeScale = 1f;
+        Mplayer.PlayRandomTrack();
+        Enemy_Mouvement.soundInstance.start();
     }
 }
