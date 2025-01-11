@@ -1,7 +1,5 @@
-using System.Threading;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Point_System : MonoBehaviour
 {
