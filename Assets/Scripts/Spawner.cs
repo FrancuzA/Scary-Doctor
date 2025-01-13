@@ -11,6 +11,10 @@ public class Spawner : MonoBehaviour
     public Quaternion _Rotation;
     public GameObject This_Wall;
     public GameObject Score_Multip_Obj;
+    public LayerMask WhatIsWall;
+    public GameObject SpawnChecker;
+    public bool IsWallAlready;
+
 
     private void Awake()
     {
@@ -21,10 +25,11 @@ public class Spawner : MonoBehaviour
     private void FixedUpdate()
     {
         SpawningPoint = Spawn_Point.transform.position; 
+        IsWallAlready = Physics.Raycast(SpawnChecker.transform.position, Vector3.down,2f, WhatIsWall);
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Spawner") && IsWallAlready==false)
         {
             SpawnSegment();
         }
@@ -42,7 +47,7 @@ public class Spawner : MonoBehaviour
     public void RollForBonus()
     {
         float BRNG = Random.value;
-        if (BRNG <= 0.1) {Score_Multip_Obj.SetActive(true); }
+        if (BRNG <= 0.1) { Score_Multip_Obj.SetActive(true); Debug.Log("bonus spawned"); }
     }
 
 }
