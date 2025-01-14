@@ -3,50 +3,70 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using FMODUnity;
+using UnityEditor.SearchService;
+using System;
 
 public class Player_Movement : MonoBehaviour
 {
+    [SerializeField] private Transform playerObj;
     [SerializeField] private Rigidbody PlayerRigidbody;
     [SerializeField] private float JumpForce;
     [SerializeField] private float Speed;
+    [SerializeField] private float maxSlideTime;
+    [SerializeField] private float slideForcce;
+    [SerializeField] private float slideTimer;
+    [SerializeField] private float slideYscale;
+    private float startYScale;
+    public float playerHeight;
+    public LayerMask whatIsGround;
     public bool IsDead = false;
-    private bool IsJumping = false;
+    public bool IsOnGround = false;
+    private bool IsSliding = false;
+    private bool isPlaying = false; // Tracks if the sound is currently playing
     public EventReference soundEvent; // The FMOD event to play in a loop
     private EventInstance soundInstance; // The FMOD event instance
-    private bool isPlaying = false;     // Tracks if the sound is currently playing
+    public MusicPlayer Mplayer;
+    public GameObject DeathUI;
 
 
     void Start()
     {
         PlayerRigidbody = GetComponent<Rigidbody>();
         soundInstance = RuntimeManager.CreateInstance(soundEvent);
+        startYScale = playerObj.localScale.y;
     }
 
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && IsJumping==false) 
+        if (Input.GetKeyDown(KeyCode.W) && IsOnGround == true)
         {
-         StartCoroutine(Jumping());
+            IsOnGround = false;
+            StopSlide();
+            Jumping();
         }
+        if (IsOnGround==true && isPlaying == false && PlayerRigidbody.linearVelocity.x >0) {PlaySound();}
+        if(IsOnGround==false && isPlaying == true) { StopSound();}
+        if (Input.GetKeyDown(KeyCode.S) && IsSliding == false) { StartSlide(); }
 
-        if(IsJumping==false && isPlaying == false) {PlaySound();}
-        if(IsJumping==true && isPlaying == true) { StopSound();}
+        IsOnGround = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
     }
 
     private void FixedUpdate()
     {
-        PlayerRigidbody.linearVelocity = new Vector3(0f,0f,Speed);
+        PlayerRigidbody.linearVelocity = new Vector3(0f,PlayerRigidbody.linearVelocity.y,Speed);
+
+        if(Input.GetKeyDown(KeyCode.S) && IsSliding == false) {StartSlide();}
+
+        if (IsSliding == true) { SlideMovement();}
     }
 
 
-    IEnumerator Jumping()
+    private void Jumping()
     {
-        IsJumping = true;
-        PlayerRigidbody.AddForce(new Vector3(0, JumpForce, 0));
-        yield return new WaitForSeconds(1);
-        yield return new WaitUntil(() => Mathf.Abs(PlayerRigidbody.linearVelocity.y)<= 0.01);
-        IsJumping = false;
+        PlayerRigidbody.linearVelocity = new Vector3(PlayerRigidbody.linearVelocity.x, 0f, PlayerRigidbody.linearVelocity.z);
+        PlayerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+        Debug.Log("JUmping");
     }
 
     private void PlaySound()
@@ -69,5 +89,43 @@ public class Player_Movement : MonoBehaviour
             soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             soundInstance.release();
         }
+    }
+
+    private void StartSlide() 
+    {
+        IsSliding = true;
+        playerObj.localScale = new Vector3(playerObj.localScale.x,slideYscale,playerObj.localScale.z);
+        PlayerRigidbody.AddForce(Vector3.down * 50f, ForceMode.Impulse);
+        slideTimer = maxSlideTime;
+    }
+    private void SlideMovement()
+    {
+        PlayerRigidbody.AddForce(Vector3.forward * slideForcce, ForceMode.Force);
+
+        slideTimer -= Time.deltaTime;
+        if (slideTimer <= 0) { StopSlide(); }
+    }
+
+    private void StopSlide()
+    {
+        IsSliding = false;
+        playerObj.localScale = new Vector3(playerObj.localScale.x, startYScale, playerObj.localScale.z);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Death();
+        }
+    }
+
+    public void Death()
+    {
+        Mplayer.currentTrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        Enemy_Mouvement.soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        DeathUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

@@ -8,13 +8,13 @@ public class Enemy_Mouvement : MonoBehaviour
     public Rigidbody DoctorRB;
     public BoxCollider DeathCollider;
     public EventReference soundEvent; // The FMOD event to play in a loop
-    private EventInstance soundInstance; // The FMOD event instance
+    public static EventInstance soundInstance; // The FMOD event instance
 
     private void Start()
     {
         DoctorRB = GetComponent<Rigidbody>();
         soundInstance = RuntimeManager.CreateInstance(soundEvent);
-        soundInstance.start();
+        
     }
 
     private void FixedUpdate()

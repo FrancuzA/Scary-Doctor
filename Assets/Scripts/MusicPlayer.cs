@@ -6,7 +6,7 @@ using FMOD.Studio;
 public class MusicPlayer : MonoBehaviour
 {
     public List<EventReference> musicTracks; // List of FMOD events for music tracks
-    private EventInstance currentTrack; // The currently playing FMOD event instance
+    public EventInstance currentTrack; // The currently playing FMOD event instance
     private int lastTrackIndex = -1; // Keeps track of the last played track index
     public float volume = 1.0f;
 
@@ -16,12 +16,10 @@ public class MusicPlayer : MonoBehaviour
         {
             Debug.LogError("Music tracks list is empty!");
             return;
-        }
-
-        PlayRandomTrack();
+        } 
     }
 
-    private void PlayRandomTrack()
+    public void PlayRandomTrack()
     {
         if (musicTracks.Count <= 1)
         {
