@@ -7,10 +7,10 @@ public class Point_System : MonoBehaviour
 
     public int HighScore;
     public int LastGamePoint;
-    public int Current_Points;
-    public static int Point_Multiplier = 1;
+    public float Current_Points;
+    public int Point_Multiplier = 1;
     public TextMeshProUGUI Score_UI;
-    public static bool OnBonus = false;
+    public bool OnBonus = false;
 
     private void Awake()
     {
@@ -21,22 +21,23 @@ public class Point_System : MonoBehaviour
     }
     void Start()
     {
-        Point_Multiplier = 1;
+        Point_Multiplier = 10;
         Current_Points = 0;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        Current_Points +=Point_Multiplier * ((int)Time.deltaTime);
+        Debug.Log("addin points " + " current points: " + Current_Points + " Multiplier: " + Point_Multiplier + " time delta timme?: " + Time.deltaTime + " should add " + ( Point_Multiplier * ((int)Time.deltaTime)) + " to print on screen: " + Mathf.RoundToInt(Current_Points).ToString());
+        Current_Points += (Point_Multiplier * Time.deltaTime);
         Score_UI.text = Mathf.RoundToInt(Current_Points).ToString();
         if(HighScore <= Current_Points) 
         {
-            PlayerPrefs.SetInt("HighScore", Current_Points);
+            PlayerPrefs.SetFloat("HighScore", Current_Points);
         }
     }
 
     public void SaveLastPoints()
     {
-        PlayerPrefs.SetInt("LastGamePoint", Current_Points);
+        PlayerPrefs.SetFloat("LastGamePoint", Current_Points);
     }
 }

@@ -6,13 +6,23 @@ public class StartingSquence : MonoBehaviour
 {
     public TextMeshProUGUI CounterUI;
     public MusicPlayer Mplayer;
+    public bool StartSequenceEnded;
     void Start()
     {
         StartCoroutine(StartingSequence());
     }
 
+    public void Update()
+    {
+       /* if (StartSequenceEnded == true)
+        {
+            Time.timeScale = 1f;
+        }*/
+    }
+
     public IEnumerator StartingSequence()
     {
+        Debug.Log("TIme before " + Time.deltaTime);
         Time.timeScale = 0f;
         CounterUI.text = "3";
         yield return new WaitForSecondsRealtime(1);
@@ -24,7 +34,11 @@ public class StartingSquence : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         CounterUI.text = "";
         Time.timeScale = 1f;
+        yield return null;
+        yield return null;
+        Debug.Log("TIme after " + Time.deltaTime);
         Mplayer.PlayRandomTrack();
         Enemy_Mouvement.soundInstance.start();
+        Debug.Log("TIme after " + Time.deltaTime);
     }
 }

@@ -16,6 +16,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float slideForcce;
     [SerializeField] private float slideTimer;
     [SerializeField] private float slideYscale;
+    [SerializeField] private float AnimSpeed;
+    public Animator RunAnim;
     private float startYScale;
     public float playerHeight;
     public LayerMask whatIsGround;
@@ -31,6 +33,7 @@ public class Player_Movement : MonoBehaviour
 
     void Start()
     {
+        RunAnim.speed = AnimSpeed;
         PlayerRigidbody = GetComponent<Rigidbody>();
         soundInstance = RuntimeManager.CreateInstance(soundEvent);
         startYScale = playerObj.localScale.y;
