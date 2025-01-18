@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6003001083561602319}
   - component: {fileID: 8670741726675149894}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 4743950947507715757}
   - component: {fileID: 1215186585715946885}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ScoreName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 7908110629442130340}
   - component: {fileID: 3093959111145351476}
   - component: {fileID: 6794702958208083595}
+  - component: {fileID: 3549229850236407443}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -349,3 +350,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3549229850236407443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8486438017366580583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28fd3135b85b4e14fb7a8370f15a4e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameUI: {fileID: 1215186585715946885}
+  PointsUI: {fileID: 8670741726675149894}

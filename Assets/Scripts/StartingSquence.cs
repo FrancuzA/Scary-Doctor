@@ -11,15 +11,6 @@ public class StartingSquence : MonoBehaviour
     {
         StartCoroutine(StartingSequence());
     }
-
-    public void Update()
-    {
-       /* if (StartSequenceEnded == true)
-        {
-            Time.timeScale = 1f;
-        }*/
-    }
-
     public IEnumerator StartingSequence()
     {
         Debug.Log("TIme before " + Time.deltaTime);
@@ -36,9 +27,7 @@ public class StartingSquence : MonoBehaviour
         Time.timeScale = 1f;
         yield return null;
         yield return null;
-        Debug.Log("TIme after " + Time.deltaTime);
         Mplayer.PlayRandomTrack();
         Enemy_Mouvement.soundInstance.start();
-        Debug.Log("TIme after " + Time.deltaTime);
     }
 }

@@ -5,6 +5,7 @@ using TMPro;
 
 public class DeathScreen : MonoBehaviour
 {
+    public static DeathScreen instance;
     public GameObject ScoreSaving;
     public GameObject Choose;
     public GameObject InsertName;
@@ -14,7 +15,12 @@ public class DeathScreen : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
         ScoreSaving.SetActive(true);
+        Point_System.instance.SaveLastPoints();
     }
     public void TryAgain()
     {
@@ -28,13 +34,15 @@ public class DeathScreen : MonoBehaviour
 
     public void StartSaving() 
     {
+        Debug.Log("Starting save system");
         Choose.SetActive(false);
         InsertName.SetActive(true);
     }
 
     public void SetNewName()
     {
-        PlayerPrefs.SetString(NewScoreName, NameChosen.text);
+        Debug.Log("setting new name to " + NameChosen.text);
+        PlayerPrefs.SetString("NewScoreName", NameChosen.text);
     }
 
     public void NoSaving()

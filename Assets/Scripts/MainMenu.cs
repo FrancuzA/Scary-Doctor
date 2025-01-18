@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject MainMenuUI;
     public GameObject Scoreboard;
     public void StartGame() 
     {
@@ -16,11 +17,13 @@ public class MainMenu : MonoBehaviour
 
     public void OpenScoreboard()
     {
+        MainMenuUI.SetActive(false);
         Scoreboard.SetActive(true);
     }
 
     public void CloseScoreboard()
     {
+        MainMenuUI.SetActive(true);
         Scoreboard.SetActive(false);
     }
 }
