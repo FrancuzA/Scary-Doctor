@@ -20,7 +20,6 @@ public class DeathScreen : MonoBehaviour
             instance = this;
         }
         ScoreSaving.SetActive(true);
-        Point_System.instance.SaveLastPoints();
     }
     public void TryAgain()
     {
@@ -42,6 +41,7 @@ public class DeathScreen : MonoBehaviour
     public void SetNewName()
     {
         Debug.Log("setting new name to " + NameChosen.text);
+        Point_System.instance.SaveLastPoints();
         PlayerPrefs.SetString("NewScoreName", NameChosen.text);
     }
 
