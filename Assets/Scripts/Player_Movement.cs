@@ -27,7 +27,11 @@ public class Player_Movement : MonoBehaviour
     private bool IsSliding = false;
     private bool isPlaying = false; // Tracks if the sound is currently playing
     public EventReference soundEvent; // The FMOD event to play in a loop
+    public EventReference soundDeath;
+    public EventReference soundJump;
     private EventInstance soundInstance; // The FMOD event instance
+    private EventInstance DeathSoundInstance;
+    private EventInstance JumpSoundinstance;
     public MusicPlayer Mplayer;
     public GameObject DeathUI;
     public Animator Animator;
@@ -38,6 +42,8 @@ public class Player_Movement : MonoBehaviour
         RunAnim.speed = AnimSpeed;
         PlayerRigidbody = GetComponent<Rigidbody>();
         soundInstance = RuntimeManager.CreateInstance(soundEvent);
+        DeathSoundInstance = RuntimeManager.CreateInstance(soundDeath);
+        JumpSoundinstance = RuntimeManager.CreateInstance(soundJump);
     }
 
 
@@ -53,7 +59,7 @@ public class Player_Movement : MonoBehaviour
         if (IsOnGround == true && isPlaying == false && PlayerRigidbody.linearVelocity.x > 0) { PlaySound(); }
         if (IsOnGround == false && isPlaying == true) { StopSound(); }
         if (Input.GetKeyDown(KeyCode.S) && IsSliding == false) { StartSlide(); }
-
+        if (PlayerRigidbody.transform.position.y < -1) { Death(); }
         IsOnGround = Physics.Raycast(playerObj.transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Ground);
         if (IsOnGround)
         {
@@ -131,6 +137,7 @@ public class Player_Movement : MonoBehaviour
         Mplayer.currentTrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         Enemy_Mouvement.soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        DeathSoundInstance.start();
         DeathUI.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -156,6 +163,7 @@ public class Player_Movement : MonoBehaviour
         yield return null;
         yield return null;
         PlayerRigidbody.linearVelocity = new Vector3(PlayerRigidbody.linearVelocity.x, 0f, PlayerRigidbody.linearVelocity.z);
+        JumpSoundinstance.start();
         PlayerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         Debug.Log("JUmping");
         yield return null;

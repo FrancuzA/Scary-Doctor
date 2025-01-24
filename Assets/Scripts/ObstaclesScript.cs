@@ -1,3 +1,5 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
 public class ObstaclesScript : MonoBehaviour
@@ -9,10 +11,5 @@ public class ObstaclesScript : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * 3f, ForceMode.Impulse);
             other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 5f, ForceMode.Impulse);
         }
-        if (other.CompareTag("Enemy"))
-        {
-            Destroy(this.gameObject);
-        }
-
     }
 }

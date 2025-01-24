@@ -119,63 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &88697752
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.019564867
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.20886362
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.5229931
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 297871696596572966, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7338385761140465391, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
-      propertyPath: m_Name
-      value: WheelChair
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1fca09a8252507949bc715162caf28cd, type: 3}
 --- !u!1 &275325960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &1060931332
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1604,6 +1547,13 @@ MonoBehaviour:
       Data3: 1129735308
       Data4: -1658006534
     Path: event:/sounds/MonsterRun
+  DestorySound:
+    Guid:
+      Data1: 1203169086
+      Data2: 1237906687
+      Data3: -1356326268
+      Data4: 2140779698
+    Path: event:/sounds/Destroy
 --- !u!136 &1060931339
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2465,7 +2415,7 @@ Transform:
   m_GameObject: {fileID: 1588014592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.051, z: 0}
+  m_LocalPosition: {x: 0, y: 1.051, z: -1.69}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2500,7 +2450,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 114
   m_CollisionDetection: 1
 --- !u!114 &1588014598
 MonoBehaviour:
@@ -2519,7 +2469,7 @@ MonoBehaviour:
   JumpForce: 5
   Speed: 3.5
   maxSlideTime: 1
-  slideForcce: 30
+  slideForcce: 10
   slideTimer: 0
   SlidingCollider: {fileID: 692200434}
   AnimSpeed: 1.5
@@ -2541,6 +2491,20 @@ MonoBehaviour:
       Data3: -80714091
       Data4: -2070940508
     Path: event:/sounds/BoyRun
+  soundDeath:
+    Guid:
+      Data1: 707884423
+      Data2: 1185010467
+      Data3: -572438358
+      Data4: -1371354478
+    Path: event:/sounds/Death
+  soundJump:
+    Guid:
+      Data1: -1807636315
+      Data2: 1135500426
+      Data3: 993856445
+      Data4: 700877560
+    Path: event:/sounds/Jump
   Mplayer: {fileID: 1075685095}
   DeathUI: {fileID: 1742941257}
   Animator: {fileID: 919132149214468213}
@@ -16628,4 +16592,3 @@ SceneRoots:
   - {fileID: 1014925188}
   - {fileID: 1177817413}
   - {fileID: 740639935}
-  - {fileID: 88697752}
