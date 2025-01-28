@@ -15,12 +15,15 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float maxSlideTime;
     [SerializeField] private float slideForcce;
     [SerializeField] private float slideTimer;
+    [SerializeField] private float gettingUpAnimationLength = 1.0f;
     [SerializeField] private GameObject SlidingCollider;
     [SerializeField] private float AnimSpeed;
-    public Animator RunAnim;
+    public Animator characterAnim;
     public float playerHeight;
     public LayerMask Ground;
     public LayerMask obstacle;
+    private Coroutine gettingUpRoutine;
+    private bool isJumping = false;
     public bool IsDead = false;
     public bool IsOnGround = false;
     public bool IsSomethingBlocking;
@@ -34,12 +37,11 @@ public class Player_Movement : MonoBehaviour
     private EventInstance JumpSoundinstance;
     public MusicPlayer Mplayer;
     public GameObject DeathUI;
-    public Animator Animator;
 
 
     void Start()
     {
-        RunAnim.speed = AnimSpeed;
+        characterAnim.speed = AnimSpeed;
         PlayerRigidbody = GetComponent<Rigidbody>();
         soundInstance = RuntimeManager.CreateInstance(soundEvent);
         DeathSoundInstance = RuntimeManager.CreateInstance(soundDeath);
@@ -49,18 +51,25 @@ public class Player_Movement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Jumping? " + Animator.GetBool("IsJumping"));
-        if (Input.GetKeyDown(KeyCode.S) && IsSliding == false) { StartSlide(); }
-        if (Input.GetKeyDown(KeyCode.W) && IsOnGround == true && IsSomethingBlocking == false)
+        if (Input.GetKeyDown(KeyCode.S) && !IsSliding && characterAnim.GetBool("IsRunning")) { StartSlide(); }
+        if (Input.GetKeyDown(KeyCode.W) && IsOnGround && !IsSomethingBlocking && !isJumping && !characterAnim.GetBool("IsGettingUp"))
         {
-            StopSlide();
-            StartCoroutine(UpdateJumpFallState());
+            if (gettingUpRoutine != null)
+            {
+                StopCoroutine(gettingUpRoutine);
+                gettingUpRoutine = null;
+            }
+            StopSlide(true);
+            StartCoroutine(JumpRoutine());
         }
+        IsOnGround = Physics.Raycast(playerObj.transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Ground);
+        
+        Debug.Log(IsOnGround);
+        characterAnim.SetBool("IsGrounded", IsOnGround);
         if (IsOnGround == true && isPlaying == false && PlayerRigidbody.linearVelocity.x > 0) { PlaySound(); }
         if (IsOnGround == false && isPlaying == true) { StopSound(); }
-        if (Input.GetKeyDown(KeyCode.S) && IsSliding == false) { StartSlide(); }
         if (PlayerRigidbody.transform.position.y < -1) { Death(); }
-        IsOnGround = Physics.Raycast(playerObj.transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Ground);
+        
         if (IsOnGround)
         {
             Debug.DrawRay(transform.position, Vector3.down * (playerHeight * 0.5f + 0.2f), Color.green); // Ground hit
@@ -75,11 +84,83 @@ public class Player_Movement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 newPosition = PlayerRigidbody.position + Vector3.forward * Speed * Time.deltaTime;
-
         PlayerRigidbody.MovePosition(newPosition);
-        if (IsSliding == true) { SlideMovement(); }
+
+        if (IsSliding)
+        {
+            SlideMovement();
+        }
+
     }
 
+    private IEnumerator GettingUpRoutine()
+    {
+        /*float animationLength = characterAnim
+       .GetCurrentAnimatorStateInfo(0)
+       .length;
+
+        yield return new WaitForSeconds(animationLength);*/
+
+        characterAnim.SetBool("IsGettingUp", true);
+        characterAnim.SetBool("IsRunning", false);
+        // Wait for animation to complete
+        float timer = 0;
+        while (timer < gettingUpAnimationLength)
+        {
+            // Check if interrupted by jump
+            if (isJumping) yield break;
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        characterAnim.SetBool("IsGettingUp", false);
+        characterAnim.SetBool("IsRunning", true);
+        gettingUpRoutine = null;
+    }
+
+    private IEnumerator JumpRoutine()
+    {
+        isJumping = true;
+        characterAnim.SetBool("IsRunning", false);
+        characterAnim.SetBool("IsJumping", true);
+        if (gettingUpRoutine != null)
+        {
+            StopCoroutine(gettingUpRoutine);
+            gettingUpRoutine = null;
+        }
+        if (IsSliding) StopSlide(true);
+
+        // Jump physics
+        PlayerRigidbody.linearVelocity = new Vector3(PlayerRigidbody.linearVelocity.x, 0f, PlayerRigidbody.linearVelocity.z);
+        PlayerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+        JumpSoundinstance.start();
+
+        // Wait for landing
+        yield return new WaitUntil(() => IsOnGround);
+        yield return new WaitForFixedUpdate();
+        // Landing logic
+        characterAnim.SetBool("IsJumping", false);
+        characterAnim.SetBool("IsLanding", true);
+        yield return new WaitForSeconds(1.4f);
+        characterAnim.SetBool("IsLanding", false);
+        characterAnim.SetBool("IsRunning", true);
+        isJumping = false;
+    }
+
+    private void StopSlide(bool fromJump = false)
+    {
+        IsSliding = false;
+        characterAnim.SetBool("IsSliding", false);
+        GetComponent<CapsuleCollider>().enabled = true;
+        SlidingCollider.SetActive(false);
+
+        if (!fromJump && !isJumping)
+        {
+            if (gettingUpRoutine != null) StopCoroutine(gettingUpRoutine);
+            gettingUpRoutine = StartCoroutine(GettingUpRoutine());
+        }
+    }
     private void PlaySound()
     {
         soundInstance.start();
@@ -104,9 +185,12 @@ public class Player_Movement : MonoBehaviour
 
     private void StartSlide()
     {
+        characterAnim.SetBool("IsRunning", false);
+        characterAnim.SetBool("IsGettingUp", false);
         IsSliding = true;
+        characterAnim.SetBool("IsSliding", true);
         SlidingCollider.SetActive(true);
-        this.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
         slideTimer = maxSlideTime;
     }
     private void SlideMovement()
@@ -114,14 +198,7 @@ public class Player_Movement : MonoBehaviour
         PlayerRigidbody.AddForce(Vector3.forward * slideForcce, ForceMode.Force);
 
         slideTimer -= Time.deltaTime;
-        if (slideTimer <= 0 && IsSomethingBlocking == false) { StopSlide(); }
-    }
-
-    private void StopSlide()
-    {
-        IsSliding = false;
-        this.gameObject.GetComponent<CapsuleCollider>().enabled = true;
-        SlidingCollider.SetActive(false);
+        if (slideTimer <= 0 && !IsSomethingBlocking && IsSliding) { StopSlide(); }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -140,68 +217,5 @@ public class Player_Movement : MonoBehaviour
         DeathSoundInstance.start();
         DeathUI.SetActive(true);
         Time.timeScale = 0f;
-    }
-
-
-    private IEnumerator UpdateJumpFallState()
-    {
-        Animator.SetBool("IsRunning", false);
-        StopSlide();
-        Animator.SetBool("IsJumping", true);
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        PlayerRigidbody.linearVelocity = new Vector3(PlayerRigidbody.linearVelocity.x, 0f, PlayerRigidbody.linearVelocity.z);
-        JumpSoundinstance.start();
-        PlayerRigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
-        Debug.Log("JUmping");
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-
-        yield return new WaitUntil(() => IsOnGround == true);
-        Debug.Log("IsOnGround");
-        Animator.SetBool("IsJumping", false);
-        Animator.SetBool("IsFalling", true);
-        yield return null;
-        yield return null;
-        yield return null;
-        yield return null;
-        /*while (!IsOnGround)
-        {
-            if (PlayerRigidbody.linearVelocity.y < 0 && !Animator.GetBool("IsFalling"))
-            {
-                Animator.SetBool("IsJumping", false);
-                Animator.SetBool("IsFalling", true);
-                Debug.Log("Falling");
-            }
-            yield return null;
-        }*/
-
-        Animator.SetBool("IsFalling", false);
-        Animator.SetBool("IsRunning", true);
-        Debug.Log("Landed");
     }
 }

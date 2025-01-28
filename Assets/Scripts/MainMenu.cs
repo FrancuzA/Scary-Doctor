@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject MainMenuUI;
     public GameObject Scoreboard;
+    public GameObject CreditsUI;
     public void StartGame() 
     {
         SceneManager.LoadScene(1);
@@ -15,15 +16,16 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void OpenScoreboard()
+    public void OpenCloseScoreboard()
     {
-        MainMenuUI.SetActive(false);
-        Scoreboard.SetActive(true);
+        MainMenuUI.SetActive(!MainMenuUI.activeInHierarchy);
+        Scoreboard.SetActive(!Scoreboard.activeInHierarchy);
     }
 
-    public void CloseScoreboard()
+    public void OpenCloseCredits()
     {
-        MainMenuUI.SetActive(true);
-        Scoreboard.SetActive(false);
+        CreditsUI.SetActive(!CreditsUI.activeInHierarchy);
     }
+
+
 }

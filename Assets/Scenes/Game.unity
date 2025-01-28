@@ -823,7 +823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &692200435
 Transform:
   m_ObjectHideFlags: 0
@@ -833,7 +833,7 @@ Transform:
   m_GameObject: {fileID: 692200434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.045, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2415,7 +2415,7 @@ Transform:
   m_GameObject: {fileID: 1588014592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 1.051, z: -1.69}
+  m_LocalPosition: {x: 0, y: 1.08, z: -1.69}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2471,9 +2471,10 @@ MonoBehaviour:
   maxSlideTime: 1
   slideForcce: 10
   slideTimer: 0
+  gettingUpAnimationLength: 1
   SlidingCollider: {fileID: 692200434}
   AnimSpeed: 1.5
-  RunAnim: {fileID: 919132149214468213}
+  characterAnim: {fileID: 919132149214468213}
   playerHeight: 1.3
   Ground:
     serializedVersion: 2
@@ -2507,7 +2508,6 @@ MonoBehaviour:
     Path: event:/sounds/Jump
   Mplayer: {fileID: 1075685095}
   DeathUI: {fileID: 1742941257}
-  Animator: {fileID: 919132149214468213}
 --- !u!136 &1588014599
 CapsuleCollider:
   m_ObjectHideFlags: 0
