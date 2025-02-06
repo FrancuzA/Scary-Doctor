@@ -63,8 +63,6 @@ public class Player_Movement : MonoBehaviour
             StartCoroutine(JumpRoutine());
         }
         IsOnGround = Physics.Raycast(playerObj.transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Ground);
-        
-        Debug.Log(IsOnGround);
         characterAnim.SetBool("IsGrounded", IsOnGround);
         if (IsOnGround == true && isPlaying == false && PlayerRigidbody.linearVelocity.x > 0) { PlaySound(); }
         if (IsOnGround == false && isPlaying == true) { StopSound(); }
@@ -142,7 +140,7 @@ public class Player_Movement : MonoBehaviour
         // Landing logic
         characterAnim.SetBool("IsJumping", false);
         characterAnim.SetBool("IsLanding", true);
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitUntil(() => characterAnim.GetCurrentAnimatorStateInfo(0).IsName("rig|Landing_Animation"));
         characterAnim.SetBool("IsLanding", false);
         characterAnim.SetBool("IsRunning", true);
         isJumping = false;
