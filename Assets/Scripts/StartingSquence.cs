@@ -13,7 +13,6 @@ public class StartingSquence : MonoBehaviour
     }
     public IEnumerator StartingSequence()
     {
-        Debug.Log("TIme before " + Time.deltaTime);
         Time.timeScale = 0f;
         CounterUI.text = "3";
         yield return new WaitForSecondsRealtime(1);

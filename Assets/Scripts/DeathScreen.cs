@@ -33,16 +33,13 @@ public class DeathScreen : MonoBehaviour
 
     public void StartSaving() 
     {
-        Debug.Log("Starting save system");
         Choose.SetActive(false);
         InsertName.SetActive(true);
     }
 
     public void SetNewName()
     {
-        Debug.Log("setting new name to " + NameChosen.text);
         Point_System.instance.SaveLastPoints();
-        PlayerPrefs.SetString("NewScoreName", NameChosen.text);
     }
 
     public void NoSaving()

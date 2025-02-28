@@ -17,13 +17,24 @@ public class Spawner : MonoBehaviour
     public GameObject SpawnChecker;
     public bool IsWallAlready;
     public List<GameObject> Obstacles;
-    public float ObstacleSpawnChance = 0.3f;
+    public float ObstacleSpawnChance;
+    public int Difficulty;
 
 
     private void Awake()
     {
         This_Wall.transform.parent = null;
         RollForBonus();
+        Difficulty = PlayerPrefs.GetInt("DifficultyLvl");
+        switch (Difficulty) { 
+            case 0: ObstacleSpawnChance = 0.3f;
+                break;
+            case 1: ObstacleSpawnChance = 0.45f;
+                break;
+            case 2: ObstacleSpawnChance = 0.7f;
+                break;
+
+        }
     }
 
     private void FixedUpdate()
@@ -58,18 +69,12 @@ public class Spawner : MonoBehaviour
 
     public void RollForObstacle()
     {
-        // Roll for the chance to spawn an obstacle
         if (UnityEngine.Random.value <= ObstacleSpawnChance && Obstacles.Count > 0)
         {
-            // Choose a random obstacle from the list
             int randomIndex = UnityEngine.Random.Range(0, Obstacles.Count);
             GameObject selectedObstacle = Obstacles[randomIndex];
 
            PlaceObstacle(selectedObstacle);
-        }
-        else
-        {
-            Debug.Log("No obstacle spawned this time.");
         }
     }
 

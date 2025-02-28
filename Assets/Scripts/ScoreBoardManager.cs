@@ -33,11 +33,8 @@ public class ScoreBoardManager : MonoBehaviour
 
     public void AddNewScore(string name, float points)
     {
-        Debug.Log($"Adding new score: Name={name}, Points={points}");
-
         if (IsDuplicate(name, points))
         {
-            Debug.LogWarning($"Duplicate score detected: Name={name}, Points={points}. Skipping.");
             return;
         }
 
@@ -72,10 +69,6 @@ public class ScoreBoardManager : MonoBehaviour
             if (nameText != null) nameText.text = name;
             if (pointsText != null) pointsText.text = points.ToString();
         }
-        else
-        {
-            Debug.LogWarning("Name or Points child not found in ScoreLine prefab.");
-        }
     }
 
     public void LoadScoresFromJson()
@@ -101,10 +94,6 @@ public class ScoreBoardManager : MonoBehaviour
                     CreateScoreLineUI(score.name, score.points);
                 }
             }
-        }
-        else
-        {
-            Debug.Log("No previous scores found.");
         }
     }
 

@@ -1,10 +1,7 @@
 using FMOD.Studio;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using FMODUnity;
-using UnityEditor.SearchService;
-using System;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -18,6 +15,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float gettingUpAnimationLength = 1.0f;
     [SerializeField] private GameObject SlidingCollider;
     [SerializeField] private float AnimSpeed;
+    private int NextMileStone = 10;
+    private float CurrentDistance = 0;
     public Animator characterAnim;
     public float playerHeight;
     public LayerMask Ground;
@@ -67,16 +66,8 @@ public class Player_Movement : MonoBehaviour
         if (IsOnGround == true && isPlaying == false && PlayerRigidbody.linearVelocity.x > 0) { PlaySound(); }
         if (IsOnGround == false && isPlaying == true) { StopSound(); }
         if (PlayerRigidbody.transform.position.y < -1) { Death(); }
-        
-        if (IsOnGround)
-        {
-            Debug.DrawRay(transform.position, Vector3.down * (playerHeight * 0.5f + 0.2f), Color.green); // Ground hit
-        }
-        else
-        {
-            Debug.DrawRay(transform.position, Vector3.down * (playerHeight * 0.5f + 0.2f), Color.red); // No ground hit
-        }
         IsSomethingBlocking = Physics.Raycast(SlidingCollider.transform.position - new Vector3(0, 0.5f, 0), Vector3.up, playerHeight, obstacle);
+        SpeedUpGame();
     }
 
     private void FixedUpdate()
@@ -93,21 +84,13 @@ public class Player_Movement : MonoBehaviour
 
     private IEnumerator GettingUpRoutine()
     {
-        /*float animationLength = characterAnim
-       .GetCurrentAnimatorStateInfo(0)
-       .length;
-
-        yield return new WaitForSeconds(animationLength);*/
 
         characterAnim.SetBool("IsGettingUp", true);
         characterAnim.SetBool("IsRunning", false);
-        // Wait for animation to complete
         float timer = 0;
         while (timer < gettingUpAnimationLength)
         {
-            // Check if interrupted by jump
             if (isJumping) yield break;
-
             timer += Time.deltaTime;
             yield return null;
         }
@@ -173,7 +156,6 @@ public class Player_Movement : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Clean up the FMOD event instance when the object is destroyed
         if (soundInstance.isValid())
         {
             soundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -216,4 +198,17 @@ public class Player_Movement : MonoBehaviour
         DeathUI.SetActive(true);
         Time.timeScale = 0f;
     }
+
+    public void SpeedUpGame()
+    {
+
+        CurrentDistance += Time.deltaTime;
+        if (CurrentDistance > NextMileStone)
+        {
+            NextMileStone += 10;
+            Speed = 2*Mathf.Log(Speed, 2);
+        }
+        Debug.Log("Distance "+CurrentDistance + " Milestone "+ NextMileStone+ " Current speed " +Speed+ " Log od speed " + 2*Mathf.Log(Speed, 2));
+    }
+   
 }

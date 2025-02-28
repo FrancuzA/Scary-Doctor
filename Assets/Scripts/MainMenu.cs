@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
     public GameObject MainMenuUI;
     public GameObject Scoreboard;
     public GameObject CreditsUI;
+    public GameObject DifficultyUI;
     public void StartGame() 
     {
         SceneManager.LoadScene(1);
@@ -27,5 +28,14 @@ public class MainMenu : MonoBehaviour
         CreditsUI.SetActive(!CreditsUI.activeInHierarchy);
     }
 
+    public void ChooseDifficulty() 
+    {
+        DifficultyUI.SetActive(!DifficultyUI.activeInHierarchy);
+    }
 
+    public void SetDifficulty(int Lvl)
+    {
+        PlayerPrefs.SetInt("DifficultyLvl", Lvl);
+        StartGame();
+    }
 }
