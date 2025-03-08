@@ -29,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3132992830615620766}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.053033214, z: 0, w: 0.9985928}
-  m_LocalPosition: {x: 0, y: 0.20749116, z: 1.8583683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -6.08, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5375539424378012295
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -123,13 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3325a6419e40d74ba8ed09a83d5064f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestorySound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!135 &7415739199466268234
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -149,5 +142,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.67
-  m_Center: {x: 0, y: 0.52, z: 0.04}
+  m_Radius: 0.4793474
+  m_Center: {x: 0, y: 0.52, z: -0.06}
