@@ -12,11 +12,7 @@ public class MusicPlayer : MonoBehaviour
 
     void Start()
     {
-        if (musicTracks == null || musicTracks.Count == 0)
-        {
-            Debug.LogError("Music tracks list is empty!");
-            return;
-        } 
+        PlayRandomTrack();
     }
 
     public void PlayRandomTrack()

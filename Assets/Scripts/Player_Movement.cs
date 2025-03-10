@@ -15,7 +15,8 @@ public class Player_Movement : MonoBehaviour
     [SerializeField] private float gettingUpAnimationLength = 1.0f;
     [SerializeField] private GameObject SlidingCollider;
     [SerializeField] private float AnimSpeed;
-    private int NextMileStone = 10;
+    [SerializeField] private float StartingMilestone;
+    private int NextMileStone = 50;
     private float CurrentDistance = 0;
     public Animator characterAnim;
     public float playerHeight;
@@ -40,6 +41,7 @@ public class Player_Movement : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1.0f;
         characterAnim.speed = AnimSpeed;
         PlayerRigidbody = GetComponent<Rigidbody>();
         soundInstance = RuntimeManager.CreateInstance(soundEvent);
@@ -123,7 +125,7 @@ public class Player_Movement : MonoBehaviour
         // Landing logic
         characterAnim.SetBool("IsJumping", false);
         characterAnim.SetBool("IsLanding", true);
-        yield return new WaitUntil(() => characterAnim.GetCurrentAnimatorStateInfo(0).IsName("rig|Landing_Animation"));
+        yield return new WaitUntil(() => characterAnim.GetCurrentAnimatorStateInfo(0).IsName("rig|Landing_Animation 0"));
         characterAnim.SetBool("IsLanding", false);
         characterAnim.SetBool("IsRunning", true);
         isJumping = false;
@@ -203,12 +205,19 @@ public class Player_Movement : MonoBehaviour
     {
 
         CurrentDistance += Time.deltaTime;
+        if (CurrentDistance > StartingMilestone-0.5f && CurrentDistance < 50)
+        {
+            Enemy_Mouvement.StartMoving();
+        }
+        if (CurrentDistance > StartingMilestone && CurrentDistance < 50)
+        {
+            Speed = 3.6f;
+        }
         if (CurrentDistance > NextMileStone)
         {
             NextMileStone += 10;
             Speed = 2*Mathf.Log(Speed, 2);
         }
-        Debug.Log("Distance "+CurrentDistance + " Milestone "+ NextMileStone+ " Current speed " +Speed+ " Log od speed " + 2*Mathf.Log(Speed, 2));
     }
    
 }

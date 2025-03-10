@@ -9,7 +9,7 @@ public class ObstaclesScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * 3f, ForceMode.Impulse);
-            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 5f, ForceMode.Impulse);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 3f, ForceMode.Impulse);
         }
     }
 }
