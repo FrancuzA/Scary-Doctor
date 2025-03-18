@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{20d7cf09-5779-455c-9aee-5851141838ae}">
 		<property name="assetPath">
 			<value>SOunds/explosion-sound-effect-1-free-on-gamesfxpackscom-241821.mp3</value>
