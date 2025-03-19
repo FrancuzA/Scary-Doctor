@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.02.00">
+<objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{429d3ad2-7ba3-468f-80fb-a22e0d74379c}">
 		<property name="assetPath">
 			<value>Musics/141949978-accelerate-action-sport-rock-i.wav</value>
