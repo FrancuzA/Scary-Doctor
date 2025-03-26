@@ -1,25 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5755069668030313951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../../Documents/FMOD Studio/Scary_Doctor/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638720488296528287
-  FileSizes:
-  - Name: Desktop
-    Value: 1190
-  Exists: 1
 --- !u!114 &-4569453701520776943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,7 +19,7 @@ MonoBehaviour:
     Data3: 286020772
     Data4: 398362299
   Banks:
-  - {fileID: 8143036433914323311}
+  - {fileID: 3989416404210304957}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -66,7 +46,7 @@ MonoBehaviour:
     Data3: 993856445
     Data4: 700877560
   Banks:
-  - {fileID: 1866457140399820811}
+  - {fileID: 2295591327430685325}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -93,7 +73,7 @@ MonoBehaviour:
     Data3: -572438358
     Data4: -1371354478
   Banks:
-  - {fileID: 1866457140399820811}
+  - {fileID: 2295591327430685325}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -120,7 +100,7 @@ MonoBehaviour:
     Data3: -197475694
     Data4: -1836544130
   Banks:
-  - {fileID: 8143036433914323311}
+  - {fileID: 3989416404210304957}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -147,7 +127,7 @@ MonoBehaviour:
     Data3: -1356326268
     Data4: 2140779698
   Banks:
-  - {fileID: 1866457140399820811}
+  - {fileID: 2295591327430685325}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -168,9 +148,9 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -5755069668030313951}
-  - {fileID: 8143036433914323311}
-  - {fileID: 1866457140399820811}
+  - {fileID: 1094533384844518940}
+  - {fileID: 3989416404210304957}
+  - {fileID: 2295591327430685325}
   EditorEvents:
   - {fileID: 8444858475999638213}
   - {fileID: -4569453701520776943}
@@ -184,10 +164,10 @@ MonoBehaviour:
   - {fileID: -3750526235410612644}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8143036433914323311}
+  - {fileID: 3989416404210304957}
   StringsBanks:
-  - {fileID: -5755069668030313951}
-  cacheTime: 638720506718009272
+  - {fileID: 1094533384844518940}
+  cacheTime: 638778455906871620
   cacheVersion: 131622
 --- !u!114 &195077345824658688
 MonoBehaviour:
@@ -208,7 +188,7 @@ MonoBehaviour:
     Data3: 1129735308
     Data4: -1658006534
   Banks:
-  - {fileID: 1866457140399820811}
+  - {fileID: 2295591327430685325}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -216,7 +196,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6765
---- !u!114 &1866457140399820811
+--- !u!114 &1094533384844518940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Music and sounds/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638778455906871620
+  FileSizes:
+  - Name: Desktop
+    Value: 1190
+  Exists: 1
+--- !u!114 &2295591327430685325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -228,10 +228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/SoundScaryDoctor.bank
   m_EditorClassIdentifier: 
-  Path: ../../../../Documents/FMOD Studio/Scary_Doctor/Build/Desktop/SoundScaryDoctor.bank
+  Path: Assets/Music and sounds/Build/Desktop/SoundScaryDoctor.bank
   Name: SoundScaryDoctor
   StudioPath: bank:/SoundScaryDoctor
-  lastModified: 638720506718009272
+  lastModified: 638778455906871620
   FileSizes:
   - Name: Desktop
     Value: 825856
@@ -255,7 +255,7 @@ MonoBehaviour:
     Data3: -80714091
     Data4: -2070940508
   Banks:
-  - {fileID: 1866457140399820811}
+  - {fileID: 2295591327430685325}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
     Data3: 1041923496
     Data4: 1701182178
   Banks:
-  - {fileID: 8143036433914323311}
+  - {fileID: 3989416404210304957}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -290,6 +290,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 117000
+--- !u!114 &3989416404210304957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Music and sounds/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638778455906871620
+  FileSizes:
+  - Name: Desktop
+    Value: 7478080
+  Exists: 1
 --- !u!114 &5656585704361751851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +329,7 @@ MonoBehaviour:
     Data3: 735918243
     Data4: 1794671395
   Banks:
-  - {fileID: 8143036433914323311}
+  - {fileID: 3989416404210304957}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -317,26 +337,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 126390
---- !u!114 &8143036433914323311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../../../../Documents/FMOD Studio/Scary_Doctor/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638720488296503167
-  FileSizes:
-  - Name: Desktop
-    Value: 7478080
-  Exists: 1
 --- !u!114 &8444858475999638213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
     Data3: -119033465
     Data4: 1263519746
   Banks:
-  - {fileID: 8143036433914323311}
+  - {fileID: 3989416404210304957}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
