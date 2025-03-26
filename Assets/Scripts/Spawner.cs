@@ -44,14 +44,17 @@ public class Spawner : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Spawner") && IsWallAlready==false)
         {
+            Debug.Log("spawner triggered");
             SpawnSegment();
         }
     }
 
     public void SpawnSegment() 
     {
+        Debug.Log("spawning wall?");
         float RNG = UnityEngine.Random.Range(0f, 10f);
         if (RNG <=4.5f) { Instantiate(Wall_Empty, SpawningPoint, _Rotation, terrain.transform); }
         if (RNG > 4.5f && RNG <= 9) { Instantiate(Wall_Chairs, SpawningPoint, _Rotation, terrain.transform); }
