@@ -2786,10 +2786,10 @@ MonoBehaviour:
     Path: event:/sounds/Death
   soundJump:
     Guid:
-      Data1: -1807636315
-      Data2: 1135500426
-      Data3: 993856445
-      Data4: 700877560
+      Data1: -2011408918
+      Data2: 1312506845
+      Data3: -589294427
+      Data4: -255535933
     Path: event:/sounds/Jump
   Mplayer: {fileID: 1075685095}
   DeathUI: {fileID: 1742941257}
