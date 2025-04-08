@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject Wall_Empty;
-    public GameObject Wall_Chairs;
-    public GameObject Wall_Doors;
+    
     public GameObject Spawn_Point;
-    private Vector3 SpawningPoint;
     public GameObject terrain;
-    public Quaternion _Rotation;
     public GameObject This_Wall;
     public GameObject Score_Multip_Obj;
-    public LayerMask WhatIsWall;
     public GameObject SpawnChecker;
-    public bool IsWallAlready;
+    private Vector3 SpawningPoint;
+    private Quaternion _Rotation;
+    public LayerMask WhatIsWall;
+    private bool IsWallAlready;
     public List<GameObject> Obstacles;
-    public float ObstacleSpawnChance;
-    public int Difficulty;
+    private List<GameObject> CurrentWalls;
+    public List<GameObject> WallsLvl1;
+    public List<GameObject> WallsLvl2;  
+    private float ObstacleSpawnChance;
+    private int Difficulty;
 
 
     private void Awake()
     {
+        CurrentWalls = WallsLvl1;
         This_Wall.transform.parent = null;
         RollForBonus();
         Difficulty = PlayerPrefs.GetInt("DifficultyLvl");
@@ -47,7 +49,12 @@ public class Spawner : MonoBehaviour
 
         if (other.CompareTag("Spawner") && IsWallAlready==false)
         {
-            Debug.Log("spawner triggered");
+            if(Point_System.instance.Current_Points >= 100)
+            {
+                CurrentWalls.Clear();
+                CurrentWalls = WallsLvl2;
+            }
+
             SpawnSegment();
         }
     }
@@ -55,12 +62,9 @@ public class Spawner : MonoBehaviour
     public void SpawnSegment() 
     {
         Debug.Log("spawning wall?");
-        float RNG = UnityEngine.Random.Range(0f, 10f);
-        if (RNG <=4.5f) { Instantiate(Wall_Empty, SpawningPoint, _Rotation, terrain.transform); }
-        if (RNG > 4.5f && RNG <= 9) { Instantiate(Wall_Chairs, SpawningPoint, _Rotation, terrain.transform); }
-        if(RNG >9 && RNG <=10) { Instantiate(Wall_Doors, SpawningPoint, _Rotation, terrain.transform); }
-
-
+        int RNG = UnityEngine.Random.Range(0, WallsLvl1.Count);
+        GameObject SelectecWall = CurrentWalls[RNG];
+        Instantiate(SelectecWall, SpawningPoint, _Rotation, terrain.transform);
         RollForObstacle();
     }
     

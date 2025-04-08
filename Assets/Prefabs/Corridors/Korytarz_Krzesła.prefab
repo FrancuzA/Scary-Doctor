@@ -67,26 +67,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eecce844fd6d9146815eef48703b8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wall_Empty: {fileID: 3447492740785255843, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
-  Wall_Chairs: {fileID: 6820764681110063391}
-  Wall_Doors: {fileID: 6251084768089269200, guid: f25065513c7179943bf28c0ab55e1bbe, type: 3}
   Spawn_Point: {fileID: 4959333750843385858}
   terrain: {fileID: 6820764681110063391}
-  _Rotation: {x: 0, y: 0, z: 0, w: 0}
   This_Wall: {fileID: 6820764681110063391}
   Score_Multip_Obj: {fileID: 8348729105060131690}
+  SpawnChecker: {fileID: 7389684987803348786}
   WhatIsWall:
     serializedVersion: 2
     m_Bits: 8
-  SpawnChecker: {fileID: 7389684987803348786}
-  IsWallAlready: 0
   Obstacles:
   - {fileID: 8727530576562523675}
   - {fileID: 3631023467074822687}
   - {fileID: 7526239236012517772}
   - {fileID: 663349917847716060}
-  ObstacleSpawnChance: 0.3
-  Difficulty: 0
+  WallsLvl1:
+  - {fileID: 6251084768089269200, guid: f25065513c7179943bf28c0ab55e1bbe, type: 3}
+  - {fileID: 6820764681110063391}
+  - {fileID: 3447492740785255843, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
+  WallsLvl2:
+  - {fileID: 968249682948357759, guid: fe50d2512e371b342b5f922e39faa98a, type: 3}
+  - {fileID: 1609271182237275643, guid: e898ff93430e8914fa143a2e58b650cc, type: 3}
+  - {fileID: 5877623854093192874, guid: 80aedf6b79555e54aafb39cc314c0424, type: 3}
 --- !u!1 &7389684987803348786
 GameObject:
   m_ObjectHideFlags: 0

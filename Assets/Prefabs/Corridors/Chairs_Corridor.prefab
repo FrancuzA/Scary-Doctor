@@ -67,26 +67,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eecce844fd6d9146815eef48703b8a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wall_Empty: {fileID: 5877623854093192874, guid: 80aedf6b79555e54aafb39cc314c0424, type: 3}
-  Wall_Chairs: {fileID: 968249682948357759}
-  Wall_Doors: {fileID: 1609271182237275643, guid: e898ff93430e8914fa143a2e58b650cc, type: 3}
   Spawn_Point: {fileID: 4051975698573137102}
   terrain: {fileID: 968249682948357759}
-  _Rotation: {x: 0, y: 0, z: 0, w: 0}
   This_Wall: {fileID: 968249682948357759}
   Score_Multip_Obj: {fileID: 7611042788228843660}
+  SpawnChecker: {fileID: 5771364968645495038}
   WhatIsWall:
     serializedVersion: 2
     m_Bits: 8
-  SpawnChecker: {fileID: 5771364968645495038}
-  IsWallAlready: 0
   Obstacles:
   - {fileID: 7595782762289239223}
   - {fileID: 6663424067970856109}
   - {fileID: 7744327543617913212}
   - {fileID: 1415206905791931427}
-  ObstacleSpawnChance: 0.3
-  Difficulty: 0
+  WallsLvl1:
+  - {fileID: 6251084768089269200, guid: f25065513c7179943bf28c0ab55e1bbe, type: 3}
+  - {fileID: 6820764681110063391, guid: 84102d99141dd6b4e9a621c78b545740, type: 3}
+  - {fileID: 3447492740785255843, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
+  WallsLvl2:
+  - {fileID: 968249682948357759}
+  - {fileID: 1609271182237275643, guid: e898ff93430e8914fa143a2e58b650cc, type: 3}
+  - {fileID: 5877623854093192874, guid: 80aedf6b79555e54aafb39cc314c0424, type: 3}
 --- !u!1 &5771364968645495038
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,15 +307,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7321616342145858065, guid: edb98913fc7d2c345a35dffc1c3a0244, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.52
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 7321616342145858065, guid: edb98913fc7d2c345a35dffc1c3a0244, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 0.879
       objectReference: {fileID: 0}
     - target: {fileID: 7321616342145858065, guid: edb98913fc7d2c345a35dffc1c3a0244, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.46
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 7321616342145858065, guid: edb98913fc7d2c345a35dffc1c3a0244, type: 3}
       propertyPath: m_LocalRotation.w
@@ -350,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7984965603930415275, guid: edb98913fc7d2c345a35dffc1c3a0244, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -676,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3579242110927434118, guid: 97bf4a942a15b42418e26b5f55f0e290, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5681140169439092427, guid: 97bf4a942a15b42418e26b5f55f0e290, type: 3}
       propertyPath: m_LocalPosition.x

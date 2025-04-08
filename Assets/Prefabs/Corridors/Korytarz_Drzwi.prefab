@@ -85,6 +85,14 @@ MonoBehaviour:
   - {fileID: 2249060538253678116}
   - {fileID: 7811070355140837919}
   - {fileID: 3390675214713497969}
+  WallsLvl1:
+  - {fileID: 6251084768089269200}
+  - {fileID: 6820764681110063391, guid: 84102d99141dd6b4e9a621c78b545740, type: 3}
+  - {fileID: 3447492740785255843, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
+  WallsLvl2:
+  - {fileID: 968249682948357759, guid: fe50d2512e371b342b5f922e39faa98a, type: 3}
+  - {fileID: 1609271182237275643, guid: e898ff93430e8914fa143a2e58b650cc, type: 3}
+  - {fileID: 5877623854093192874, guid: 80aedf6b79555e54aafb39cc314c0424, type: 3}
   ObstacleSpawnChance: 0.3
   Difficulty: 0
 --- !u!1 &5601106892945842416
