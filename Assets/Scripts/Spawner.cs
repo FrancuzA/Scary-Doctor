@@ -49,7 +49,7 @@ public class Spawner : MonoBehaviour
 
         if (other.CompareTag("Spawner") && IsWallAlready==false)
         {
-            if(Point_System.instance.Current_Points >= 100)
+            if(Point_System.instance.Current_Points >= 300)
             {
                 CurrentWalls.Clear();
                 CurrentWalls = WallsLvl2;
