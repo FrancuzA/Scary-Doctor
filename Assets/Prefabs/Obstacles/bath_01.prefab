@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1727225261959282198}
   - component: {fileID: 4662585417524948666}
   - component: {fileID: 1144303885629650166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bath_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,9 +95,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6670039273460868806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bath_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 8012642075169090775}
   - component: {fileID: 3552248705251052873}
   - component: {fileID: 1000303277123548216}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bath_water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
