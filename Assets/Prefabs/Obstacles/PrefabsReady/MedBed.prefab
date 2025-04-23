@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8141121658910408901}
   - component: {fileID: 7117763814456697161}
   m_Layer: 6
-  m_Name: F_MedBed
+  m_Name: MedBed
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

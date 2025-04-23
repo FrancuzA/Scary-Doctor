@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3190816512777436346}
   - component: {fileID: 8967912883141200604}
+  - component: {fileID: 3076218170012445147}
   m_Layer: 0
   m_Name: Torus.009
   m_TagString: Untagged
@@ -119,7 +120,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3841569103861808922, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
+  - {fileID: 2100000, guid: 129a707c805dd5f4faa5a8ff401c9140, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,6 +159,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00028214627, y: 0.00060439564, z: -0.0000040773302}
     m_Extent: {x: 0.0017023224, y: 0.0008501437, z: 0.0017023229}
   m_DirtyAABB: 0
+--- !u!64 &3076218170012445147
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2193869447744593701}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -614873171625502810, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
 --- !u!1 &2291983117384879392
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442073021642259042}
   - component: {fileID: 4629141878128407609}
+  - component: {fileID: 3035906315311789763}
   m_Layer: 0
   m_Name: Torus.008
   m_TagString: Untagged
@@ -305,7 +329,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3841569103861808922, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
+  - {fileID: 2100000, guid: 129a707c805dd5f4faa5a8ff401c9140, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -344,6 +368,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00025298962, y: 0.0022437326, z: 0.00039298565}
     m_Extent: {x: 0.00087449676, y: 0.0017340617, z: 0.0011849023}
   m_DirtyAABB: 0
+--- !u!64 &3035906315311789763
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794970869498693661}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8929340590942090684, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
 --- !u!1 &3422748293773568414
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2817494013616965005}
   - component: {fileID: 79236012751939423}
+  - component: {fileID: 8993150838557557899}
   m_Layer: 0
   m_Name: Torus.025
   m_TagString: Untagged
@@ -399,7 +446,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3841569103861808922, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
+  - {fileID: 2100000, guid: 129a707c805dd5f4faa5a8ff401c9140, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -438,6 +485,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0002529897, y: 0.009008353, z: 0.0031695769}
     m_Extent: {x: 0.00032934034, y: 0.0018795524, z: 0.0016158016}
   m_DirtyAABB: 0
+--- !u!64 &8993150838557557899
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3422748293773568414}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -9024181409669779191, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
 --- !u!1 &3701483024977226699
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4513616163749779688}
   - component: {fileID: 3905971087197340898}
+  - component: {fileID: 3529228180965511540}
   m_Layer: 0
   m_Name: Torus.026
   m_TagString: Untagged
@@ -525,7 +595,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3841569103861808922, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
+  - {fileID: 2100000, guid: 129a707c805dd5f4faa5a8ff401c9140, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -564,6 +634,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0002852839, y: 0.0139855975, z: 0.006835335}
     m_Extent: {x: 0.0013590297, y: 0.006149248, z: 0.005914054}
   m_DirtyAABB: 0
+--- !u!64 &3529228180965511540
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3743376601005612913}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8323702706139326470, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
 --- !u!1 &4365769093860118936
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8442041379358966459}
   - component: {fileID: 1536214208513072141}
+  - component: {fileID: 3211664758480841579}
   m_Layer: 0
   m_Name: Torus.022
   m_TagString: Untagged
@@ -619,7 +712,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3841569103861808922, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
+  - {fileID: 2100000, guid: 129a707c805dd5f4faa5a8ff401c9140, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -658,6 +751,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0002529897, y: 0.004557484, z: 0.0012130558}
     m_Extent: {x: 0.00022163626, y: 0.0018321639, z: 0.0014401639}
   m_DirtyAABB: 0
+--- !u!64 &3211664758480841579
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4365769093860118936}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2626209553120531689, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
 --- !u!1 &4753323082894418551
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,6 +783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8793964649787289401}
   - component: {fileID: 6158653652813872029}
+  - component: {fileID: 5122857752043003314}
   m_Layer: 0
   m_Name: Torus.024
   m_TagString: Untagged
@@ -713,7 +829,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3841569103861808922, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
+  - {fileID: 2100000, guid: 129a707c805dd5f4faa5a8ff401c9140, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -752,6 +868,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0002529896, y: 0.00689595, z: 0.0020830007}
     m_Extent: {x: 0.001006077, y: 0.0015296072, z: 0.0008971467}
   m_DirtyAABB: 0
+--- !u!64 &5122857752043003314
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4753323082894418551}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5065928041617232340, guid: 4cf9dcde0c5919349a7f921b8fc94da5, type: 3}
 --- !u!1 &4987481746553157014
 GameObject:
   m_ObjectHideFlags: 0

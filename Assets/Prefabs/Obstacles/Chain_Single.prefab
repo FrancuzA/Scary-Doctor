@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596664282826075328}
   - component: {fileID: 9179655976517465688}
-  - component: {fileID: 6741184004488272063}
+  - component: {fileID: 3218280637667058269}
   m_Layer: 0
   m_Name: Torus.005
   m_TagString: Untagged
@@ -57,12 +57,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1596613800724957082}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.9969254, y: 0.07758473, z: 0.010969973, w: -0.00000014761451}
+  m_LocalPosition: {x: -0.0021465258, y: 0.003886519, z: -0.000023611767}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 3700905098193733131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &9179655976517465688
 SkinnedMeshRenderer:
@@ -87,7 +87,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -129,8 +129,8 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0016973267, y: 0.014522857, z: -0.00009288333}
     m_Extent: {x: 0.00052673405, y: 0.0016269581, z: 0.0010077066}
   m_DirtyAABB: 0
---- !u!136 &6741184004488272063
-CapsuleCollider:
+--- !u!64 &3218280637667058269
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -147,11 +147,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.10077114
-  m_Height: 0.3253922
-  m_Direction: 1
-  m_Center: {x: 0.16973266, y: 0.28033972, z: 0.00929266}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7536622687930795020, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
 --- !u!1 &1724395178364207633
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +181,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3700905098193733131}
+  - {fileID: 8353573038776698337}
   m_Father: {fileID: 3408002243903168086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1786415807942130791
@@ -214,6 +214,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1261432684562214612}
+  - {fileID: 5630222282782354509}
   m_Father: {fileID: 3700905098193733131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1957974694894273815
@@ -226,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5630222282782354509}
   - component: {fileID: 8651418565035194737}
-  - component: {fileID: 6833913927946298961}
+  - component: {fileID: 6147923357507788632}
   m_Layer: 0
   m_Name: Torus.006
   m_TagString: Untagged
@@ -242,12 +243,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957974694894273815}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.9908261, y: 0.13472298, z: 0.01063014, w: -0.0006553171}
+  m_LocalPosition: {x: -0.0023033607, y: 0.0012347364, z: -0.000022173448}
+  m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 3785769867635453031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &8651418565035194737
 SkinnedMeshRenderer:
@@ -272,7 +273,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -314,8 +315,8 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0022001583, y: 0.016839644, z: -0.00006539386}
     m_Extent: {x: 0.0012859649, y: 0.0017824378, z: 0.0006498345}
   m_DirtyAABB: 0
---- !u!136 &6833913927946298961
-CapsuleCollider:
+--- !u!64 &6147923357507788632
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -332,11 +333,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.12859648
-  m_Height: 0.35648793
-  m_Direction: 1
-  m_Center: {x: 0.22001582, y: 0.048661113, z: 0.0065444047}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -109517962708253532, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
 --- !u!1 &2676279339354388705
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5555711913507631754}
   - component: {fileID: 4776459443337897046}
-  - component: {fileID: 1727484389942928113}
+  - component: {fileID: 2907941465092503542}
   m_Layer: 0
   m_Name: Torus.002
   m_TagString: Untagged
@@ -363,12 +363,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2676279339354388705}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.9969254, y: 0.07758473, z: 0.010969973, w: -0.00000014765509}
+  m_LocalPosition: {x: -0.0021465258, y: 0.01099826, z: -0.000023611763}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 3365295298954137611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &4776459443337897046
 SkinnedMeshRenderer:
@@ -393,7 +393,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -435,8 +435,8 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0005429374, y: 0.0072612446, z: -0.00004548725}
     m_Extent: {x: 0.001246287, y: 0.0017424228, z: 0.00025902104}
   m_DirtyAABB: 0
---- !u!136 &1727484389942928113
-CapsuleCollider:
+--- !u!64 &2907941465092503542
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -453,11 +453,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1246287
-  m_Height: 0.3484847
-  m_Direction: 1
-  m_Center: {x: 0.054293744, y: 1.006501, z: 0.0045508887}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5345760584941703707, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
 --- !u!1 &2741547214072921247
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +487,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4418248764450422907}
+  - {fileID: 4128366602087191955}
   m_Father: {fileID: 1925158549301637531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3680290165341726555
@@ -500,7 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 378420935308910575}
   - component: {fileID: 6607895380597482884}
-  - component: {fileID: 3453677883574081609}
+  - component: {fileID: 6761147428642071675}
   m_Layer: 0
   m_Name: Torus.037
   m_TagString: Untagged
@@ -516,12 +516,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3680290165341726555}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.9969254, y: 0.077584736, z: 0.010969973, w: -0.00000014774065}
+  m_LocalPosition: {x: -0.0021465258, y: 0.013709039, z: -0.000023611765}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 4418248764450422907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6607895380597482884
 SkinnedMeshRenderer:
@@ -546,7 +546,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -588,8 +588,8 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00015209639, y: 0.004770031, z: -0.000076110155}
     m_Extent: {x: 0.00049863604, y: 0.0016224119, z: 0.0010085197}
   m_DirtyAABB: 0
---- !u!136 &3453677883574081609
-CapsuleCollider:
+--- !u!64 &6761147428642071675
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -606,11 +606,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.100852445
-  m_Height: 0.32448295
-  m_Direction: 1
-  m_Center: {x: 0.0152096385, y: 1.2556223, z: 0.0076124365}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6044461706212107085, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
 --- !u!1 &4365641277567952923
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +640,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4093130992666506770}
+  - {fileID: 1217051256291094124}
   m_Father: {fileID: 3365295298954137611}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5562777629242671682
@@ -685,7 +685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4128366602087191955}
   - component: {fileID: 8341217806192218684}
-  - component: {fileID: 4816879861313006003}
+  - component: {fileID: 5946794329937803832}
   m_Layer: 0
   m_Name: Torus.035
   m_TagString: Untagged
@@ -701,12 +701,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5688540918201061125}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 1, y: 1.1626941e-23, z: 2.2204463e-16, w: -0.00000016684623}
+  m_LocalPosition: {x: 0, y: 0.01606669, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 6024198020174860591}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &8341217806192218684
 SkinnedMeshRenderer:
@@ -731,7 +731,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -773,8 +773,8 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000052279094, y: 0.0023622424, z: -0.000040101237}
     m_Extent: {x: 0.00090965687, y: 0.0016156752, z: 0.0006776175}
   m_DirtyAABB: 0
---- !u!136 &4816879861313006003
-CapsuleCollider:
+--- !u!64 &5946794329937803832
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -791,11 +791,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.09096569
-  m_Height: 0.3231354
-  m_Direction: 1
-  m_Center: {x: -0.0052279094, y: 1.4964012, z: 0.0040108273}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8414979204416823408, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
 --- !u!1 &6339733942389092653
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +825,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6024198020174860591}
+  - {fileID: 6199349750128868931}
+  - {fileID: 3626557970912641207}
   m_Father: {fileID: 5950901174188155678}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6676482478726509736
@@ -859,15 +860,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5950901174188155678}
-  - {fileID: 5555711913507631754}
-  - {fileID: 1217051256291094124}
-  - {fileID: 8353573038776698337}
-  - {fileID: 1596664282826075328}
-  - {fileID: 5630222282782354509}
-  - {fileID: 3626557970912641207}
-  - {fileID: 4128366602087191955}
-  - {fileID: 6199349750128868931}
-  - {fileID: 378420935308910575}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &673630155546733369
@@ -934,7 +926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217051256291094124}
   - component: {fileID: 4181796482754759049}
-  - component: {fileID: 4274932119751576085}
+  - component: {fileID: 3960541651318043009}
   m_Layer: 0
   m_Name: Torus.003
   m_TagString: Untagged
@@ -950,12 +942,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6949289906217175957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.9969254, y: 0.07758473, z: 0.010969973, w: -0.00000014762222}
+  m_LocalPosition: {x: -0.0021465258, y: 0.008528195, z: -0.000023611761}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 3408002243903168086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &4181796482754759049
 SkinnedMeshRenderer:
@@ -980,7 +972,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1022,8 +1014,8 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0009224295, y: 0.009689853, z: -0.00008457492}
     m_Extent: {x: 0.000586928, y: 0.0016362546, z: 0.0010008658}
   m_DirtyAABB: 0
---- !u!136 &4274932119751576085
-CapsuleCollider:
+--- !u!64 &3960541651318043009
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1040,11 +1032,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.10008706
-  m_Height: 0.3272515
-  m_Direction: 1
-  m_Center: {x: 0.09224295, y: 0.76364017, z: 0.008460379}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2252909918924021680, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
 --- !u!1 &8117034775057426768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,6 +1066,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3365295298954137611}
+  - {fileID: 378420935308910575}
   m_Father: {fileID: 6024198020174860591}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8128637262679472007
@@ -1107,6 +1099,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3785769867635453031}
+  - {fileID: 1596664282826075328}
   m_Father: {fileID: 4093130992666506770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8834243673017745210
@@ -1139,6 +1132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3408002243903168086}
+  - {fileID: 5555711913507631754}
   m_Father: {fileID: 4418248764450422907}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8865835544399648669
@@ -1151,7 +1145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8353573038776698337}
   - component: {fileID: 6385985806821369136}
-  - component: {fileID: 6477725826932668481}
+  - component: {fileID: 1509358476919413990}
   m_Layer: 0
   m_Name: Torus.004
   m_TagString: Untagged
@@ -1167,12 +1161,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8865835544399648669}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.9969254, y: 0.07758473, z: 0.010969973, w: -0.00000014761837}
+  m_LocalPosition: {x: -0.0021465258, y: 0.006211401, z: -0.000023611765}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 4093130992666506770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6385985806821369136
 SkinnedMeshRenderer:
@@ -1197,7 +1191,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1239,8 +1233,8 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0013018072, y: 0.012107857, z: -0.000053825002}
     m_Extent: {x: 0.001245495, y: 0.0017422643, z: 0.00027921496}
   m_DirtyAABB: 0
---- !u!136 &6477725826932668481
-CapsuleCollider:
+--- !u!64 &1509358476919413990
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1257,11 +1251,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.12454951
-  m_Height: 0.348453
-  m_Direction: 1
-  m_Center: {x: 0.13018072, y: 0.52183986, z: 0.005386108}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1907608370310603259, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
 --- !u!1 &8946320779217184349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3626557970912641207}
   - component: {fileID: 6647578182536624569}
-  - component: {fileID: 7496179610189822892}
+  - component: {fileID: 1681409031453827942}
   m_Layer: 0
   m_Name: Torus.007
   m_TagString: Untagged
@@ -1288,12 +1281,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8946320779217184349}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 1, y: -0.0000000016539944, z: -0.0000000026921585, w: -0.0000013709068}
+  m_LocalPosition: {x: 0, y: 0.017325724, z: 0}
+  m_LocalScale: {x: 0.009999997, y: 0.01, z: 0.010000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 1925158549301637531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6647578182536624569
 SkinnedMeshRenderer:
@@ -1318,7 +1311,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1360,8 +1353,8 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0033331623, y: 0.018995022, z: -0.000056753168}
     m_Extent: {x: 0.0012611875, y: 0.0015530996, z: 0.0010546286}
   m_DirtyAABB: 0
---- !u!136 &7496179610189822892
-CapsuleCollider:
+--- !u!64 &1681409031453827942
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1378,11 +1371,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.12611875
-  m_Height: 0.31062052
-  m_Direction: 1
-  m_Center: {x: 0.33331624, y: -0.16687667, z: 0.0056809774}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8972365964879406069, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
 --- !u!1 &9213756231399832140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,7 +1385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6199349750128868931}
   - component: {fileID: 2245361068418266317}
-  - component: {fileID: 6452383931585143275}
+  - component: {fileID: 4563680708143664307}
   m_Layer: 0
   m_Name: Torus.036
   m_TagString: Untagged
@@ -1409,12 +1401,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9213756231399832140}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.006162815, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 1, y: -1.9852335e-22, z: 2.2204455e-16, w: -0.0000014603138}
+  m_LocalPosition: {x: 0, y: 0.017326256, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4087732892331194205}
+  m_Father: {fileID: 1925158549301637531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &2245361068418266317
 SkinnedMeshRenderer:
@@ -1439,7 +1431,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7092572577149078651, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
+  - {fileID: 2100000, guid: 62476f463fbc7f74cb3525d189d0ce3a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1481,8 +1473,8 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.000023122411, y: 0.00066474814, z: -0.000027486822}
     m_Extent: {x: 0.0017023225, y: 0.0008501428, z: 0.0017023227}
   m_DirtyAABB: 0
---- !u!136 &6452383931585143275
-CapsuleCollider:
+--- !u!64 &4563680708143664307
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1499,8 +1491,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.17023252
-  m_Height: 0.17002957
-  m_Direction: 1
-  m_Center: {x: -0.0023122411, y: 1.6661506, z: 0.00274888}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8790625001186595450, guid: 4fed09857f979804eb6afb812c6918e2, type: 3}
