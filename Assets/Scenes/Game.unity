@@ -1134,6 +1134,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 400645445309325867, guid: 8e6f02c3506456a429a23ebadefc8f6b, type: 3}
+      propertyPath: DeathUI
+      value: 
+      objectReference: {fileID: 1742941257}
+    - target: {fileID: 400645445309325867, guid: 8e6f02c3506456a429a23ebadefc8f6b, type: 3}
+      propertyPath: Mplayer
+      value: 
+      objectReference: {fileID: 1075685095}
     - target: {fileID: 4573434711874484744, guid: 8e6f02c3506456a429a23ebadefc8f6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.62
@@ -2986,7 +2994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6808729117770670747, guid: ece00a39fc48e0645960ce92fb4a3659, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7580982005321592366, guid: ece00a39fc48e0645960ce92fb4a3659, type: 3}
       propertyPath: m_LocalPosition.x
