@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4f7e65620c3a89846b46f32e16132c53, type: 2}
     - target: {fileID: 919132149155446097, guid: c40181b2cdbef3949a5a2dc64692ddc7, type: 3}
       propertyPath: m_Name
-      value: F_MedCabinet
+      value: MedCabinet
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c40181b2cdbef3949a5a2dc64692ddc7, type: 3}
       propertyPath: m_Layer
@@ -118,7 +118,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6663571164047236467, guid: c40181b2cdbef3949a5a2dc64692ddc7, type: 3}
 --- !u!65 &416777019726314644
@@ -140,8 +140,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9208193, y: 2.741064, z: 1.8397913}
-  m_Center: {x: -0.022760034, y: 1.3765306, z: 0.060120106}
+  m_Size: {x: 1.9208193, y: 2.2944043, z: 1.8397913}
+  m_Center: {x: -0.022760034, y: 1.1532007, z: 0.060120124}
 --- !u!114 &3992863918789820975
 MonoBehaviour:
   m_ObjectHideFlags: 0

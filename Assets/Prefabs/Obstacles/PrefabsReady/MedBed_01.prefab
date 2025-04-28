@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 937afc50d242a174da04c4a324941263, type: 2}
     - target: {fileID: 919132149155446097, guid: cc4bd81b5d53db44280a3945d276c2f7, type: 3}
       propertyPath: m_Name
-      value: F_MedBed_01
+      value: MedBed_01
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc4bd81b5d53db44280a3945d276c2f7, type: 3}
       propertyPath: m_Layer
@@ -140,8 +140,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 343.58087, y: 198.73997, z: 118.29716}
-  m_Center: {x: 22.014992, y: 0.75868195, z: 36.527378}
+  m_Size: {x: 343.58087, y: 198.73997, z: 98.69895}
+  m_Center: {x: 22.014992, y: 0.7586819, z: 46.326485}
 --- !u!114 &7701769844854108972
 MonoBehaviour:
   m_ObjectHideFlags: 0

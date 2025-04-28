@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 1727225261959282198}
   - component: {fileID: 4662585417524948666}
   - component: {fileID: 1144303885629650166}
+  - component: {fileID: 5088723513155603302}
+  - component: {fileID: 1173622453340365146}
+  - component: {fileID: 7216496282276608670}
   m_Layer: 6
   m_Name: Bath_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,6 +89,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5088723513155603302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032480685882249526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3325a6419e40d74ba8ed09a83d5064f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1173622453340365146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032480685882249526}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8602316, y: 0.55256164, z: 1.7197424}
+  m_Center: {x: -0.0016053615, y: 0.27629977, z: -0.007504701}
+--- !u!64 &7216496282276608670
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032480685882249526}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6674915918663050107, guid: 0ed4838c135ce5141ba488e92b8b1f2c, type: 3}
 --- !u!1 &2553661729323736246
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +190,7 @@ GameObject:
   - component: {fileID: 1000303277123548216}
   m_Layer: 6
   m_Name: Bath_water
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

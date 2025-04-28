@@ -49,7 +49,7 @@ public class Spawner : MonoBehaviour
 
         if (other.CompareTag("Spawner") && IsWallAlready==false)
         {
-            if(Point_System.instance.Current_Points >= 300)
+            if(Point_System.instance.Current_Points >= 200)
             {
                 CurrentWalls.Clear();
                 CurrentWalls = WallsLvl2;
@@ -61,8 +61,9 @@ public class Spawner : MonoBehaviour
 
     public void SpawnSegment() 
     {
-        Debug.Log("spawning wall?");
-        int RNG = UnityEngine.Random.Range(0, WallsLvl1.Count);
+        Debug.Log("ile w liscie " + CurrentWalls.Count);
+        int RNG = UnityEngine.Random.Range(0, CurrentWalls.Count);
+        Debug.Log("wylososwano " + RNG);
         GameObject SelectecWall = CurrentWalls[RNG];
         Instantiate(SelectecWall, SpawningPoint, _Rotation, terrain.transform);
         RollForObstacle();
@@ -71,7 +72,7 @@ public class Spawner : MonoBehaviour
     public void RollForBonus()
     {
         float BRNG = UnityEngine.Random.value;
-        if (BRNG <= 0.1) { Score_Multip_Obj.SetActive(true); Debug.Log("bonus spawned"); }
+        if (BRNG <= 0.1) { Score_Multip_Obj.SetActive(true);}
     }
 
     public void RollForObstacle()

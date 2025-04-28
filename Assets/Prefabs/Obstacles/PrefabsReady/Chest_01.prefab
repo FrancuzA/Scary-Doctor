@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5223393175305433992}
   m_Layer: 6
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015376997354892097}
   - component: {fileID: 3554095716621171290}
+  - component: {fileID: 6741063808907232896}
   m_Layer: 6
   m_Name: Chest_01
   m_TagString: Obstacle
@@ -169,12 +170,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0148532, y: 1.1603945, z: 1.9709301}
-  m_Center: {x: 0.0074266195, y: 0.5985977, z: -0.0020208359}
+  m_Size: {x: 1.0607944, y: 1.0318959, z: 2.014196}
+  m_Center: {x: 0.012339076, y: 0.53434837, z: 0.0039316816}
+--- !u!114 &6741063808907232896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618174990748492604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3325a6419e40d74ba8ed09a83d5064f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &636903884143459000
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +202,7 @@ GameObject:
   - component: {fileID: 2769800071830633198}
   m_Layer: 6
   m_Name: Torus.001
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,7 +311,7 @@ GameObject:
   - component: {fileID: 1855636465731940555}
   m_Layer: 6
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +420,7 @@ GameObject:
   - component: {fileID: 6736105581682043486}
   m_Layer: 6
   m_Name: Cylinder.003
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -516,7 +529,7 @@ GameObject:
   - component: {fileID: 6067500756649035802}
   m_Layer: 6
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -625,7 +638,7 @@ GameObject:
   - component: {fileID: 4670122660356072525}
   m_Layer: 6
   m_Name: Cylinder.005
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -734,7 +747,7 @@ GameObject:
   - component: {fileID: 7221939875834970760}
   m_Layer: 6
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -843,7 +856,7 @@ GameObject:
   - component: {fileID: 5372399264734420608}
   m_Layer: 6
   m_Name: Cylinder.004
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,7 +965,7 @@ GameObject:
   - component: {fileID: 4956349774933077350}
   m_Layer: 6
   m_Name: Cylinder.002
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1061,7 +1074,7 @@ GameObject:
   - component: {fileID: 5323664443268567196}
   m_Layer: 6
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,7 +1183,7 @@ GameObject:
   - component: {fileID: 5364695007206136575}
   m_Layer: 6
   m_Name: NurbsPath
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1279,7 +1292,7 @@ GameObject:
   - component: {fileID: 1999716246727766438}
   m_Layer: 6
   m_Name: Cylinder.001
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1388,7 +1401,7 @@ GameObject:
   - component: {fileID: 3780843557122584352}
   m_Layer: 6
   m_Name: Torus
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
