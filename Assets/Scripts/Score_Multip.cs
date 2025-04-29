@@ -4,6 +4,7 @@ using UnityEngine;
 public class Score_Multip : MonoBehaviour
 {
     public GameObject shape;
+    public GameObject pickUpVFX;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && Point_System.instance.OnBonus == false)
@@ -20,6 +21,7 @@ public class Score_Multip : MonoBehaviour
 
     public IEnumerator StartBonus()
     {
+        pickUpVFX.SetActive(true);
         Point_System.instance.OnBonus = true;
         shape.SetActive(false) ;
         Point_System.instance.Point_Multiplier = 30;
