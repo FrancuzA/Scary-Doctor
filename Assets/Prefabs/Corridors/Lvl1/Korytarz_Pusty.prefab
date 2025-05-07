@@ -87,7 +87,7 @@ MonoBehaviour:
   - {fileID: 3144072465542366696}
   - {fileID: 8854544760667723677}
   WallsLvl1:
-  - {fileID: 6251084768089269200, guid: f25065513c7179943bf28c0ab55e1bbe, type: 3}
+  - {fileID: 4579525803025763881, guid: 0df3619f318f6a04fbff0c0e4a5d451d, type: 3}
   - {fileID: 6820764681110063391, guid: 84102d99141dd6b4e9a621c78b545740, type: 3}
   - {fileID: 3447492740785255843}
   WallsLvl2:

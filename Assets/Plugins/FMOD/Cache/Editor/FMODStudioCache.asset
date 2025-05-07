@@ -339,7 +339,7 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/SoundScaryDoctor.bank
   Name: SoundScaryDoctor
   StudioPath: bank:/SoundScaryDoctor
-  lastModified: 638816286821532864
+  lastModified: 638791066447614097
   FileSizes:
   - Name: Desktop
     Value: 1039744
@@ -441,7 +441,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7455696973018287962}
   cacheVersion: 131847
-  cacheTime: 638816286821532864
+  cacheTime: 638791071018002108
   SerializableEventsDict:
   - key: event:/musics/Music2
     index: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638816286821532864
+  lastModified: 638791071017865288
   FileSizes:
   - Name: Desktop
     Value: 11834048
@@ -653,7 +653,7 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638816286821532864
+  lastModified: 638791071018002108
   FileSizes:
   - Name: Desktop
     Value: 1628
