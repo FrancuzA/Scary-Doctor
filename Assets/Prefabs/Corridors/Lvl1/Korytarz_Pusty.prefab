@@ -87,7 +87,7 @@ MonoBehaviour:
   - {fileID: 3144072465542366696}
   - {fileID: 8854544760667723677}
   WallsLvl1:
-  - {fileID: 4579525803025763881, guid: 0df3619f318f6a04fbff0c0e4a5d451d, type: 3}
+  - {fileID: 3447492740785255843}
   - {fileID: 6820764681110063391, guid: 84102d99141dd6b4e9a621c78b545740, type: 3}
   - {fileID: 3447492740785255843}
   WallsLvl2:
@@ -743,7 +743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5350161
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalRotation.x
@@ -751,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8448419
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalRotation.z
@@ -763,7 +763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 115.31
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
