@@ -61,9 +61,7 @@ public class Spawner : MonoBehaviour
 
     public void SpawnSegment() 
     {
-        Debug.Log("ile w liscie " + CurrentWalls.Count);
         int RNG = UnityEngine.Random.Range(0, CurrentWalls.Count);
-        Debug.Log("wylososwano " + RNG);
         GameObject SelectecWall = CurrentWalls[RNG];
         Instantiate(SelectecWall, SpawningPoint, _Rotation, terrain.transform);
         RollForObstacle();

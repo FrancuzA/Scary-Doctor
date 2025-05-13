@@ -4143,37 +4143,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 2290980946229662709}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0499fc94bb8f7d49952a374bc6d1e4b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e5048bd986046041966aacdcdbaf5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerObj: {fileID: 0}
   PlayerRigidbody: {fileID: 0}
   Speed: 3.6
-  SlidingCollider: {fileID: 1673645483778285939}
-  PlayerCollider: {fileID: 7182542984835881520}
-  StartingMilestone: 13.7
-  playerHeight: 1.3
-  Ground:
-    serializedVersion: 2
-    m_Bits: 8
+  SlidingCollider: {fileID: 0}
+  PlayerCollider: {fileID: 0}
+  StartingMilestone: 0
   obstacle:
     serializedVersion: 2
-    m_Bits: 72
-  IsDead: 0
-  soundEvent:
+    m_Bits: 0
+  MusicLoop:
     Guid:
-      Data1: 864394122
-      Data2: 1331627725
-      Data3: -80714091
-      Data4: -2070940508
-    Path: event:/sounds/BoyRun
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   soundDeath:
     Guid:
-      Data1: 707884423
-      Data2: 1185010467
-      Data3: -572438358
-      Data4: -1371354478
-    Path: event:/sounds/Death
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   Mplayer: {fileID: 0}
   DeathUI: {fileID: 0}
 --- !u!114 &3483847765840235345

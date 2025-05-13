@@ -98,7 +98,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7791486788655378091, guid: 09661fba516f40f4497793d4d89d283c, type: 3}
+  - {fileID: 2100000, guid: b0d8f225a9e61f942a7bf2ef0ecb5724, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,6 @@ GameObject:
   - component: {fileID: 8808930293921942143}
   - component: {fileID: 2104678658519431792}
   - component: {fileID: 4109361045270012340}
-  - component: {fileID: 1889229137333566504}
   m_Layer: 6
   m_Name: BedWithCorpse
   m_TagString: Obstacle
@@ -209,7 +208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: b0d8f225a9e61f942a7bf2ef0ecb5724, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -274,15 +273,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9092387, y: 1.7394744, z: 0.75367486}
   m_Center: {x: -0.008618653, y: 0.006516278, z: -0.43301564}
---- !u!114 &1889229137333566504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401699653549582651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3325a6419e40d74ba8ed09a83d5064f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

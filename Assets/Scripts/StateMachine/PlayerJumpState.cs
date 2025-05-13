@@ -1,5 +1,6 @@
+using FMOD.Studio;
 using UnityEngine;
-
+using FMODUnity;
 public class PlayerJumpState : State
 {
     private Rigidbody _rb;
@@ -10,10 +11,11 @@ public class PlayerJumpState : State
 
     public override void Enter()
     {
+        Player_Manager.instance.JumpStartInstance.start();
         playerAnim = _stateMachine.GetComponent<Animator>();
         _rb = _stateMachine.GetComponent<Rigidbody>();
-        _rb.AddForce(Vector3.up * 6f, ForceMode.Impulse);
-        _rb.AddForce(Vector3.forward *3f, ForceMode.Impulse);
+        _rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
+        _rb.AddForce(Vector3.forward *4f, ForceMode.Impulse);
     }
 
     public override void Update()
@@ -24,13 +26,12 @@ public class PlayerJumpState : State
 
             return;
         }
-
-        if (Physics.Raycast(_stateMachine.transform.position, Vector3.down, 0.3f, Player_Movement.instance.obstacle))
+        if (Physics.Raycast(_stateMachine.transform.position, Vector3.down, 0.3f, Player_Manager.instance.obstacle))
         {
             playerAnim.SetTrigger("Land");
+            Player_Manager.instance.JumpEndInstance.start();
             Exit();
         }
-        Debug.DrawRay(_stateMachine.transform.position, Vector3.down,Color.red, 0.3f);
     }
 
     public override void Exit()
