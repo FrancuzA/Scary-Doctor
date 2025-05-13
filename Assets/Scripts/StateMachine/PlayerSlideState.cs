@@ -21,7 +21,7 @@ public class PlayerSlideState : State
     {
         Vector3 newPosition = playerRigidbody.position + Vector3.forward * Player_Movement.instance.Speed * Time.deltaTime;
         playerRigidbody.MovePosition(newPosition);
-        IsSomethingBlocking = Physics.Raycast(Player_Movement.instance.SlidingCollider.transform.position , Vector3.up, Player_Movement.instance.playerHeight, Player_Movement.instance.obstacle);
+        IsSomethingBlocking = Physics.Raycast(Player_Movement.instance.SlidingCollider.transform.position + new Vector3(0,0.1f,0) , Vector3.up, 1, Player_Movement.instance.obstacle);
         Debug.Log(IsSomethingBlocking);
         Timer -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.W) & IsSomethingBlocking == false) 
