@@ -39,7 +39,6 @@ public class Enemy_Mouvement : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            DestroySoundInstance.start();
             Destroy(other.gameObject);
         }
     }
