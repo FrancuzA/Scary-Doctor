@@ -15,8 +15,9 @@ public class PlayerGroundedState : State
     }
     public override void Update()
     {
-        Vector3 newPosition = _rb.position + Vector3.forward * Player_Manager.instance.Speed * Time.deltaTime;
-        _rb.MovePosition(newPosition);
+        /*Vector3 newPosition = _rb.position + Vector3.forward * Player_Manager.instance.Speed * Time.deltaTime;
+        _rb.MovePosition(newPosition);*/
+        _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, _rb.linearVelocity.y, Player_Manager.instance.Speed);
 
         if (Input.GetKeyDown(KeyCode.W))
         {
