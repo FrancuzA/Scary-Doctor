@@ -31,15 +31,18 @@ public class PlayerSlideState : State
         {
             Player_Manager.instance.SlideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             Exit("Jump", new PlayerJumpState(_stateMachine));
+            return;
         }
         if (Timer <= 0 & IsSomethingBlocking==false)
         {
             Exit("GetUp", new PlayerGroundedState(_stateMachine));
+            return;
         }
         if (Input.GetKeyUp(KeyCode.S) & IsSomethingBlocking == false)
         {
             Player_Manager.instance.SlideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             Exit("GetUp", new PlayerGroundedState(_stateMachine));
+            return;
         }
     }
 

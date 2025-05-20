@@ -522,6 +522,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b461864b5c63a744b347e326cb7e1a7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1386249532069643128}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b461864b5c63a744b347e326cb7e1a7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 46723428947015672}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b461864b5c63a744b347e326cb7e1a7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4643777243513613916}
   m_SourcePrefab: {fileID: 100100000, guid: 7b461864b5c63a744b347e326cb7e1a7, type: 3}
 --- !u!4 &2638023945937121049 stripped
 Transform:
@@ -576,6 +582,50 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9910936, y: 4.0264425, z: 7.00785}
   m_Center: {x: 0.3962894, y: 1.8695045, z: -0.00003147125}
+--- !u!114 &46723428947015672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3447492740785255843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d3f1dbae54d2342b5b6dcbd4b7b92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decals:
+  - {fileID: 5699215885251095431, guid: 17a5099a780ad044aac904d1043d059f, type: 3}
+  - {fileID: 897841202242849385, guid: 44d8b81351c8ccd429d701674a97cd26, type: 3}
+  - {fileID: 3474018726893473901, guid: 0af362933f58adb47952edc04cc588d9, type: 3}
+  DecalPlacement: {x: 2, y: 0, z: 0}
+  WallTransform: {fileID: 2638023945937121049}
+  DecalSpawnChance: 0.35
+  MinZ: -3.25
+  MinY: 1.75
+  MaxZ: 3
+  MaxY: 2.5
+--- !u!114 &4643777243513613916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3447492740785255843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f32bf3290b9ac24580859d3a9b398bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decals:
+  - {fileID: 7006037492708790337, guid: 4ddaf3fa9320eef428f7064b7515984e, type: 3}
+  DecalPlacement: {x: 0, y: 0, z: 0}
+  WallTransform: {fileID: 2638023945937121049}
+  DecalSpawnChance: 0.35
+  MinZ: -3
+  MinX: -1.4
+  MaxZ: 3
+  MaxX: 1.8
 --- !u!1001 &3327198221419365872
 PrefabInstance:
   m_ObjectHideFlags: 0
