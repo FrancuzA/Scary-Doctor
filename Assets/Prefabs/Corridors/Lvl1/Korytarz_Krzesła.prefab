@@ -87,7 +87,7 @@ MonoBehaviour:
   - {fileID: 5618769086726888598}
   - {fileID: 2328990064330491553}
   WallsLvl1:
-  - {fileID: 4579525803025763881, guid: 0df3619f318f6a04fbff0c0e4a5d451d, type: 3}
+  - {fileID: 6820764681110063391}
   - {fileID: 6820764681110063391}
   - {fileID: 3447492740785255843, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
   WallsLvl2:
@@ -809,7 +809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9985928
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalRotation.x
@@ -817,7 +817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.053033214
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalRotation.z
@@ -829,7 +829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -6.08
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5372739533105744215, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -963,6 +963,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b05dd1a0a2909454e9040d317341d12a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8913894241583577407}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b05dd1a0a2909454e9040d317341d12a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1890471822720424019}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b05dd1a0a2909454e9040d317341d12a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8174322401679835542}
   m_SourcePrefab: {fileID: 100100000, guid: b05dd1a0a2909454e9040d317341d12a, type: 3}
 --- !u!4 &6189047574778401701 stripped
 Transform:
@@ -1017,6 +1023,50 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8898216550872927291, guid: b05dd1a0a2909454e9040d317341d12a, type: 3}
+--- !u!114 &1890471822720424019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820764681110063391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f32bf3290b9ac24580859d3a9b398bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decals:
+  - {fileID: 7006037492708790337, guid: 4ddaf3fa9320eef428f7064b7515984e, type: 3}
+  DecalPlacement: {x: 0, y: 0, z: 0}
+  WallTransform: {fileID: 6189047574778401701}
+  DecalSpawnChance: 0.35
+  MinZ: -3
+  MinX: -1.4
+  MaxZ: 3
+  MaxX: 1.8
+--- !u!114 &8174322401679835542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820764681110063391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d3f1dbae54d2342b5b6dcbd4b7b92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decals:
+  - {fileID: 5699215885251095431, guid: 17a5099a780ad044aac904d1043d059f, type: 3}
+  - {fileID: 3474018726893473901, guid: 0af362933f58adb47952edc04cc588d9, type: 3}
+  - {fileID: 897841202242849385, guid: 44d8b81351c8ccd429d701674a97cd26, type: 3}
+  DecalPlacement: {x: 2, y: 0, z: 0}
+  WallTransform: {fileID: 6189047574778401701}
+  DecalSpawnChance: 0.35
+  MinZ: -3.25
+  MinY: 1.75
+  MaxZ: 3
+  MaxY: 2.5
 --- !u!1001 &7385619122015061141
 PrefabInstance:
   m_ObjectHideFlags: 0

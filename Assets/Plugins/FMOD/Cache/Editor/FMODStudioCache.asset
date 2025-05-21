@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 882
+--- !u!114 &-8590556943632174930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/Booster
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/Booster
+  Guid:
+    Data1: -1926832148
+    Data2: 1249162482
+    Data3: 589605762
+    Data4: -1380648561
+  Banks:
+  - {fileID: -1922123890128589132}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-8145105686837851500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,39 +75,12 @@ MonoBehaviour:
   Banks:
   - {fileID: -1922123890128589132}
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1068
---- !u!114 &-7454645057530284841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musics/Music2
-  m_EditorClassIdentifier: 
-  Path: event:/musics/Music2
-  Guid:
-    Data1: 739071306
-    Data2: 1090208548
-    Data3: -119033465
-    Data4: 1263519746
-  Banks:
-  - {fileID: 2317840639043123861}
-  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 146000
+  Length: 1068
 --- !u!114 &-5135625077898557123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,33 +162,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
---- !u!114 &-3888810415075106063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musics/Music3
-  m_EditorClassIdentifier: 
-  Path: event:/musics/Music3
-  Guid:
-    Data1: 1814173423
-    Data2: 1217996189
-    Data3: 1041923496
-    Data4: 1701182178
-  Banks:
-  - {fileID: 2317840639043123861}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 117000
 --- !u!114 &-3675895998564409626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +210,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -1922123890128589132}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -270,6 +243,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2586
+--- !u!114 &-2651827205143329164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/LampDrop
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/LampDrop
+  Guid:
+    Data1: 1384346805
+    Data2: 1171322995
+    Data3: 1174738865
+    Data4: -1393077001
+  Banks:
+  - {fileID: -1922123890128589132}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2058885446727279239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,38 +292,11 @@ MonoBehaviour:
   - {fileID: 2317840639043123861}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 118204
---- !u!114 &-1979250786871709737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musics/Music5
-  m_EditorClassIdentifier: 
-  Path: event:/musics/Music5
-  Guid:
-    Data1: -317228120
-    Data2: 1194472530
-    Data3: 735918243
-    Data4: 1794671395
-  Banks:
-  - {fileID: 2317840639043123861}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 126390
 --- !u!114 &-1922123890128589132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,10 +312,10 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/SoundScaryDoctor.bank
   Name: SoundScaryDoctor
   StudioPath: bank:/SoundScaryDoctor
-  lastModified: 638791066447614097
+  lastModified: 638827386080589103
   FileSizes:
   - Name: Desktop
-    Value: 1039744
+    Value: 5297472
   Exists: 1
 --- !u!114 &-613055461195531374
 MonoBehaviour:
@@ -415,11 +388,6 @@ MonoBehaviour:
   - {fileID: 2317840639043123861}
   - {fileID: -1922123890128589132}
   EditorEvents:
-  - {fileID: -7454645057530284841}
-  - {fileID: 4589515475135370360}
-  - {fileID: -1979250786871709737}
-  - {fileID: -3888810415075106063}
-  - {fileID: 6370541240532237447}
   - {fileID: -2058885446727279239}
   - {fileID: 8108193610263073174}
   - {fileID: 151833460408359711}
@@ -435,54 +403,68 @@ MonoBehaviour:
   - {fileID: -8765576788521354570}
   - {fileID: 4242518384425807727}
   - {fileID: 1293710631475208701}
+  - {fileID: 4047673499503913948}
+  - {fileID: 3598203310886015795}
+  - {fileID: 451718692651841990}
+  - {fileID: 5752287297140796278}
+  - {fileID: -2651827205143329164}
+  - {fileID: 4494756998097747994}
+  - {fileID: 4539868674692715698}
+  - {fileID: -8590556943632174930}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2317840639043123861}
   StringsBanks:
   - {fileID: 7455696973018287962}
   cacheVersion: 131847
-  cacheTime: 638791071018002108
+  cacheTime: 638827386080589103
   SerializableEventsDict:
-  - key: event:/musics/Music2
-    index: 0
-  - key: event:/musics/Music1
-    index: 1
-  - key: event:/musics/Music5
-    index: 2
-  - key: event:/musics/Music3
-    index: 3
-  - key: event:/musics/Music4
-    index: 4
   - key: event:/musics/MainMenu
-    index: 5
+    index: 0
   - key: event:/sounds/JumpEnd
-    index: 6
+    index: 1
   - key: event:/sounds/MonsterRun
-    index: 7
+    index: 2
   - key: "event:/sounds/Point\u0421ursor"
-    index: 8
+    index: 3
   - key: event:/sounds/Destroy
-    index: 9
+    index: 4
   - key: event:/sounds/Slide
-    index: 10
+    index: 5
   - key: event:/sounds/DeathBoy
-    index: 11
+    index: 6
   - key: event:/sounds/Death
-    index: 12
+    index: 7
   - key: event:/sounds/BoyRun
-    index: 13
+    index: 8
   - key: event:/sounds/MonsterRun2
-    index: 14
+    index: 9
   - key: event:/sounds/DeathGirl
-    index: 15
+    index: 10
   - key: event:/sounds/JumpStart
-    index: 16
+    index: 11
   - key: event:/sounds/BackButton
-    index: 17
+    index: 12
   - key: event:/sounds/Jump
-    index: 18
+    index: 13
   - key: event:/sounds/ClickButton
+    index: 14
+  - key: event:/musics/BasementAmbient
+    index: 15
+  - key: event:/sounds/Wheels
+    index: 16
+  - key: event:/sounds/BoosterCollect
+    index: 17
+  - key: event:/sounds/Chains
+    index: 18
+  - key: event:/sounds/LampDrop
     index: 19
+  - key: event:/sounds/StartScene
+    index: 20
+  - key: event:/musics/LvlMusic
+    index: 21
+  - key: event:/sounds/Booster
+    index: 22
 --- !u!114 &151833460408359711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,13 +485,40 @@ MonoBehaviour:
     Data4: -1658006534
   Banks:
   - {fileID: -1922123890128589132}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 6765
+  Length: 1180
+--- !u!114 &451718692651841990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/BoosterCollect
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/BoosterCollect
+  Guid:
+    Data1: -1961398718
+    Data2: 1137609291
+    Data3: -2030141269
+    Data4: -801739600
+  Banks:
+  - {fileID: -1922123890128589132}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 990
 --- !u!114 &1293710631475208701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,11 +561,65 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638791071017865288
+  lastModified: 638827366477761600
   FileSizes:
   - Name: Desktop
-    Value: 11834048
+    Value: 4357888
   Exists: 1
+--- !u!114 &3598203310886015795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/Wheels
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/Wheels
+  Guid:
+    Data1: 1392167732
+    Data2: 1217178022
+    Data3: -68161611
+    Data4: -2123386330
+  Banks:
+  - {fileID: -1922123890128589132}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4047673499503913948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/musics/BasementAmbient
+  m_EditorClassIdentifier: 
+  Path: event:/musics/BasementAmbient
+  Guid:
+    Data1: 1890822994
+    Data2: 1191638011
+    Data3: 866948282
+    Data4: -1114249311
+  Banks:
+  - {fileID: 2317840639043123861}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4242518384425807727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,7 +647,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1416
---- !u!114 &4589515475135370360
+--- !u!114 &4494756998097747994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -594,24 +657,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musics/Music1
+  m_Name: event:/sounds/StartScene
   m_EditorClassIdentifier: 
-  Path: event:/musics/Music1
+  Path: event:/sounds/StartScene
   Guid:
-    Data1: -469383268
-    Data2: 1147485390
-    Data3: 286020772
-    Data4: 398362299
+    Data1: -887702583
+    Data2: 1289201939
+    Data3: 19557031
+    Data4: -1017228610
   Banks:
-  - {fileID: 2317840639043123861}
-  IsStream: 1
-  Is3D: 0
+  - {fileID: -1922123890128589132}
+  IsStream: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 45714
---- !u!114 &6370541240532237447
+  Length: 8784
+--- !u!114 &4539868674692715698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -621,23 +684,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musics/Music4
+  m_Name: event:/musics/LvlMusic
   m_EditorClassIdentifier: 
-  Path: event:/musics/Music4
+  Path: event:/musics/LvlMusic
   Guid:
-    Data1: -489414405
-    Data2: 1229623079
-    Data3: -197475694
-    Data4: -1836544130
+    Data1: 548256978
+    Data2: 1315753198
+    Data3: -90880094
+    Data4: -973284439
   Banks:
-  - {fileID: 2317840639043123861}
+  - {fileID: -1922123890128589132}
   IsStream: 1
   Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 146000
+--- !u!114 &5752287297140796278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sounds/Chains
+  m_EditorClassIdentifier: 
+  Path: event:/sounds/Chains
+  Guid:
+    Data1: 517551965
+    Data2: 1274206269
+    Data3: -172863587
+    Data4: 1564033249
+  Banks:
+  - {fileID: -1922123890128589132}
+  IsStream: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 120013
+  Length: 7000
 --- !u!114 &7455696973018287962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,10 +743,10 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638791071018002108
+  lastModified: 638827366477786612
   FileSizes:
   - Name: Desktop
-    Value: 1628
+    Value: 1810
   Exists: 1
 --- !u!114 &8108193610263073174
 MonoBehaviour:
@@ -679,7 +769,7 @@ MonoBehaviour:
   Banks:
   - {fileID: -1922123890128589132}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1

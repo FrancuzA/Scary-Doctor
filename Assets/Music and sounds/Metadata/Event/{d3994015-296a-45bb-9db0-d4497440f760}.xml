@@ -5,7 +5,7 @@
 			<value>JumpEnd</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{80d1f719-7287-4435-8a28-e97ed4eb76c3}</destination>
@@ -118,8 +118,8 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{8c41f11b-c6b3-449f-ac6d-026db71fd933}">
 		<relationship name="effects">
+			<destination>{4ff33400-1751-4b50-b806-77243dce5fc0}</destination>
 			<destination>{ed39b214-c962-47b7-8fa1-bfcc55405de5}</destination>
-			<destination>{ff8f989a-9754-412b-8f34-9930daaa0381}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{52c41e45-401d-4eb9-ae90-d58896798984}" />
@@ -130,7 +130,26 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{560bb188-d316-444e-8d23-4f859f795955}" />
+	<object class="SFXReverbEffect" id="{4ff33400-1751-4b50-b806-77243dce5fc0}">
+		<property name="earlyDelay">
+			<value>7</value>
+		</property>
+		<property name="lateDelay">
+			<value>11</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>59</value>
+		</property>
+		<property name="highCut">
+			<value>7800</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>87</value>
+		</property>
+		<property name="wetLevel">
+			<value>-5.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{ed39b214-c962-47b7-8fa1-bfcc55405de5}" />
-	<object class="SpatialiserEffect" id="{ff8f989a-9754-412b-8f34-9930daaa0381}" />
 	<object class="MixerBusFader" id="{c1371daa-d96b-4af2-aef1-f32503414923}" />
 </objects>

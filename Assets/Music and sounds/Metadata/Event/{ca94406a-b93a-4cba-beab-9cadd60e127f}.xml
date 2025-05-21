@@ -5,7 +5,7 @@
 			<value>Slide</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{80d1f719-7287-4435-8a28-e97ed4eb76c3}</destination>
@@ -115,8 +115,8 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{9f80a31b-0508-4b6d-90a1-3adbacf19dca}">
 		<relationship name="effects">
+			<destination>{13154e85-08b0-4721-b565-a04ea1edc1ad}</destination>
 			<destination>{edec65ed-882c-4f4a-a42a-57232101f2a0}</destination>
-			<destination>{1a20effa-10bd-4f60-8090-a153816bc96e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ca747cce-04e2-49fa-b02f-8934119900f6}" />
@@ -127,7 +127,26 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e593044c-9e34-43a7-9795-3ad51810c019}" />
+	<object class="SFXReverbEffect" id="{13154e85-08b0-4721-b565-a04ea1edc1ad}">
+		<property name="earlyDelay">
+			<value>7</value>
+		</property>
+		<property name="lateDelay">
+			<value>11</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>59</value>
+		</property>
+		<property name="highCut">
+			<value>7800</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>87</value>
+		</property>
+		<property name="wetLevel">
+			<value>-5.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{edec65ed-882c-4f4a-a42a-57232101f2a0}" />
-	<object class="SpatialiserEffect" id="{1a20effa-10bd-4f60-8090-a153816bc96e}" />
 	<object class="MixerBusFader" id="{3294c452-a21f-4dfd-824d-abd7fdc5317e}" />
 </objects>

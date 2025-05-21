@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 543707020924079462}
   - component: {fileID: 761376974802016052}
   - component: {fileID: 5915557550581538230}
-  - component: {fileID: 7415739199466268234}
+  - component: {fileID: 559222787338806799}
   m_Layer: 6
   m_Name: WheelChair 1
   m_TagString: Obstacle
@@ -123,8 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3325a6419e40d74ba8ed09a83d5064f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &7415739199466268234
-SphereCollider:
+--- !u!65 &559222787338806799
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -138,9 +138,9 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.4793474
-  m_Center: {x: 0, y: 0.52, z: -0.06}
+  m_Size: {x: 0.9575852, y: 0.7752742, z: 0.8620461}
+  m_Center: {x: 0.01773329, y: 0.4155015, z: 0.01018101}
