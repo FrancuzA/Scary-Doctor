@@ -2,17 +2,20 @@ using FMOD.Studio;
 using UnityEngine;
 using FMODUnity;
 using System.Collections;
+using TMPro;
 
 public class PlayerSlideState : State
 {
     private Rigidbody playerRigidbody;
     private float Timer = 1f;
     private bool IsSomethingBlocking;
+    private bool OnExit = false;
     private Animator playerAnim;
     public PlayerSlideState(StateMachine stateMachine) : base(stateMachine) { }
 
     public override void Enter()
     {
+        OnExit = false;
         Player_Manager.instance.SlideInstance.start();
         playerAnim = _stateMachine.GetComponent<Animator>();
         playerRigidbody = _stateMachine.GetComponent<Rigidbody>();
@@ -27,21 +30,24 @@ public class PlayerSlideState : State
         IsSomethingBlocking = Physics.Raycast(Player_Manager.instance.SlidingCollider.transform.position + new Vector3(0,0.1f,0) , Vector3.up, 1, Player_Manager.instance.obstacle);
         Debug.Log(IsSomethingBlocking);
         Timer -= Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.W) & IsSomethingBlocking == false) 
+        if (Input.GetKeyDown(KeyCode.W) && IsSomethingBlocking == false && OnExit == false) 
         {
             Player_Manager.instance.SlideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             Exit("Jump", new PlayerJumpState(_stateMachine));
+            OnExit = true;
             return;
         }
-        if (Timer <= 0 & IsSomethingBlocking==false)
+        if (Timer <= 0 && IsSomethingBlocking==false && OnExit == false)
         {
             Exit("GetUp", new PlayerGroundedState(_stateMachine));
+            OnExit = true;
             return;
         }
-        if (Input.GetKeyUp(KeyCode.S) & IsSomethingBlocking == false)
+        if (Input.GetKeyUp(KeyCode.S) && IsSomethingBlocking == false && OnExit == false)
         {
             Player_Manager.instance.SlideInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             Exit("GetUp", new PlayerGroundedState(_stateMachine));
+            OnExit = true;
             return;
         }
     }

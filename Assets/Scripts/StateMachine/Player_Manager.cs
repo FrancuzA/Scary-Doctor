@@ -27,6 +27,7 @@ public class Player_Manager : MonoBehaviour
     public EventInstance BoyRunInstance;
     public GameObject DeathUI;
     public static Player_Manager instance;
+    public Spawner spawner;
 
     private void Awake()
     {
@@ -83,6 +84,11 @@ public class Player_Manager : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Death();
+        }
+
+        if (other.CompareTag("Spawner"))
+        {
+            spawner.SpawnSegment();
         }
     }
     

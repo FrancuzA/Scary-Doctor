@@ -833,6 +833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4625653560239853802}
   - component: {fileID: 126006454881070732}
+  - component: {fileID: 7528299860745099861}
   m_Layer: 3
   m_Name: Basement3
   m_TagString: Wall
@@ -891,6 +892,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4, y: 4.000001, z: 7.001068}
   m_Center: {x: 0.39717382, y: 1.8572268, z: -0.000031113625}
+--- !u!114 &7528299860745099861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273728429965982311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bad705465dbd1544b6ec35643691d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score_Multip_Obj: {fileID: 4722708866150414708}
+  Obstacles:
+  - {fileID: 6981094334342467612}
+  - {fileID: 4333558146475223405}
+  - {fileID: 8009929752851630210}
+  - {fileID: 5252176112827045891}
+  - {fileID: 6564031423679441542}
+  - {fileID: 4119863006019892092}
+  - {fileID: 8894400222851789144}
+  - {fileID: 1184513502139503751}
+  - {fileID: 3313779898808252571}
+  - {fileID: 3045155191998447475}
 --- !u!1 &5429335491406928003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,10 +1184,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4997461174185158011}
   - component: {fileID: 6015119061965521166}
-  - component: {fileID: 5407353225651737660}
   m_Layer: 0
   m_Name: Spawn_Point
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1204,45 +1228,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5407353225651737660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5731355780564490236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eecce844fd6d9146815eef48703b8a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spawn_Point: {fileID: 5731355780564490236}
-  terrain: {fileID: 5273728429965982311}
-  This_Wall: {fileID: 5273728429965982311}
-  Score_Multip_Obj: {fileID: 4722708866150414708}
-  SpawnChecker: {fileID: 7105250542711762005}
-  WhatIsWall:
-    serializedVersion: 2
-    m_Bits: 8
-  Obstacles:
-  - {fileID: 6981094334342467612}
-  - {fileID: 4333558146475223405}
-  - {fileID: 8009929752851630210}
-  - {fileID: 5252176112827045891}
-  - {fileID: 6564031423679441542}
-  - {fileID: 4119863006019892092}
-  - {fileID: 8894400222851789144}
-  - {fileID: 1184513502139503751}
-  - {fileID: 3313779898808252571}
-  - {fileID: 3045155191998447475}
-  WallsLvl1:
-  - {fileID: 6251084768089269200, guid: f25065513c7179943bf28c0ab55e1bbe, type: 3}
-  - {fileID: 6820764681110063391, guid: 84102d99141dd6b4e9a621c78b545740, type: 3}
-  - {fileID: 3447492740785255843, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
-  WallsLvl2:
-  - {fileID: 3340450759801336976, guid: b1c0d6d97c0976a4fb879d26331da00a, type: 3}
-  - {fileID: 157974918233970610, guid: 8ca86a079a2351344b293e629f13ff05, type: 3}
-  - {fileID: 5273728429965982311}
 --- !u!1 &5846218157359062786
 GameObject:
   m_ObjectHideFlags: 0

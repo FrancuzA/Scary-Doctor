@@ -5,87 +5,48 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     
-    public GameObject Spawn_Point;
-    public GameObject terrain;
-    public GameObject This_Wall;
-    public GameObject Score_Multip_Obj;
-    public GameObject SpawnChecker;
+    
     private Vector3 SpawningPoint;
-    private Quaternion _Rotation;
-    public LayerMask WhatIsWall;
-    private bool IsWallAlready;
-    public List<GameObject> Obstacles;
+    
     private List<GameObject> CurrentWalls;
     public List<GameObject> WallsLvl1;
     public List<GameObject> WallsLvl2;  
-    private float ObstacleSpawnChance;
     private int Difficulty;
-
 
     private void Awake()
     {
+        RNG_Custom.Init(-1);
+    }
+
+    private void Start()
+    {
+        SpawningPoint = new Vector3(0, 0, 14);
         CurrentWalls = WallsLvl1;
-        This_Wall.transform.parent = null;
-        RollForBonus();
         Difficulty = PlayerPrefs.GetInt("DifficultyLvl");
         switch (Difficulty) { 
-            case 0: ObstacleSpawnChance = 0.3f;
+            case 0: ObstacleSpawner.ObstacleSpawnChance = 0.3f;
                 break;
-            case 1: ObstacleSpawnChance = 0.45f;
+            case 1:
+                ObstacleSpawner.ObstacleSpawnChance = 0.45f;
                 break;
-            case 2: ObstacleSpawnChance = 0.7f;
+            case 2:
+                ObstacleSpawner.ObstacleSpawnChance = 0.7f;
                 break;
 
         }
     }
-
-    private void FixedUpdate()
-    {
-        SpawningPoint = Spawn_Point.transform.position; 
-        IsWallAlready = Physics.Raycast(SpawnChecker.transform.position, Vector3.down,2f, WhatIsWall);
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-
-        if (other.CompareTag("Spawner") && IsWallAlready==false)
-        {
-            if(Point_System.instance.Current_Points >= 2000)
-            {
-                CurrentWalls.Clear();
-                CurrentWalls = WallsLvl2;
-            }
-
-            SpawnSegment();
-        }
-    }
-
     public void SpawnSegment() 
     {
-        int RNG = UnityEngine.Random.Range(0, CurrentWalls.Count);
+        if (Point_System.instance.Current_Points >= 2000)
+        {
+            CurrentWalls.Clear();
+            CurrentWalls = WallsLvl2;
+        }
+        int RNG = RNG_Custom.random.Next(0, CurrentWalls.Count);
         GameObject SelectecWall = CurrentWalls[RNG];
-        Instantiate(SelectecWall, SpawningPoint, _Rotation, terrain.transform);
-        RollForObstacle();
+        Instantiate(SelectecWall, SpawningPoint,Quaternion.identity);
+        SpawningPoint += new Vector3(0, 0, 7);
     }
     
-    public void RollForBonus()
-    {
-        float BRNG = UnityEngine.Random.value;
-        if (BRNG <= 0.1) { Score_Multip_Obj.SetActive(true);}
-    }
-
-    public void RollForObstacle()
-    {
-        if (UnityEngine.Random.value <= ObstacleSpawnChance && Obstacles.Count > 0)
-        {
-            int randomIndex = UnityEngine.Random.Range(0, Obstacles.Count);
-            GameObject selectedObstacle = Obstacles[randomIndex];
-
-           PlaceObstacle(selectedObstacle);
-        }
-    }
-
-    public void PlaceObstacle(GameObject obstacle)
-    {
-        obstacle.SetActive(true);
-    }
+   
 }

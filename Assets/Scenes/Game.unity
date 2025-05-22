@@ -1382,6 +1382,57 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
+--- !u!1 &958921726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958921727}
+  - component: {fileID: 958921728}
+  m_Layer: 0
+  m_Name: SpawnerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &958921727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958921726}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.860075, y: -0.5840747, z: 0.5970084}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &958921728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958921726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eecce844fd6d9146815eef48703b8a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WallsLvl1:
+  - {fileID: 6820764681110063391, guid: 84102d99141dd6b4e9a621c78b545740, type: 3}
+  - {fileID: 3447492740785255843, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
+  WallsLvl2:
+  - {fileID: 3340450759801336976, guid: b1c0d6d97c0976a4fb879d26331da00a, type: 3}
+  - {fileID: 157974918233970610, guid: 8ca86a079a2351344b293e629f13ff05, type: 3}
+  - {fileID: 5273728429965982311, guid: a5a9ebe11aeeace4ba2946d7a84b8378, type: 3}
 --- !u!1 &964272144
 GameObject:
   m_ObjectHideFlags: 0
@@ -4013,6 +4064,10 @@ PrefabInstance:
       propertyPath: Mplayer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 703972351639313904, guid: bbde03c7d164a104db375fde8e5ca868, type: 3}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 958921728}
     - target: {fileID: 703972351639313904, guid: bbde03c7d164a104db375fde8e5ca868, type: 3}
       propertyPath: playerObj
       value: 
@@ -6804,3 +6859,4 @@ SceneRoots:
   - {fileID: 5985372491729638532}
   - {fileID: 964272145}
   - {fileID: 513608122}
+  - {fileID: 958921727}
