@@ -12,13 +12,13 @@ public class DecalsOnWalls : MonoBehaviour
     public float MinY;
     public float MaxZ;
     public float MaxY;
-    void Start()
+    void OnEnable()
     {
         RollForDecal();
     }
 
 
-    public void RollForDecal()
+    private void RollForDecal()
     {
         if (UnityEngine.Random.value <= DecalSpawnChance && Decals.Count > 0)
         {
@@ -29,7 +29,7 @@ public class DecalsOnWalls : MonoBehaviour
         }
     }
 
-    public void PlaceDecal(GameObject Decal)
+    private void PlaceDecal(GameObject Decal)
     {
         float RandomZ = UnityEngine.Random.Range(MinZ, MaxZ);
         float RandomY = UnityEngine.Random.Range(MinY, MaxY);

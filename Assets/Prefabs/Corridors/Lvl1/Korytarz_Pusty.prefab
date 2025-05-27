@@ -601,6 +601,7 @@ MonoBehaviour:
   DecalPlacement: {x: 2, y: 0, z: 0}
   WallTransform: {fileID: 2638023945937121049}
   DecalSpawnChance: 0.35
+  DecalRotationAmount: 0
   MinZ: -3.25
   MinY: 1.75
   MaxZ: 3

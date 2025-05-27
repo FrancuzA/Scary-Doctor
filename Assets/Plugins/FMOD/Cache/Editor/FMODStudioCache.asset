@@ -312,10 +312,14 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/SoundScaryDoctor.bank
   Name: SoundScaryDoctor
   StudioPath: bank:/SoundScaryDoctor
-  lastModified: 638827386080589103
+<<<<<<< Updated upstream
+  lastModified: 638839381618296162
+=======
+  lastModified: 638839350873208950
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
-    Value: 5297472
+    Value: 16562880
   Exists: 1
 --- !u!114 &-613055461195531374
 MonoBehaviour:
@@ -403,7 +407,6 @@ MonoBehaviour:
   - {fileID: -8765576788521354570}
   - {fileID: 4242518384425807727}
   - {fileID: 1293710631475208701}
-  - {fileID: 4047673499503913948}
   - {fileID: 3598203310886015795}
   - {fileID: 451718692651841990}
   - {fileID: 5752287297140796278}
@@ -417,7 +420,11 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7455696973018287962}
   cacheVersion: 131847
-  cacheTime: 638827386080589103
+<<<<<<< Updated upstream
+  cacheTime: 638839381618296162
+=======
+  cacheTime: 638839350873208950
+>>>>>>> Stashed changes
   SerializableEventsDict:
   - key: event:/musics/MainMenu
     index: 0
@@ -449,22 +456,20 @@ MonoBehaviour:
     index: 13
   - key: event:/sounds/ClickButton
     index: 14
-  - key: event:/musics/BasementAmbient
-    index: 15
   - key: event:/sounds/Wheels
-    index: 16
+    index: 15
   - key: event:/sounds/BoosterCollect
-    index: 17
+    index: 16
   - key: event:/sounds/Chains
-    index: 18
+    index: 17
   - key: event:/sounds/LampDrop
-    index: 19
+    index: 18
   - key: event:/sounds/StartScene
-    index: 20
+    index: 19
   - key: event:/musics/LvlMusic
-    index: 21
+    index: 20
   - key: event:/sounds/Booster
-    index: 22
+    index: 21
 --- !u!114 &151833460408359711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,10 +566,14 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638827366477761600
+<<<<<<< Updated upstream
+  lastModified: 638839379920450257
+=======
+  lastModified: 638839350701208704
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
-    Value: 4357888
+    Value: 4357248
   Exists: 1
 --- !u!114 &3598203310886015795
 MonoBehaviour:
@@ -588,33 +597,6 @@ MonoBehaviour:
   - {fileID: -1922123890128589132}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4047673499503913948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/musics/BasementAmbient
-  m_EditorClassIdentifier: 
-  Path: event:/musics/BasementAmbient
-  Guid:
-    Data1: 1890822994
-    Data2: 1191638011
-    Data3: 866948282
-    Data4: -1114249311
-  Banks:
-  - {fileID: 2317840639043123861}
-  IsStream: 0
-  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -697,10 +679,11 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 6262244091582510485}
   MinDistance: 1
   MaxDistance: 20
-  Length: 146000
+  Length: 808777
 --- !u!114 &5752287297140796278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +711,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7000
+--- !u!114 &6262244091582510485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LvlMusic/LVLNumber
+  m_EditorClassIdentifier: 
+  Name: LVLNumber
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1572903029
+    data2: 3465953936
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - LVL1
+  - LVL2
+  - LVL3
+  Exists: 1
 --- !u!114 &7455696973018287962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,10 +753,14 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638827366477786612
+<<<<<<< Updated upstream
+  lastModified: 638839379920474003
+=======
+  lastModified: 638839350701254237
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
-    Value: 1810
+    Value: 1816
   Exists: 1
 --- !u!114 &8108193610263073174
 MonoBehaviour:
