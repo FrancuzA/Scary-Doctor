@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     public List<GameObject> WallsLvl1;
     public List<GameObject> WallsLvl2;  
     private int Difficulty;
+    private bool LVLChanged= false;
 
     private void Awake()
     {
@@ -37,10 +38,12 @@ public class Spawner : MonoBehaviour
     }
     public void SpawnSegment() 
     {
-        if (Point_System.instance.Current_Points >= 2000)
+        if (Point_System.instance.Current_Points >= 2000 && LVLChanged == false)
         {
             CurrentWalls.Clear();
             CurrentWalls = WallsLvl2;
+            MusicLVL.instance.SetLVL2();
+            LVLChanged = true;
         }
         int RNG = RNG_Custom.random.Next(0, CurrentWalls.Count);
         GameObject SelectecWall = CurrentWalls[RNG];

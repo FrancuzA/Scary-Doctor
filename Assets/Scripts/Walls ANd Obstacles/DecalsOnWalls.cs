@@ -12,7 +12,7 @@ public class DecalsOnWalls : MonoBehaviour
     public float MinY;
     public float MaxZ;
     public float MaxY;
-    void OnEnable()
+    void Start()
     {
         RollForDecal();
     }
@@ -38,7 +38,6 @@ public class DecalsOnWalls : MonoBehaviour
         float DecalRotationAmount = RNG_Custom.NextFloat(-15f, 15f);
         Quaternion zAxisRotation = Quaternion.Euler(0f, 0f, DecalRotationAmount);
         Quaternion finalRotation = prefabRotation * zAxisRotation;
-        Debug.Log(finalRotation);
         GameObject PlacedDecal = Instantiate(Decal, DecalPlacement, finalRotation, WallTransform);
         PlacedDecal.transform.localPosition = DecalPlacement;
     }

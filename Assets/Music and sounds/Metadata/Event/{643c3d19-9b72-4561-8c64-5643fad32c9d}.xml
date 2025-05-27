@@ -75,6 +75,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{26d135eb-68db-47e8-bba0-473f2137b6b0}">
+		<property name="volume">
+			<value>-8</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{273a5461-4afd-4837-9601-1304e5ede2ff}</destination>
 		</relationship>
@@ -128,7 +131,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>0.68000000000000005</value>
+			<value>0.60000000000000009</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{f70fb97b-8876-4ad6-976e-b7bd6bd92597}</destination>
@@ -140,8 +143,9 @@
 	<object class="MixerBusEffectChain" id="{273a5461-4afd-4837-9601-1304e5ede2ff}">
 		<relationship name="effects">
 			<destination>{2d571f04-7081-4b55-ac31-3547484a6b32}</destination>
-			<destination>{5a845a4c-977c-41ed-8ce2-47e8b98e031f}</destination>
 			<destination>{f4e74c37-3e86-4f61-bb1e-9e6c7f0c4958}</destination>
+			<destination>{5a845a4c-977c-41ed-8ce2-47e8b98e031f}</destination>
+			<destination>{6d9c16b8-0b3d-428f-8074-33a0c9ee9b33}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a7abb415-7dac-4d52-8501-7c7728efadb7}" />
@@ -288,17 +292,23 @@
 	</object>
 	<object class="MixerBusPanner" id="{5202179a-4537-412c-9e28-98a9945a3f6e}" />
 	<object class="SFXReverbEffect" id="{2d571f04-7081-4b55-ac31-3547484a6b32}">
+		<property name="decayTime">
+			<value>2000</value>
+		</property>
 		<property name="earlyDelay">
 			<value>7</value>
 		</property>
 		<property name="lateDelay">
 			<value>11</value>
 		</property>
+		<property name="HFReference">
+			<value>1300</value>
+		</property>
 		<property name="HFDecayRatio">
-			<value>59</value>
+			<value>35</value>
 		</property>
 		<property name="highCut">
-			<value>7800</value>
+			<value>4200</value>
 		</property>
 		<property name="earlyLateMix">
 			<value>87</value>
@@ -307,7 +317,6 @@
 			<value>-5.5</value>
 		</property>
 	</object>
-	<object class="MixerBusFader" id="{5a845a4c-977c-41ed-8ce2-47e8b98e031f}" />
 	<object class="PitchShifterEffect" id="{f4e74c37-3e86-4f61-bb1e-9e6c7f0c4958}">
 		<property name="fftSize">
 			<value>1740</value>
@@ -316,5 +325,7 @@
 			<value>13.1999998</value>
 		</property>
 	</object>
+	<object class="MixerBusFader" id="{5a845a4c-977c-41ed-8ce2-47e8b98e031f}" />
+	<object class="ObjectSpatialiserEffect" id="{6d9c16b8-0b3d-428f-8074-33a0c9ee9b33}" />
 	<object class="MixerBusFader" id="{0e6ce588-f072-474b-88ef-ab002cb05782}" />
 </objects>

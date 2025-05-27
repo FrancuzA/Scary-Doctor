@@ -1,6 +1,7 @@
 using FMOD.Studio;
 using UnityEngine;
 using FMODUnity;
+using System.Drawing;
 
 public class Player_Manager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class Player_Manager : MonoBehaviour
     public GameObject DeathUI;
     public static Player_Manager instance;
     public Spawner spawner;
+    public GameObject Doctor;
 
     private void Awake()
     {
@@ -40,6 +42,7 @@ public class Player_Manager : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1.0f;
+        MusicLVL.instance.SetLVL1();
         MusicSoundInstance = RuntimeManager.CreateInstance(MusicLoop);
         DeathSoundInstance = RuntimeManager.CreateInstance(soundDeath);
         JumpStartInstance = RuntimeManager.CreateInstance(soundJumpStart);
@@ -96,7 +99,7 @@ public class Player_Manager : MonoBehaviour
     {
         MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         BoyRunInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        Enemy_Mouvement.MonsterRunInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        Doctor.SetActive(false);
         DeathSoundInstance.start();
         DeathUI.SetActive(true);
         Time.timeScale = 0f;
@@ -115,6 +118,7 @@ public class Player_Manager : MonoBehaviour
    
     public void StartGame()
     {
-        Enemy_Mouvement.StartMoving();
+        Enemy_Mouvement.instance.StartMoving();
+        Point_System.instance.GameStarted = true;
     }
 }

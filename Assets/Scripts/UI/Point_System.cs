@@ -11,6 +11,7 @@ public class Point_System : MonoBehaviour
     public int Point_Multiplier = 1;
     public TextMeshProUGUI Score_UI;
     public bool OnBonus = false;
+    public bool GameStarted = false;
 
     private void Awake()
     {
@@ -27,11 +28,14 @@ public class Point_System : MonoBehaviour
 
     private void Update()
     {
-        Current_Points += (Point_Multiplier * Time.deltaTime);
-        Score_UI.text = Mathf.RoundToInt(Current_Points).ToString();
-        if(HighScore <= Current_Points) 
+        if (GameStarted)
         {
-            PlayerPrefs.SetFloat("HighScore",Mathf.RoundToInt(Current_Points));
+            Current_Points += (Point_Multiplier * Time.deltaTime);
+            Score_UI.text = Mathf.RoundToInt(Current_Points).ToString();
+            if (HighScore <= Current_Points)
+            {
+                PlayerPrefs.SetFloat("HighScore", Mathf.RoundToInt(Current_Points));
+            }
         }
     }
 
