@@ -20,9 +20,9 @@ public class DecalsOnFloor : MonoBehaviour
 
     public void RollForDecal()
     {
-        if (UnityEngine.Random.value <= DecalSpawnChance && Decals.Count > 0)
+        if (RNG_Custom.random.NextDouble() <= DecalSpawnChance && Decals.Count > 0)
         {
-            int randomIndex = UnityEngine.Random.Range(0, Decals.Count);
+            int randomIndex = RNG_Custom.random.Next(0, Decals.Count);
             GameObject selectedDecal = Decals[randomIndex];
 
             PlaceDecal(selectedDecal);
@@ -31,11 +31,11 @@ public class DecalsOnFloor : MonoBehaviour
 
     public void PlaceDecal(GameObject Decal)
     {
-        float RandomZ = UnityEngine.Random.Range(MinZ, MaxZ);
-        float RandomX = UnityEngine.Random.Range(MinX, MaxX);
+        float RandomZ = RNG_Custom.NextFloat(MinZ, MaxZ);
+        float RandomX = RNG_Custom.NextFloat(MinX, MaxX);
         DecalPlacement = new Vector3(RandomX,0.25f , RandomZ);
         Quaternion prefabRotation = Decal.transform.rotation;
-        float DecalRotationAmount = UnityEngine.Random.Range(-15f, 15f);
+        float DecalRotationAmount = RNG_Custom.NextFloat(-15f, 15f);
         Quaternion yAxisRotation = Quaternion.Euler(0f,DecalRotationAmount, 0f);
         Quaternion finalRotation = prefabRotation * yAxisRotation;
         GameObject PlacedDecal = Instantiate(Decal, DecalPlacement, finalRotation, WallTransform);
