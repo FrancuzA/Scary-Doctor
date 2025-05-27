@@ -1,16 +1,26 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject pauseUI;
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseUI.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Resume()
     {
-        
+        pauseUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void GoToSettings()
+    {
+        Debug.Log("go to settings");
     }
 }

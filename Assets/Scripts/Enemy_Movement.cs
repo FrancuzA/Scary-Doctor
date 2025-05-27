@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using FMODUnity;
 using System;
+using System.Collections;
 
 [Serializable]
 public class Enemy_Mouvement : MonoBehaviour
@@ -47,7 +48,21 @@ public class Enemy_Mouvement : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            Destroy(other.gameObject);
+          StartCoroutine(DestroyObstacle(other.gameObject));
         }
+    }
+
+    
+    public IEnumerator DestroyObstacle(GameObject obstacle)
+    {
+        int AnimNum = RNG_Custom.random.Next(1, 3);
+        DoctorAnim.SetInteger("RandAnim", AnimNum);
+        yield return new WaitForSeconds(0.9f);
+        Destroy(obstacle);
+    }
+
+    public void _ResetNumberToZero()
+    {
+        DoctorAnim.SetInteger("RandAnim", 0);
     }
 }
