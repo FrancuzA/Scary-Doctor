@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 3783768322992237242}
   - component: {fileID: 2658842981831212018}
   - component: {fileID: 4087550214253439861}
+  - component: {fileID: 5889596315797842010}
   m_Layer: 0
   m_Name: StartDoor
   m_TagString: Untagged
@@ -258,6 +259,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.0760548, y: 2.9112008, z: 5.236016}
   m_Center: {x: 0.10598558, y: 1.216144, z: 0.04538811}
+--- !u!114 &5889596315797842010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627995258489797889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -887702583
+      Data2: 1289201939
+      Data3: 19557031
+      Data4: -1017228610
+    Path: event:/sounds/StartScene
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 4.3838882
+  OverrideMaxDistance: 5.7511573
 --- !u!1 &786085856144310994
 GameObject:
   m_ObjectHideFlags: 0

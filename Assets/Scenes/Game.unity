@@ -307,7 +307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 98.100006, y: -67.600006}
+  m_AnchoredPosition: {x: 98.1001, y: -67.599976}
   m_SizeDelta: {x: -641, y: -405}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193500496
@@ -575,8 +575,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 3.140853
-  OverrideMaxDistance: 19.633068
+  OverrideMinDistance: 3.2
+  OverrideMaxDistance: 13
 --- !u!114 &300905045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +774,6 @@ GameObject:
   - component: {fileID: 513608121}
   - component: {fileID: 513608119}
   - component: {fileID: 513608123}
-  - component: {fileID: 513608124}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -924,20 +923,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!114 &513608124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513608118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
 --- !u!1 &610704148
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,7 +2128,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075685092}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d84a7824730fe804aa33163c089f0b1a, type: 3}
   m_Name: 
@@ -3636,7 +3621,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Korytarz_Pusty (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7276804936731417948, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4335,6 +4321,10 @@ PrefabInstance:
     - target: {fileID: 4845854267592230336, guid: 669bb3f7206636041bd44bf156f95be8, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5889596315797842010, guid: 669bb3f7206636041bd44bf156f95be8, type: 3}
+      propertyPath: EventStopTrigger
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6237232672869832189, guid: 669bb3f7206636041bd44bf156f95be8, type: 3}
       propertyPath: m_Layer
@@ -9535,7 +9525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7580982005321592366, guid: ece00a39fc48e0645960ce92fb4a3659, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.96
+      value: -13.08
       objectReference: {fileID: 0}
     - target: {fileID: 7580982005321592366, guid: ece00a39fc48e0645960ce92fb4a3659, type: 3}
       propertyPath: m_LocalRotation.w

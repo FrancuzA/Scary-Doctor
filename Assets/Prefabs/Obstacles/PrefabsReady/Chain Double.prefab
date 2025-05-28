@@ -3263,6 +3263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5232852823691892509}
   - component: {fileID: 5396617731886160932}
+  - component: {fileID: 3007350461515775739}
   m_Layer: 6
   m_Name: Chain Double
   m_TagString: Obstacle
@@ -3312,6 +3313,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3007350461515775739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8085509859252037499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 517551965
+      Data2: 1274206269
+      Data3: -172863587
+      Data4: 1564033249
+    Path: event:/sounds/Chains
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1.6237102
+  OverrideMaxDistance: 8.0273905
 --- !u!1 &8092867335326853761
 GameObject:
   m_ObjectHideFlags: 0
