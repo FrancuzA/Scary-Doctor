@@ -25,13 +25,13 @@ public class Spawner : MonoBehaviour
         CurrentWalls = WallsLvl1;
         Difficulty = PlayerPrefs.GetInt("DifficultyLvl");
         switch (Difficulty) { 
-            case 0: ObstacleSpawner.ObstacleSpawnChance = 0.3f;
+            case 0: ObstacleSpawner.ObstacleSpawnChance = 0.5f;
                 break;
             case 1:
-                ObstacleSpawner.ObstacleSpawnChance = 0.45f;
+                ObstacleSpawner.ObstacleSpawnChance = 0.75f;
                 break;
             case 2:
-                ObstacleSpawner.ObstacleSpawnChance = 0.7f;
+                ObstacleSpawner.ObstacleSpawnChance = 0.95f;
                 break;
 
         }
