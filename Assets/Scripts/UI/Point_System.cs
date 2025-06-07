@@ -37,6 +37,12 @@ public class Point_System : MonoBehaviour
                 PlayerPrefs.SetFloat("HighScore", Mathf.RoundToInt(Current_Points));
             }
         }
+
+        if(Current_Points >= 150)
+        {
+            ChooseCharacterMAnager.instance.UnlockGirl();
+
+        }
     }
 
     public void SaveLastPoints()

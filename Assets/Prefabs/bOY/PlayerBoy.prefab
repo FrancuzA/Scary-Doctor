@@ -4147,57 +4147,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5048bd986046041966aacdcdbaf5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerRigidbody: {fileID: 0}
+  PlayerRigidbody: {fileID: 7378963031788421797}
   Speed: 3.6
-  SlidingCollider: {fileID: 0}
-  PlayerCollider: {fileID: 0}
+  SlidingCollider: {fileID: 1673645483778285939}
+  PlayerCollider: {fileID: 7182542984835881520}
   StartingMilestone: 0
-  MusicVolume: 0
+  MusicVolume: 0.2
   obstacle:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 72
   MusicLoop:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 548256978
+      Data2: 1315753198
+      Data3: -90880094
+      Data4: -973284439
+    Path: event:/musics/LvlMusic
   soundDeath:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -508728446
+      Data2: 1341477184
+      Data3: -1033441090
+      Data4: -1897973620
+    Path: event:/sounds/DeathBoy
   soundJumpStart:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -683602242
+      Data2: 1199448516
+      Data3: 1729198256
+      Data4: 741380020
+    Path: event:/sounds/JumpStart
   soundJumpEnd:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -744931307
+      Data2: 1169893738
+      Data3: 1238675613
+      Data4: 1626816628
+    Path: event:/sounds/JumpEnd
   soundSlide:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -896253846
+      Data2: 1287305530
+      Data3: -1382241346
+      Data4: 2131889878
+    Path: event:/sounds/Slide
   soundBoyRun:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 864394122
+      Data2: 1331627725
+      Data3: -80714091
+      Data4: -2070940508
+    Path: event:/sounds/BoyRun
   DeathUI: {fileID: 0}
   spawner: {fileID: 0}
   Doctor: {fileID: 0}

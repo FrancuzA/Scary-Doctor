@@ -1,7 +1,6 @@
 using FMOD.Studio;
 using UnityEngine;
 using FMODUnity;
-using System.Drawing;
 
 public class Player_Manager : MonoBehaviour
 {
@@ -72,6 +71,7 @@ public class Player_Manager : MonoBehaviour
     private void StopSound()
     {
         MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        MusicSoundInstance.release();
     }
 
     private void OnDestroy()
@@ -103,6 +103,7 @@ public class Player_Manager : MonoBehaviour
         DeathSoundInstance.start();
         DeathUI.SetActive(true);
         Time.timeScale = 0f;
+        StopSound();
     }
     
     public void SpeedUpGame()
