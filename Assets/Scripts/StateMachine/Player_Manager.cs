@@ -1,6 +1,7 @@
 using FMOD.Studio;
 using UnityEngine;
 using FMODUnity;
+using System.Collections;
 
 public class Player_Manager : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class Player_Manager : MonoBehaviour
     public static Player_Manager instance;
     public Spawner spawner;
     public GameObject Doctor;
+    public GameObject StunVFX;
 
     private void Awake()
     {
@@ -55,6 +57,10 @@ public class Player_Manager : MonoBehaviour
     void Update()
     {
         if (PlayerRigidbody.transform.position.y < -1) { Death(); }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            StartCoroutine(Stun());
+        }
     }
 
     private void FixedUpdate()
@@ -104,6 +110,7 @@ public class Player_Manager : MonoBehaviour
         DeathUI.SetActive(true);
         Time.timeScale = 0f;
         StopSound();
+        Point_System.instance.CheckForHighScore();
     }
     
     public void SpeedUpGame()
@@ -121,5 +128,12 @@ public class Player_Manager : MonoBehaviour
     {
         Enemy_Mouvement.instance.StartMoving();
         Point_System.instance.GameStarted = true;
+    }
+
+    public IEnumerator Stun()
+    {
+        StunVFX.SetActive(true);
+        yield return new WaitForSeconds(3.5f);
+        StunVFX.SetActive(false);
     }
 }
