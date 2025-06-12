@@ -5,6 +5,7 @@ using System.Collections;
 
 public class Player_Manager : MonoBehaviour
 {
+    private Animator PlayerANim;
     public Rigidbody PlayerRigidbody;
     public  float Speed = 3.6f;
     public Collider SlidingCollider;
@@ -31,6 +32,7 @@ public class Player_Manager : MonoBehaviour
     public Spawner spawner;
     public GameObject Doctor;
     public GameObject StunVFX;
+    public GameObject PlayerMesh;
 
     private void Awake()
     {
@@ -42,6 +44,7 @@ public class Player_Manager : MonoBehaviour
 
     void Start()
     {
+        PlayerANim = gameObject.GetComponent<Animator>();
         Time.timeScale = 1.0f;
         MusicLVL.instance.SetLVL1();
         MusicSoundInstance = RuntimeManager.CreateInstance(MusicLoop);
@@ -76,7 +79,7 @@ public class Player_Manager : MonoBehaviour
 
     private void StopSound()
     {
-        MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         MusicSoundInstance.release();
     }
 
@@ -105,12 +108,22 @@ public class Player_Manager : MonoBehaviour
     {
         MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         BoyRunInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        Doctor.SetActive(false);
         DeathSoundInstance.start();
-        DeathUI.SetActive(true);
-        Time.timeScale = 0f;
         StopSound();
         Point_System.instance.CheckForHighScore();
+        Enemy_Mouvement.instance.GameOver();
+        StartCoroutine(DeathSequance());
+    }
+
+    public IEnumerator DeathSequance()
+    {
+        Speed = 0f;
+        PlayerANim.SetTrigger("GameOver");
+        PlayerMesh.SetActive(false);
+        yield return new WaitForSeconds(2.5f);
+        Doctor.SetActive(false);
+        DeathUI.SetActive(true);
+        Time.timeScale = 0f;
     }
     
     public void SpeedUpGame()
