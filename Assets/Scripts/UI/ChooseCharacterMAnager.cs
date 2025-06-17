@@ -26,14 +26,12 @@ public class ChooseCharacterMAnager : MonoBehaviour
 
         if (PlayerPrefs.GetInt("IsUnlocked") == 1)
         {
-            Debug.Log("unlockingCharacter");
             GirlBlock.SetActive(false);
             return;
         }
 
         if (IsUnlocked== false)
         {
-            Debug.Log("lockingcharacter");
             PlayerPrefs.SetInt("IsUnlocked", 0);
         }
     }
@@ -58,9 +56,14 @@ public class ChooseCharacterMAnager : MonoBehaviour
 
     public void UnlockGirl()
     {
-        Debug.Log("unlock score reached");
         IsUnlocked = true;
         PlayerPrefs.SetInt("IsUnlocked", 1);
+    }
+
+    public void ResteCharacters()
+    {
+        IsUnlocked = true;
+        PlayerPrefs.SetInt("IsUnlocked", 0);
     }
 
 }
