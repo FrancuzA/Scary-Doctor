@@ -18,18 +18,16 @@ public class MusicLVL : MonoBehaviour
 
     private void Start()
     {
-        MusicInstance = RuntimeManager.CreateInstance(LVLMusic);
+        SetLVL1();
     }
     public void SetLVL1()
     {
-        MusicInstance.setParameterByName("LVLNumber", 0);
-        MusicInstance.start();
+        Player_Manager.instance.MusicSoundInstance.setParameterByName("LVLNumber", 0);
     }
 
     public void SetLVL2()
     {
-        MusicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        MusicInstance.setParameterByName("LVLNumber", 1);
-        MusicInstance.start();
+        Player_Manager.instance.MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        Player_Manager.instance.MusicSoundInstance.setParameterByName("LVLNumber", 1);
     }
 }

@@ -49,7 +49,6 @@ public class Point_System : MonoBehaviour
         if(Current_Points >= 1000)
         {
             ChooseCharacterMAnager.instance.UnlockGirl();
-
         }
     }
 

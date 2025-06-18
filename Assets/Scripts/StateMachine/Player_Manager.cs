@@ -2,6 +2,7 @@ using FMOD.Studio;
 using UnityEngine;
 using FMODUnity;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Player_Manager : MonoBehaviour
 {
@@ -15,24 +16,25 @@ public class Player_Manager : MonoBehaviour
     private float CurrentDistance = 0;
     public float MusicVolume;
     public LayerMask obstacle;
+    public StudioEventEmitter MonsterRunEmitter;
     public EventReference MusicLoop; // The FMOD event to play in a loop
     public EventReference soundDeath;
     public EventReference soundJumpStart;
     public EventReference soundJumpEnd;
     public EventReference soundSlide;
     public EventReference soundBoyRun;
-    private EventInstance MusicSoundInstance; // The FMOD event instance
+    public EventInstance MusicSoundInstance; // The FMOD event instance
     private EventInstance DeathSoundInstance;
     public EventInstance JumpStartInstance;
     public EventInstance JumpEndInstance;
     public EventInstance SlideInstance;
     public EventInstance BoyRunInstance;
     public GameObject DeathUI;
-    public static Player_Manager instance;
     public Spawner spawner;
     public GameObject Doctor;
     public GameObject StunVFX;
-    public GameObject PlayerMesh;
+    public List<GameObject> PlayerMesh;
+    public static Player_Manager instance;
 
     private void Awake()
     {
@@ -107,6 +109,7 @@ public class Player_Manager : MonoBehaviour
     public void Death()
     {
         MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        MusicSoundInstance.release();
         BoyRunInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         DeathSoundInstance.start();
         StopSound();
@@ -115,11 +118,28 @@ public class Player_Manager : MonoBehaviour
         StartCoroutine(DeathSequance());
     }
 
+    public void PauseSounds()
+    {
+        MusicSoundInstance.setPaused(true);
+        BoyRunInstance.setPaused(true);
+        MonsterRunEmitter.enabled = false;
+    }
+
+    public void UnPauseSounds()
+    {
+        MusicSoundInstance.setPaused(false);
+        BoyRunInstance.setPaused(false);
+        MonsterRunEmitter.enabled = true;
+    }
+
     public IEnumerator DeathSequance()
     {
         Speed = 0f;
         PlayerANim.SetTrigger("GameOver");
-        PlayerMesh.SetActive(false);
+        foreach(GameObject Mesh in PlayerMesh)
+        {
+            Mesh.SetActive(false);
+        }
         yield return new WaitForSeconds(2.5f);
         Doctor.SetActive(false);
         DeathUI.SetActive(true);

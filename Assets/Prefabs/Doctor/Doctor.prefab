@@ -195,14 +195,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b3cfd9562e6b340b26253b176bfc12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DoctorRB: {fileID: 0}
   DeathCollider: {fileID: 4861083741408928110}
-  soundEvent:
-    Guid:
-      Data1: 1681669401
-      Data2: 1164024690
-      Data3: 1129735308
-      Data4: -1658006534
-    Path: event:/sounds/MonsterRun
   DestorySound:
     Guid:
       Data1: 1203169086
@@ -210,6 +204,9 @@ MonoBehaviour:
       Data3: -1356326268
       Data4: 2140779698
     Path: event:/sounds/Destroy
+  DoctorAnim: {fileID: 0}
+  OverBoy: {fileID: 0}
+  DestroyVFX: {fileID: 0}
 --- !u!1001 &6276035117500748261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -285,6 +282,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77945f1e9ecf5da4eabe2f99465527bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1309693560568137750}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77945f1e9ecf5da4eabe2f99465527bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6120940298829093617}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 77945f1e9ecf5da4eabe2f99465527bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3817529013355766291}
   m_SourcePrefab: {fileID: 100100000, guid: 77945f1e9ecf5da4eabe2f99465527bf, type: 3}
 --- !u!4 &5805788414615696910 stripped
 Transform:
@@ -318,3 +321,46 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6120940298829093617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618494171169647796}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1681669401
+      Data2: 1164024690
+      Data3: 1129735308
+      Data4: -1658006534
+    Path: event:/sounds/MonsterRun
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 3.2
+  OverrideMaxDistance: 13
+--- !u!114 &3817529013355766291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6618494171169647796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa379edc3ff96040a7d330a37b6ab45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

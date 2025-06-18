@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections.Concurrent;
 using Unity.Cinemachine;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class ChooseCharacterMAnager : MonoBehaviour
     public GameObject Boy;
     public GameObject Girl;
     public GameObject GirlBlock;
+    public StudioEventEmitter StartSoundEmitter;
     public CinemachineCamera _camera;
     public CinemachinePositionComposer _positionComposer;
 
@@ -41,6 +43,7 @@ public class ChooseCharacterMAnager : MonoBehaviour
         Boy.SetActive(true);
         ChooseUI.SetActive(false);
         Time.timeScale = 1f;
+        StartSoundEmitter.enabled = true;
         _camera.Target.TrackingTarget = Boy.transform;
         _positionComposer.CameraDistance = 4.83f;
     }
@@ -50,6 +53,7 @@ public class ChooseCharacterMAnager : MonoBehaviour
         Girl.SetActive(true);
         ChooseUI.SetActive(false);
         Time.timeScale = 1f;
+        StartSoundEmitter.enabled = true;
         _camera.Target.TrackingTarget = Girl.transform;
         _positionComposer.CameraDistance = 7.3f;
     }

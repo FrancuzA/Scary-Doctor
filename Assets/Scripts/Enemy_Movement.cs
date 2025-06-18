@@ -16,6 +16,7 @@ public class Enemy_Mouvement : MonoBehaviour
     public Animator DoctorAnim;
     private float Speed;
     public GameObject OverBoy;
+    public GameObject DestroyVFX;
     public static Enemy_Mouvement instance;
 
     private void Awake()
@@ -43,6 +44,7 @@ public class Enemy_Mouvement : MonoBehaviour
     public void StartMoving()
     {
         DoctorAnim.SetTrigger("Start");
+        Player_Manager.instance.MonsterRunEmitter.enabled = true;
         CanMove = true;
     }
 
@@ -58,10 +60,15 @@ public class Enemy_Mouvement : MonoBehaviour
     
     public IEnumerator DestroyObstacle(GameObject obstacle)
     {
+        
         int AnimNum = RNG_Custom.random.Next(1, 3);
         DoctorAnim.SetInteger("RandAnim", AnimNum);
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(0.4f);
+        DestroyVFX.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
         Destroy(obstacle);
+        yield return new WaitForSeconds(0.5f);
+        DestroyVFX.SetActive(false);
     }
 
     public void _ResetNumberToZero()

@@ -1,4 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
@@ -9,6 +8,7 @@ public class PauseMenuManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pauseUI.SetActive(true);
+            Player_Manager.instance.PauseSounds();
             Time.timeScale = 0f;
         }
     }
@@ -16,6 +16,7 @@ public class PauseMenuManager : MonoBehaviour
     public void Resume()
     {
         pauseUI.SetActive(false);
+        Player_Manager.instance.UnPauseSounds();
         Time.timeScale = 1f;
     }
 
