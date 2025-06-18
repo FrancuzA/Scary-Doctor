@@ -14,6 +14,8 @@ public class Enemy_Mouvement : MonoBehaviour
     private EventInstance DestroySoundInstance;
     private bool CanMove = false;
     public Animator DoctorAnim;
+    private float Speed;
+    public GameObject OverBoy;
     public static Enemy_Mouvement instance;
 
     private void Awake()
@@ -25,6 +27,7 @@ public class Enemy_Mouvement : MonoBehaviour
     }
     private void Start()
     {
+        Speed = 3.5f;
         CanMove = false;
         DoctorRB = GetComponent<Rigidbody>();
         DestroySoundInstance = RuntimeManager.CreateInstance(DestorySound);
@@ -34,7 +37,7 @@ public class Enemy_Mouvement : MonoBehaviour
     {
         if(CanMove)
         {
-            DoctorRB.linearVelocity = new Vector3(0f, 0f, 3.5f);
+            DoctorRB.linearVelocity = new Vector3(0f, 0f, Speed);
         }
     }
     public void StartMoving()
@@ -64,5 +67,18 @@ public class Enemy_Mouvement : MonoBehaviour
     public void _ResetNumberToZero()
     {
         DoctorAnim.SetInteger("RandAnim", 0);
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(DeatSequance());
+    }
+
+    public IEnumerator DeatSequance()
+    {
+        Speed = 0f;
+        yield return new WaitForSeconds(0.5f);
+        DoctorAnim.SetTrigger("GameOver");
+        OverBoy.SetActive(true);
     }
 }

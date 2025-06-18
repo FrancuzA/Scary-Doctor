@@ -1,10 +1,11 @@
 using FMOD.Studio;
 using UnityEngine;
 using FMODUnity;
-using System.Drawing;
+using System.Collections;
 
 public class Player_Manager : MonoBehaviour
 {
+    private Animator PlayerANim;
     public Rigidbody PlayerRigidbody;
     public  float Speed = 3.6f;
     public Collider SlidingCollider;
@@ -30,6 +31,8 @@ public class Player_Manager : MonoBehaviour
     public static Player_Manager instance;
     public Spawner spawner;
     public GameObject Doctor;
+    public GameObject StunVFX;
+    public GameObject PlayerMesh;
 
     private void Awake()
     {
@@ -41,6 +44,7 @@ public class Player_Manager : MonoBehaviour
 
     void Start()
     {
+        PlayerANim = gameObject.GetComponent<Animator>();
         Time.timeScale = 1.0f;
         MusicLVL.instance.SetLVL1();
         MusicSoundInstance = RuntimeManager.CreateInstance(MusicLoop);
@@ -56,6 +60,10 @@ public class Player_Manager : MonoBehaviour
     void Update()
     {
         if (PlayerRigidbody.transform.position.y < -1) { Death(); }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            StartCoroutine(Stun());
+        }
     }
 
     private void FixedUpdate()
@@ -71,7 +79,8 @@ public class Player_Manager : MonoBehaviour
 
     private void StopSound()
     {
-        MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        MusicSoundInstance.release();
     }
 
     private void OnDestroy()
@@ -99,8 +108,20 @@ public class Player_Manager : MonoBehaviour
     {
         MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         BoyRunInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        Doctor.SetActive(false);
         DeathSoundInstance.start();
+        StopSound();
+        Point_System.instance.CheckForHighScore();
+        Enemy_Mouvement.instance.GameOver();
+        StartCoroutine(DeathSequance());
+    }
+
+    public IEnumerator DeathSequance()
+    {
+        Speed = 0f;
+        PlayerANim.SetTrigger("GameOver");
+        PlayerMesh.SetActive(false);
+        yield return new WaitForSeconds(2.5f);
+        Doctor.SetActive(false);
         DeathUI.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -120,5 +141,12 @@ public class Player_Manager : MonoBehaviour
     {
         Enemy_Mouvement.instance.StartMoving();
         Point_System.instance.GameStarted = true;
+    }
+
+    public IEnumerator Stun()
+    {
+        StunVFX.SetActive(true);
+        yield return new WaitForSeconds(3.5f);
+        StunVFX.SetActive(false);
     }
 }

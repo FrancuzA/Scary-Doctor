@@ -9,24 +9,16 @@ public class Score_Multip : MonoBehaviour
     {
         if (other.CompareTag("Player") && Point_System.instance.OnBonus == false)
         {
-            StartCoroutine(StartBonus());
+            pickUpVFX.SetActive(true);
+            shape.SetActive(false);
+            Point_System.instance.StartBonus();
         }
 
         if (other.CompareTag("Player") && Point_System.instance.OnBonus == true)
         {
+            pickUpVFX.SetActive(true);
             shape.SetActive(false);
+            Point_System.instance.Timer += 1f;
         }
-    }
-
-
-    public IEnumerator StartBonus()
-    {
-        pickUpVFX.SetActive(true);
-        Point_System.instance.OnBonus = true;
-        shape.SetActive(false) ;
-        Point_System.instance.Point_Multiplier = 30;
-        yield return new WaitForSeconds(5);
-        Point_System.instance.Point_Multiplier = 10;
-        Point_System.instance.OnBonus = false;
     }
 }
