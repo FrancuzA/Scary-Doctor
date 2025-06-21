@@ -18,7 +18,6 @@ public class Spawner : MonoBehaviour
     {
         RNG_Custom.Init(-1);
     }
-
     private void Start()
     {
         SpawningPoint = new Vector3(0, 0, 14);

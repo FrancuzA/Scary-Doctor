@@ -7,8 +7,8 @@ public class Point_System : MonoBehaviour
     public static Point_System instance;
     public int HighScore;
     public int LastGamePoint;
+    public float BonusPoints;
     public float Current_Points;
-    public int Point_Multiplier = 1;
     public TextMeshProUGUI Score_UI;
     public bool OnBonus = false;
     public bool GameStarted = false;
@@ -24,25 +24,28 @@ public class Point_System : MonoBehaviour
     }
     void Start()
     {
-        Point_Multiplier = 10;
         Current_Points = 0;
+    }
+
+    private void FixedUpdate()
+    {
+        if (Timer > 0f)
+        {
+            Timer -= Time.deltaTime;
+            BonusPoints += 0.144f;
+            if (Timer <= 0f)
+            {
+
+                EndBonus();
+            }
+        }
     }
 
     private void Update()
     {
-        if(Timer > 0f)
-        {
-            Timer -= Time.deltaTime;
-            if(Timer <= 0f) 
-            {
-                EndBonus();
-            }
-        }
-
-
         if (GameStarted)
         {
-            Current_Points += (Point_Multiplier * Time.deltaTime);
+            Current_Points = Player_Manager.instance.PlayerRigidbody.position.z + 7 + BonusPoints;
             Score_UI.text = Mathf.RoundToInt(Current_Points).ToString();
         }
 
@@ -70,12 +73,10 @@ public class Point_System : MonoBehaviour
         PointsAnim.SetTrigger("GoOut");
         OnBonus = true;
         Timer = 3f;
-        Point_Multiplier = 30;
     }
 
     public void EndBonus()
     {
-        Point_Multiplier = 10;
         OnBonus = false;
         PointsAnim.SetTrigger("GoIn");
     }

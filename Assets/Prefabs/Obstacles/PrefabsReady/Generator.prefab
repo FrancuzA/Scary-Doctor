@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7529917695756570808}
   - component: {fileID: 5287273508915525570}
   - component: {fileID: 600403666357878441}
+  - component: {fileID: 2281157831389362730}
+  - component: {fileID: 6005486393638938833}
   m_Layer: 6
   m_Name: Generator
   m_TagString: Obstacle
@@ -110,6 +112,39 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3722570815327935443, guid: 56de8fddeabb66e41aac6735a82e7907, type: 3}
+--- !u!114 &2281157831389362730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041371297967198858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3325a6419e40d74ba8ed09a83d5064f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6005486393638938833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041371297967198858}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.008498536, y: 0.00695968, z: 0.012273001}
+  m_Center: {x: -0.000011565387, y: -0.003532869, z: -0.0000013917685}
 --- !u!1001 &4917702783777079002
 PrefabInstance:
   m_ObjectHideFlags: 0

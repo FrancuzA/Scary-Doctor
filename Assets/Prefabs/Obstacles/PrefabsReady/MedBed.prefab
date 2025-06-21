@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 619426020091386017}
   - component: {fileID: 7117763814456697161}
   - component: {fileID: 3380601110470270184}
+  - component: {fileID: 8090370649004654807}
   m_Layer: 6
   m_Name: MedBed
   m_TagString: Obstacle
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.18, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5643046045043133925}
@@ -83,6 +84,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 2
+--- !u!65 &8090370649004654807
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275691555994337819}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.164188, y: 4.345712, z: 2.8904784}
+  m_Center: {x: -0.018182099, y: -2.1274354, z: -0.018469617}
 --- !u!1 &619549749558405290
 GameObject:
   m_ObjectHideFlags: 0

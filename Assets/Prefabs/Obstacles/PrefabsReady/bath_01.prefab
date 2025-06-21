@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1144303885629650166}
   - component: {fileID: 1173622453340365146}
   - component: {fileID: 7216496282276608670}
+  - component: {fileID: 7912278618964609173}
   m_Layer: 6
   m_Name: Bath_01
   m_TagString: Obstacle
@@ -131,6 +132,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6674915918663050107, guid: 0ed4838c135ce5141ba488e92b8b1f2c, type: 3}
+--- !u!114 &7912278618964609173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032480685882249526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3325a6419e40d74ba8ed09a83d5064f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2553661729323736246
 GameObject:
   m_ObjectHideFlags: 0

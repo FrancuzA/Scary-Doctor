@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ObstaclesScript : MonoBehaviour
@@ -5,9 +6,9 @@ public class ObstaclesScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {/*
-            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.back * 3f, ForceMode.Impulse);
-            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.up * 2f, ForceMode.Impulse);*/
-        }
+        {
+            Enemy_Mouvement.instance.gameObject.transform.position =new Vector3(Enemy_Mouvement.instance.gameObject.transform.position.x, Enemy_Mouvement.instance.gameObject.transform.position.y, Player_Manager.instance.transform.position.z - 6f);
+            Destroy(this);
+        } 
     }
 }

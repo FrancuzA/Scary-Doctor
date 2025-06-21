@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6493054405822379602}
   - component: {fileID: 4452596428875947726}
   - component: {fileID: 8284417584431931533}
+  - component: {fileID: 8932063250517328545}
+  - component: {fileID: 5795460058235688036}
   m_Layer: 6
   m_Name: 'MedBed_02 '
   m_TagString: Obstacle
@@ -109,3 +111,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2326448759704680902, guid: a22ce7ed805c632449032272b6757dd5, type: 3}
+--- !u!65 &8932063250517328545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4043289615006224282}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.7902184, y: 0.22730148, z: 1.6139662}
+  m_Center: {x: -0.17881379, y: -0.05822327, z: -0.006161318}
+--- !u!114 &5795460058235688036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4043289615006224282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3325a6419e40d74ba8ed09a83d5064f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -33,10 +33,9 @@ public class Enemy_Mouvement : MonoBehaviour
         DoctorRB = GetComponent<Rigidbody>();
         DestroySoundInstance = RuntimeManager.CreateInstance(DestorySound);
     }
-
-    private void FixedUpdate()
+    public void Update()
     {
-        if(CanMove)
+        if (CanMove)
         {
             DoctorRB.linearVelocity = new Vector3(0f, 0f, Speed);
         }

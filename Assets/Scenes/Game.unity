@@ -6858,6 +6858,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Korytarz_Pusty
       objectReference: {fileID: 0}
+    - target: {fileID: 6653084121683027526, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7922504976627488914, guid: a368bbd1a75ee654680aa584e46f6cab, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -18291,7 +18295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2105432963297313015, guid: ece00a39fc48e0645960ce92fb4a3659, type: 3}
       propertyPath: m_Constraints
-      value: 114
+      value: 122
       objectReference: {fileID: 0}
     - target: {fileID: 2108664089227300374, guid: ece00a39fc48e0645960ce92fb4a3659, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
