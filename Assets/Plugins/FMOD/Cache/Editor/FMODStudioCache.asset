@@ -28,33 +28,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 808777
---- !u!114 &-8301216592653053678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sounds/MonsterRun2
-  m_EditorClassIdentifier: 
-  Path: event:/sounds/MonsterRun2
-  Guid:
-    Data1: -1278863209
-    Data2: 1226626656
-    Data3: 1777658290
-    Data4: 819811120
-  Banks:
-  - {fileID: 5746938077573272389}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 552
 --- !u!114 &-7276854170762947934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +70,7 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638839386838766791
+  lastModified: 638863803329933135
   FileSizes:
   - Name: Desktop
     Value: 4357248
@@ -198,10 +171,10 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638839386838786847
+  lastModified: 638863803329969521
   FileSizes:
   - Name: Desktop
-    Value: 1816
+    Value: 1734
   Exists: 1
 --- !u!114 &-3930423288752523192
 MonoBehaviour:
@@ -313,9 +286,7 @@ MonoBehaviour:
   - {fileID: 1510451315080449249}
   - {fileID: 3112209299279763378}
   - {fileID: 1060717803859665054}
-  - {fileID: -8301216592653053678}
   - {fileID: -4980391770519803567}
-  - {fileID: 3663259007394731084}
   - {fileID: 5033466145639713515}
   - {fileID: 2744386843832259408}
   - {fileID: 8240593154629767714}
@@ -329,7 +300,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -4244053569502233978}
   cacheVersion: 131847
-  cacheTime: 638840431620883043
+  cacheTime: 638863803331996544
   SerializableEventsDict:
   - key: event:/musics/MainMenu
     index: 0
@@ -359,22 +330,20 @@ MonoBehaviour:
     index: 12
   - key: event:/sounds/DeathGirl
     index: 13
-  - key: event:/sounds/LampDrop
-    index: 14
   - key: event:/sounds/JumpStart
-    index: 15
+    index: 14
   - key: event:/sounds/BackButton
-    index: 16
+    index: 15
   - key: event:/sounds/StartScene
-    index: 17
+    index: 16
   - key: event:/musics/LvlMusic
-    index: 18
+    index: 17
   - key: event:/sounds/Jump
-    index: 19
+    index: 18
   - key: event:/sounds/Booster
-    index: 20
+    index: 19
   - key: event:/sounds/ClickButton
-    index: 21
+    index: 20
 --- !u!114 &1060717803859665054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,36 +503,9 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 5
+  MaxDistance: 15
   Length: 1180
---- !u!114 &3663259007394731084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sounds/LampDrop
-  m_EditorClassIdentifier: 
-  Path: event:/sounds/LampDrop
-  Guid:
-    Data1: 1384346805
-    Data2: 1171322995
-    Data3: 1174738865
-    Data4: -1393077001
-  Banks:
-  - {fileID: 5746938077573272389}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &4694976090068305760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,10 +575,10 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Build/Desktop/SoundScaryDoctor.bank
   Name: SoundScaryDoctor
   StudioPath: bank:/SoundScaryDoctor
-  lastModified: 638840431620883043
+  lastModified: 638863803331996544
   FileSizes:
   - Name: Desktop
-    Value: 16563136
+    Value: 16557888
   Exists: 1
 --- !u!114 &6132119270074146780
 MonoBehaviour:

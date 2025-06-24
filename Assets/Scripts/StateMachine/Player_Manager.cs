@@ -47,7 +47,6 @@ public class Player_Manager : MonoBehaviour
     void Start()
     {
         PlayerANim = gameObject.GetComponent<Animator>();
-        Time.timeScale = 1.0f;
         MusicLVL.instance.SetLVL1();
         MusicSoundInstance = RuntimeManager.CreateInstance(MusicLoop);
         DeathSoundInstance = RuntimeManager.CreateInstance(soundDeath);
@@ -61,6 +60,7 @@ public class Player_Manager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(Time.timeScale);
         if (PlayerRigidbody.transform.position.y < -1) { Death(); }
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -161,6 +161,12 @@ public class Player_Manager : MonoBehaviour
     {
         Enemy_Mouvement.instance.StartMoving();
         Point_System.instance.GameStarted = true;
+    }
+
+    public void Fall()
+    {
+        PlayerANim.SetTrigger("Fall");
+        StartCoroutine(Stun());
     }
 
     public IEnumerator Stun()

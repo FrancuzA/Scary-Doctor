@@ -56,7 +56,17 @@
 			<destination>{ee268d3a-f415-43ef-9c76-da3d5fd54f45}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{80ed24de-f624-4bcd-a1c4-d407bd2607c2}" />
+	<object class="EventAutomatableProperties" id="{80ed24de-f624-4bcd-a1c4-d407bd2607c2}">
+		<property name="dopplerEnabled">
+			<value>true</value>
+		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>15</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{ac928cba-5ea7-4804-9134-125cd5ae4b0e}" />
 	<object class="GroupTrack" id="{f0c8c830-0b9e-464b-b06b-ea6198c56cac}">
 		<relationship name="modules">
@@ -327,17 +337,11 @@
 	</object>
 	<object class="MixerBusFader" id="{5a845a4c-977c-41ed-8ce2-47e8b98e031f}" />
 	<object class="ObjectSpatialiserEffect" id="{6d9c16b8-0b3d-428f-8074-33a0c9ee9b33}">
-		<property name="distanceRolloffType">
-			<value>1</value>
-		</property>
 		<property name="minimumDistance">
 			<value>0.300000012</value>
 		</property>
 		<property name="maximumDistance">
 			<value>150</value>
-		</property>
-		<property name="overrideRange">
-			<value>true</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{0e6ce588-f072-474b-88ef-ab002cb05782}" />

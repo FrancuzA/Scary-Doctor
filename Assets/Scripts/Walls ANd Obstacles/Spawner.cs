@@ -37,7 +37,7 @@ public class Spawner : MonoBehaviour
     }
     public void SpawnSegment() 
     {
-        if (Point_System.instance.Current_Points >= 2000 && LVLChanged == false)
+        if (Point_System.instance.Current_Points >= 200 && LVLChanged == false)
         {
             CurrentWalls.Clear();
             CurrentWalls = WallsLvl2;
