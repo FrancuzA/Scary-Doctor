@@ -33,8 +33,10 @@ public class Player_Manager : MonoBehaviour
     public Spawner spawner;
     public GameObject Doctor;
     public GameObject StunVFX;
+    public GameObject HeadMesh;
     public List<GameObject> PlayerMesh;
     public static Player_Manager instance;
+    
 
     private void Awake()
     {
@@ -53,7 +55,7 @@ public class Player_Manager : MonoBehaviour
         JumpStartInstance = RuntimeManager.CreateInstance(soundJumpStart);
         JumpEndInstance = RuntimeManager.CreateInstance(soundJumpEnd);
         SlideInstance = RuntimeManager.CreateInstance(soundSlide);
-        BoyRunInstance = RuntimeManager.CreateInstance(soundBoyRun);
+        
         PlaySound();
     }
 
@@ -110,7 +112,6 @@ public class Player_Manager : MonoBehaviour
     {
         MusicSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         MusicSoundInstance.release();
-        BoyRunInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         DeathSoundInstance.start();
         StopSound();
         Point_System.instance.CheckForHighScore();
@@ -121,14 +122,12 @@ public class Player_Manager : MonoBehaviour
     public void PauseSounds()
     {
         MusicSoundInstance.setPaused(true);
-        BoyRunInstance.setPaused(true);
         MonsterRunEmitter.enabled = false;
     }
 
     public void UnPauseSounds()
     {
         MusicSoundInstance.setPaused(false);
-        BoyRunInstance.setPaused(false);
         MonsterRunEmitter.enabled = true;
     }
 
@@ -169,6 +168,12 @@ public class Player_Manager : MonoBehaviour
         StartCoroutine(Stun());
     }
 
+    public void TakeStep()
+    {
+        BoyRunInstance = RuntimeManager.CreateInstance(soundBoyRun);
+        BoyRunInstance.start();
+        BoyRunInstance.release();
+    }
     public IEnumerator Stun()
     {
         StunVFX.SetActive(true);

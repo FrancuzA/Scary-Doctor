@@ -59,7 +59,14 @@
 			<destination>{ee268d3a-f415-43ef-9c76-da3d5fd54f45}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{e4c5964c-226f-4af8-9110-b5c69c0affaa}" />
+	<object class="EventAutomatableProperties" id="{e4c5964c-226f-4af8-9110-b5c69c0affaa}">
+		<property name="minimumDistance">
+			<value>1.5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>3</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{9ee81cc1-e5d0-43d4-a66c-0fb98f972db3}" />
 	<object class="Timeline" id="{45c394d8-9a48-4c5b-9b54-4dfec007a09e}">
 		<property name="isProxyEnabled">
@@ -98,6 +105,7 @@
 	<object class="MixerBusPanner" id="{f2b3008b-1423-4910-80a2-bc3fdb708fc1}" />
 	<object class="MixerBusEffectChain" id="{729d3382-1ef7-4eac-88d1-d88ae9856c1c}">
 		<relationship name="effects">
+			<destination>{a45bbd40-afc4-4b71-bece-a098de32cdfe}</destination>
 			<destination>{943631e3-be80-449b-9ec6-18837d5ef3da}</destination>
 			<destination>{35941141-d237-486b-88d3-067cb79b4058}</destination>
 		</relationship>
@@ -112,6 +120,26 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{f9d149ef-ab90-4520-8e95-97184649123e}" />
+	<object class="SFXReverbEffect" id="{a45bbd40-afc4-4b71-bece-a098de32cdfe}">
+		<property name="earlyDelay">
+			<value>7</value>
+		</property>
+		<property name="lateDelay">
+			<value>11</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>59</value>
+		</property>
+		<property name="highCut">
+			<value>7800</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>87</value>
+		</property>
+		<property name="wetLevel">
+			<value>-5.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{943631e3-be80-449b-9ec6-18837d5ef3da}" />
 	<object class="SpatialiserEffect" id="{35941141-d237-486b-88d3-067cb79b4058}" />
 </objects>

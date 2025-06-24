@@ -21,6 +21,7 @@ public class PlayerSlideState : State
         playerRigidbody = _stateMachine.GetComponent<Rigidbody>();
         Player_Manager.instance.PlayerCollider.enabled = false;
         Player_Manager.instance.SlidingCollider.enabled = true;
+        Player_Manager.instance.HeadMesh.SetActive(false);
     }
 
 
@@ -57,6 +58,7 @@ public class PlayerSlideState : State
         Player_Manager.instance.PlayerCollider.enabled = true;
         Player_Manager.instance.SlidingCollider.enabled = false;
         _stateMachine.StartCoroutine(DelayedStateTransition(state));
+        Player_Manager.instance.HeadMesh.SetActive(true);
     }
 
     private IEnumerator DelayedStateTransition(State state)

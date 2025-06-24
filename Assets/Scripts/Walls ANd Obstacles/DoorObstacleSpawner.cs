@@ -1,8 +1,12 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorObstacleSpawner : MonoBehaviour
 {
+    public EventReference doorSound;
+    public EventInstance doorSoundInstance;
     public GameObject Score_Multip_Obj;
     public List<GameObject> Obstacles;
     public static float ObstacleSpawnChance;
@@ -56,6 +60,12 @@ public class DoorObstacleSpawner : MonoBehaviour
         }
     }
 
+    public void playSound()
+    {
+        doorSoundInstance = RuntimeManager.CreateInstance(doorSound);
+        doorSoundInstance.start();
+        doorSoundInstance.release();
+    }
     public void PlaceObstacle(GameObject obstacle)
     {
         obstacle.SetActive(true);

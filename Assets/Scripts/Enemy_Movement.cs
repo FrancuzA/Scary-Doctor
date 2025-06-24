@@ -1,6 +1,5 @@
 using FMOD.Studio;
 using UnityEngine;
-using UnityEngine.AI;
 using FMODUnity;
 using System;
 using System.Collections;
@@ -28,7 +27,7 @@ public class Enemy_Mouvement : MonoBehaviour
     }
     private void Start()
     {
-        Speed = 3.5f;
+        Speed = 3.4f;
         CanMove = false;
         DoctorRB = GetComponent<Rigidbody>();
         DestroySoundInstance = RuntimeManager.CreateInstance(DestorySound);
