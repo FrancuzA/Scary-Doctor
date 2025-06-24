@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Spawner
   - Obstacle
+  - Collision
   layers:
   - Default
   - TransparentFX
