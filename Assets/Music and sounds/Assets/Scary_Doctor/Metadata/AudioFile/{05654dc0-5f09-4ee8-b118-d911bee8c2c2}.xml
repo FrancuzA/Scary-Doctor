@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{05654dc0-5f09-4ee8-b118-d911bee8c2c2}">
+		<property name="assetPath">
+			<value>SOunds/stompwav-14753.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.407999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{697338cd-68df-4024-970a-beff34ec2a28}</destination>
+		</relationship>
+	</object>
+</objects>
