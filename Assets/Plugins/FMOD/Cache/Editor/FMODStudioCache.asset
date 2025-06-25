@@ -238,7 +238,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 3564984428061484349}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 3
@@ -459,7 +459,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 7263758055754449497}
   cacheVersion: 131847
-  cacheTime: 638863926083887548
+  cacheTime: 638864605277863514
   SerializableEventsDict:
   - key: event:/musics/MainMenu
     index: 0
@@ -698,10 +698,10 @@ MonoBehaviour:
   Path: Assets/Music and sounds/Assets/Scary_Doctor/Build/Desktop/SoundScaryDoctor.bank
   Name: SoundScaryDoctor
   StudioPath: bank:/SoundScaryDoctor
-  lastModified: 638863926083887548
+  lastModified: 638864605277863514
   FileSizes:
   - Name: Desktop
-    Value: 16266080
+    Value: 16265760
   Exists: 1
 --- !u!114 &3634102905860222002
 MonoBehaviour:

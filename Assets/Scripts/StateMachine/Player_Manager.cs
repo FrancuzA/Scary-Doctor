@@ -62,7 +62,6 @@ public class Player_Manager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Time.timeScale);
         if (PlayerRigidbody.transform.position.y < -1) { Death(); }
         if (Input.GetKeyDown(KeyCode.L))
         {

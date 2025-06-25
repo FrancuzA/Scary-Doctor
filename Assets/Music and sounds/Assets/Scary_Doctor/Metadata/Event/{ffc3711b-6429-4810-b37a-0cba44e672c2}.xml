@@ -5,7 +5,7 @@
 			<value>DoctorLaugh</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{80d1f719-7287-4435-8a28-e97ed4eb76c3}</destination>
@@ -121,7 +121,6 @@
 		<relationship name="effects">
 			<destination>{a2bf3bcc-afb8-4b22-9015-44eb7ee7fc97}</destination>
 			<destination>{0f037f84-9e23-4850-bbd3-4b5d7d30e6e0}</destination>
-			<destination>{78545392-62f2-4c28-8332-6d5b162b1cf9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2e0dd255-2fe2-4edd-9fad-6ced5734ebc7}" />
@@ -153,6 +152,5 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{0f037f84-9e23-4850-bbd3-4b5d7d30e6e0}" />
-	<object class="SpatialiserEffect" id="{78545392-62f2-4c28-8332-6d5b162b1cf9}" />
 	<object class="MixerBusFader" id="{c9f5b731-7fff-4776-966b-ade95bffccf7}" />
 </objects>
