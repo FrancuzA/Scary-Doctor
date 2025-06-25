@@ -345,6 +345,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8090370649004654807, guid: f7f6fb93daffe6546b8da4dcf13ebec9, type: 3}
+      propertyPath: m_Size.y
+      value: 3.9294612
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090370649004654807, guid: f7f6fb93daffe6546b8da4dcf13ebec9, type: 3}
+      propertyPath: m_Size.z
+      value: 1.9459199
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090370649004654807, guid: f7f6fb93daffe6546b8da4dcf13ebec9, type: 3}
+      propertyPath: m_Center.x
+      value: -0.018182099
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090370649004654807, guid: f7f6fb93daffe6546b8da4dcf13ebec9, type: 3}
+      propertyPath: m_Center.y
+      value: -2.335568
+      objectReference: {fileID: 0}
+    - target: {fileID: 8090370649004654807, guid: f7f6fb93daffe6546b8da4dcf13ebec9, type: 3}
+      propertyPath: m_Center.z
+      value: -0.49075094
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -573,6 +593,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8932063250517328545, guid: 4ebc1a9ab31fbf7448f8f76e4e13eeb2, type: 3}
+      propertyPath: m_Size.z
+      value: 0.73831123
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932063250517328545, guid: 4ebc1a9ab31fbf7448f8f76e4e13eeb2, type: 3}
+      propertyPath: m_Center.x
+      value: -0.17881379
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932063250517328545, guid: 4ebc1a9ab31fbf7448f8f76e4e13eeb2, type: 3}
+      propertyPath: m_Center.z
+      value: 0.43805414
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -596,6 +628,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6189047574778401701}
     m_Modifications:
+    - target: {fileID: 559222787338806799, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
+      propertyPath: m_Size.x
+      value: 0.76657754
+      objectReference: {fileID: 0}
+    - target: {fileID: 559222787338806799, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7373102
+      objectReference: {fileID: 0}
+    - target: {fileID: 559222787338806799, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
+      propertyPath: m_Center.x
+      value: 0.08499402
+      objectReference: {fileID: 0}
+    - target: {fileID: 559222787338806799, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
+      propertyPath: m_Center.y
+      value: 0.39651948
+      objectReference: {fileID: 0}
     - target: {fileID: 3132992830615620766, guid: ebab1213c9d9e2a45b9e797f527fc569, type: 3}
       propertyPath: m_Name
       value: WheelChair
@@ -667,6 +715,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6189047574778401701}
     m_Modifications:
+    - target: {fileID: 416777019726314644, guid: f8eabebd4cbf0784da9253475c3b7322, type: 3}
+      propertyPath: m_Size.y
+      value: 2.0058382
+      objectReference: {fileID: 0}
+    - target: {fileID: 416777019726314644, guid: f8eabebd4cbf0784da9253475c3b7322, type: 3}
+      propertyPath: m_Size.z
+      value: 1.5137274
+      objectReference: {fileID: 0}
+    - target: {fileID: 416777019726314644, guid: f8eabebd4cbf0784da9253475c3b7322, type: 3}
+      propertyPath: m_Center.y
+      value: 1.0089177
+      objectReference: {fileID: 0}
+    - target: {fileID: 416777019726314644, guid: f8eabebd4cbf0784da9253475c3b7322, type: 3}
+      propertyPath: m_Center.z
+      value: -0.13072053
+      objectReference: {fileID: 0}
     - target: {fileID: 6061002799520441994, guid: f8eabebd4cbf0784da9253475c3b7322, type: 3}
       propertyPath: m_Name
       value: F_MedCabinet

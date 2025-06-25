@@ -33,7 +33,7 @@ public class Player_Manager : MonoBehaviour
     public Spawner spawner;
     public GameObject Doctor;
     public GameObject StunVFX;
-    public GameObject HeadMesh;
+    public List<GameObject> CollisionMesh;
     public List<GameObject> PlayerMesh;
     public static Player_Manager instance;
     
@@ -140,7 +140,6 @@ public class Player_Manager : MonoBehaviour
             Mesh.SetActive(false);
         }
         yield return new WaitForSeconds(2.5f);
-        Doctor.SetActive(false);
         DeathUI.SetActive(true);
         Time.timeScale = 0f;
     }

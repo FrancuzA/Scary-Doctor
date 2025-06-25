@@ -14,6 +14,7 @@ public class DoorObstacleSpawner : MonoBehaviour
     private int JumpscareInt;
     public GameObject JumpScare;
     public GameObject BackRoom;
+    private bool JumpScareChosen = false;
     private void Start()
     {
         JumpscareInt = RNG_Custom.random.Next(0, 3);
@@ -26,17 +27,21 @@ public class DoorObstacleSpawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (JumpscareInt == 0)
+            if (JumpscareInt == 0 && !JumpScareChosen)
             {
                 DoorAnim.SetBool("JumpScare", true);
                 int RNG = RNG_Custom.random.Next(0, 2);
                 if(RNG == 0)
                 {
                     JumpScare.SetActive(true);
+                    BackRoom.SetActive(false);
+                    JumpScareChosen = true;
                 }
                 else
                 {
                     BackRoom.SetActive(true);
+                    JumpScare.SetActive(false);
+                    JumpScareChosen = true;
                 }
 
                 

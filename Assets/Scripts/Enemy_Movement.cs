@@ -17,6 +17,7 @@ public class Enemy_Mouvement : MonoBehaviour
     public GameObject OverBoy;
     public GameObject DestroyVFX;
     public static Enemy_Mouvement instance;
+    private bool OnDeathAnimation = false;
 
     private void Awake()
     {
@@ -76,11 +77,15 @@ public class Enemy_Mouvement : MonoBehaviour
 
     public void GameOver()
     {
-        StartCoroutine(DeatSequance());
+        if (!OnDeathAnimation)
+        {
+            StartCoroutine(DeatSequance());
+        }
     }
 
     public IEnumerator DeatSequance()
     {
+        OnDeathAnimation = true;
         Speed = 0f;
         yield return new WaitForSeconds(0.5f);
         DoctorAnim.SetTrigger("GameOver");
