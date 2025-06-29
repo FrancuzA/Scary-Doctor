@@ -1,6 +1,5 @@
 using FMOD.Studio;
 using UnityEngine;
-using UnityEngine.AI;
 using FMODUnity;
 using System;
 using System.Collections;
@@ -18,6 +17,7 @@ public class Enemy_Mouvement : MonoBehaviour
     public GameObject OverBoy;
     public GameObject DestroyVFX;
     public static Enemy_Mouvement instance;
+    private bool OnDeathAnimation = false;
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class Enemy_Mouvement : MonoBehaviour
     }
     private void Start()
     {
-        Speed = 3.5f;
+        Speed = 3.4f;
         CanMove = false;
         DoctorRB = GetComponent<Rigidbody>();
         DestroySoundInstance = RuntimeManager.CreateInstance(DestorySound);
@@ -77,11 +77,15 @@ public class Enemy_Mouvement : MonoBehaviour
 
     public void GameOver()
     {
-        StartCoroutine(DeatSequance());
+        if (!OnDeathAnimation)
+        {
+            StartCoroutine(DeatSequance());
+        }
     }
 
     public IEnumerator DeatSequance()
     {
+        OnDeathAnimation = true;
         Speed = 0f;
         yield return new WaitForSeconds(0.5f);
         DoctorAnim.SetTrigger("GameOver");

@@ -7,7 +7,7 @@ using TMPro;
 public class PlayerSlideState : State
 {
     private Rigidbody playerRigidbody;
-    private float Timer = 1f;
+    private float Timer = 2f;
     private bool IsSomethingBlocking;
     private bool OnExit = false;
     private Animator playerAnim;
@@ -21,6 +21,11 @@ public class PlayerSlideState : State
         playerRigidbody = _stateMachine.GetComponent<Rigidbody>();
         Player_Manager.instance.PlayerCollider.enabled = false;
         Player_Manager.instance.SlidingCollider.enabled = true;
+
+        foreach(GameObject Mesh in Player_Manager.instance.CollisionMesh)
+        {
+            Mesh.SetActive(false);
+        }
     }
 
 
@@ -57,11 +62,18 @@ public class PlayerSlideState : State
         Player_Manager.instance.PlayerCollider.enabled = true;
         Player_Manager.instance.SlidingCollider.enabled = false;
         _stateMachine.StartCoroutine(DelayedStateTransition(state));
+
+        
     }
 
     private IEnumerator DelayedStateTransition(State state)
     {
         yield return new WaitForSeconds(0.2f);
+
+        foreach (GameObject Mesh in Player_Manager.instance.CollisionMesh)
+        {
+            Mesh.SetActive(true);
+        }
         _stateMachine.Begin(state);
     }
 }

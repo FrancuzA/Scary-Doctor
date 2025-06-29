@@ -14,8 +14,6 @@ public class PlayerJumpState : State
         Player_Manager.instance.JumpStartInstance.start();
         playerAnim = _stateMachine.GetComponent<Animator>();
         _rb = _stateMachine.GetComponent<Rigidbody>();
-        //_rb.AddForce(Vector3.up * 5f, ForceMode.Impulse);
-        //_rb.AddForce(Vector3.forward *4f, ForceMode.Impulse);
         _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, 5, _rb.linearVelocity.z);
     }
 

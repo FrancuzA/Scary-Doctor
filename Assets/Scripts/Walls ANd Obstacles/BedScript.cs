@@ -22,7 +22,6 @@ public class BedScript : MonoBehaviour
     {
         pushSoundInst = RuntimeManager.CreateInstance(pushSoundRef);
         pushSoundInst.start();
-        Debug.Log("pushing");
         rb.AddForce(new Vector3(0f, 0f, force), ForceMode.Impulse);
         gameObject.SetActive(false);
     }

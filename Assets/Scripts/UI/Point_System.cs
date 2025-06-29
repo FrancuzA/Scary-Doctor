@@ -49,8 +49,8 @@ public class Point_System : MonoBehaviour
             Score_UI.text = Mathf.RoundToInt(Current_Points).ToString();
         }
 
-        if(Current_Points >= 1000)
-        {
+        if(Current_Points >= 500)
+        { 
             ChooseCharacterMAnager.instance.UnlockGirl();
         }
     }

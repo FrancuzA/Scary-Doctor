@@ -1,8 +1,12 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorObstacleSpawner : MonoBehaviour
 {
+    public EventReference doorSound;
+    public EventInstance doorSoundInstance;
     public GameObject Score_Multip_Obj;
     public List<GameObject> Obstacles;
     public static float ObstacleSpawnChance;
@@ -10,6 +14,7 @@ public class DoorObstacleSpawner : MonoBehaviour
     private int JumpscareInt;
     public GameObject JumpScare;
     public GameObject BackRoom;
+    private bool JumpScareChosen = false;
     private void Start()
     {
         JumpscareInt = RNG_Custom.random.Next(0, 3);
@@ -22,17 +27,21 @@ public class DoorObstacleSpawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (JumpscareInt == 0)
+            if (JumpscareInt == 0 && !JumpScareChosen)
             {
                 DoorAnim.SetBool("JumpScare", true);
                 int RNG = RNG_Custom.random.Next(0, 2);
                 if(RNG == 0)
                 {
                     JumpScare.SetActive(true);
+                    BackRoom.SetActive(false);
+                    JumpScareChosen = true;
                 }
                 else
                 {
                     BackRoom.SetActive(true);
+                    JumpScare.SetActive(false);
+                    JumpScareChosen = true;
                 }
 
                 
@@ -56,6 +65,12 @@ public class DoorObstacleSpawner : MonoBehaviour
         }
     }
 
+    public void playSound()
+    {
+        doorSoundInstance = RuntimeManager.CreateInstance(doorSound);
+        doorSoundInstance.start();
+        doorSoundInstance.release();
+    }
     public void PlaceObstacle(GameObject obstacle)
     {
         obstacle.SetActive(true);
