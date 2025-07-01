@@ -32,6 +32,9 @@ public class Spawner : MonoBehaviour
             case 2:
                 ObstacleSpawner.ObstacleSpawnChance = 0.95f;
                 break;
+            case 3:
+                ObstacleSpawner.ObstacleSpawnChance = 0f;
+                break;
 
         }
     }

@@ -39,6 +39,8 @@ public class DeathScreen : MonoBehaviour
 
     public void SetNewName()
     {
+        NewScoreName = NameChosen.text;
+        PlayerPrefs.SetString("NewScoreName", NewScoreName);
         Point_System.instance.SaveLastPoints();
     }
 

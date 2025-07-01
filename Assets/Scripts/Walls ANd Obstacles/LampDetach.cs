@@ -11,7 +11,8 @@ public class LampDetach : MonoBehaviour
     public void RollForLampFall()
     {
         float RNG = (float)RNG_Custom.random.NextDouble();
-        if (RNG <= 0.1) { Anim.SetBool("IsFalling", true); }
+        //if (RNG <= 0.1) { Anim.SetBool("IsFalling", true); }
+        if (RNG !=-1) { Anim.SetBool("IsFalling", true); }
     }
 
     private void OnTriggerEnter(Collider other)

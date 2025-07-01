@@ -22,6 +22,7 @@ public class PlayerGroundedState : State
             Player_Manager.instance.BoyRunInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             playerAnim.SetTrigger("Jump");
             _stateMachine.Begin(new PlayerJumpState(_stateMachine));
+            return;
         }
 
         if (Input.GetKeyDown(KeyCode.S))

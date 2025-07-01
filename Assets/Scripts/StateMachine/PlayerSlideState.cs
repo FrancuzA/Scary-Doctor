@@ -68,6 +68,7 @@ public class PlayerSlideState : State
 
     private IEnumerator DelayedStateTransition(State state)
     {
+        Debug.Log("test");
         yield return new WaitForSeconds(0.2f);
 
         foreach (GameObject Mesh in Player_Manager.instance.CollisionMesh)
