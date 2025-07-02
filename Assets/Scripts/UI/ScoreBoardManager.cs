@@ -28,12 +28,12 @@ public class ScoreBoardManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        AddNewScore(PlayerPrefs.GetString("NewScoreName"), PlayerPrefs.GetFloat("LastGamePoint"));
+        AddNewScore(PlayerPrefs.GetString("NewScoreName"), PlayerPrefs.GetInt("DifficultyLvl"), PlayerPrefs.GetFloat("LastGamePoint"));
     }
 
-    public void AddNewScore(string name, float points)
+    public void AddNewScore(string name,int difficulty, float points)
     {
-        if (IsDuplicate(name, points))
+        if (IsDuplicate(name,difficulty, points))
         {
             return;
         }
@@ -42,32 +42,53 @@ public class ScoreBoardManager : MonoBehaviour
         ScoreLineData newScore = new ScoreLineData
         {
             name = name,
-            points = (int)points
+            points = (int)points,
+            difficulty = difficulty,
         };
         scoreLines.Add(newScore);
 
         // Create a new UI element for the score
-        CreateScoreLineUI(name, points);
+        CreateScoreLineUI(name,difficulty, points);
 
         // Save the updated list to JSON
         SaveScoresToJson();
     }
 
-    private void CreateScoreLineUI(string name, float points)
+    private void CreateScoreLineUI(string name, int difficulty, float points)
     {
         GameObject newLine = Instantiate(NewScoreLine, ScoreBoard.transform);
 
         // Find the children where Name and Points are displayed
-        Transform nameChild = newLine.transform.Find("ScoreName");   // Replace "Name" with the actual child name
-        Transform pointsChild = newLine.transform.Find("Points"); // Replace "Points" with the actual child name
+        Transform nameChild = newLine.transform.Find("ScoreName");
+        Transform pointsChild = newLine.transform.Find("Points"); 
+        Transform difficultyChild = newLine.transform.Find("Difficulty");
 
-        if (nameChild != null && pointsChild != null)
+        if (nameChild != null && pointsChild != null && difficultyChild!= null)
         {
             TextMeshProUGUI nameText = nameChild.GetComponent<TextMeshProUGUI>();
             TextMeshProUGUI pointsText = pointsChild.GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI difficultyText = difficultyChild.GetComponent<TextMeshProUGUI>();
 
             if (nameText != null) nameText.text = name;
             if (pointsText != null) pointsText.text = points.ToString();
+            if(difficultyText != null)
+            {
+                switch(difficulty)
+                {
+                    case 0:
+                        difficultyText.text = "Easy";
+                        break;
+                    case 1:
+                        difficultyText.text = "Normal";
+                        break;
+                    case 2:
+                        difficultyText.text = "Hard";
+                        break;
+                    case 3:
+                        difficultyText.text = "Test";
+                        break;
+                }
+            }
         }
     }
 
@@ -91,7 +112,7 @@ public class ScoreBoardManager : MonoBehaviour
                 // Populate the UI with the loaded scores
                 foreach (ScoreLineData score in scoreLines)
                 {
-                    CreateScoreLineUI(score.name, score.points);
+                    CreateScoreLineUI(score.name,score.difficulty, score.points);
                 }
             }
         }
@@ -104,12 +125,12 @@ public class ScoreBoardManager : MonoBehaviour
         File.WriteAllText(filePath, json);
     }
 
-    private bool IsDuplicate(string name, float points)
+    private bool IsDuplicate(string name, int difficulty, float points)
     {
         // Check if a score with the same name and points already exists
         foreach (ScoreLineData score in scoreLines)
         {
-            if (score.name == name && score.points == points)
+            if (score.name == name && score.points == points && score.difficulty == difficulty)
             {
                 return true;
             }
@@ -121,8 +142,9 @@ public class ScoreBoardManager : MonoBehaviour
     [System.Serializable]
     private class ScoreLineData
     {
-        public string name;  // The player's name
-        public int points;   // The player's score
+        public string name;  
+        public int points;
+        public int difficulty;
     }
 
     // A class to hold the list of all scores

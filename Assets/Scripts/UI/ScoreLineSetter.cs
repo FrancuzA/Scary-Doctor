@@ -4,6 +4,7 @@ public class ScoreLineSetter : MonoBehaviour
 {
     public TextMeshProUGUI NameUI;
     public TextMeshProUGUI PointsUI;
+    public TextMeshProUGUI Difficulty;
     public void Awake()
     {
        /* Debug.Log("setting new line info");
